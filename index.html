@@ -1,0 +1,1938 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mumbai Circle</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Mumbai Circle - where to be, every day of the week.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
+<meta name="build" content="20260814-185525-814">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mumbai Circle">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+<body><style>
+  :root{
+    --ink:#231d17; --ink-2:#4f453a; --ink-3:#7d7164; --ink-4:#a99c8c;
+    --paper:#fdf9f3; --card:#fffefb; --line:#e6dccd; --line-2:#f1e9dc;
+    --accent:#c2410c;
+    --shadow:0 1px 2px #231d1708, 0 4px 14px #231d170d;
+    --shadow-lg:0 6px 14px #231d1712, 0 18px 40px #231d1718;
+
+    --c-games:#c2410c;
+    --c-startup:#3f5f86;
+    --c-expo:#9c3f6b;
+    --c-dance:#1f6f62;
+    --c-ai:#63459b;
+    --c-craft:#a8621b;
+    --c-music:#8c3a8c;
+    --c-stage:#b23a58;
+    --c-books:#54711f;
+    --c-speak:#8a6512;
+    --c-social:#26647f;
+    --c-outdoors:#2e6b45;
+    --c-wellness:#3f7a3a;
+    --c-food:#a3342b;
+
+    --d0:#c2410c; --d1:#3f5f86; --d2:#1f6f62; --d3:#9c3f6b;
+    --d4:#a8621b; --d5:#63459b; --d6:#b23a58;
+
+    --new:#c2410c;
+    --link:#a8360a;
+
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --serif:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ink:#f4ece0; --ink-2:#d2c6b6; --ink-3:#9e9284; --ink-4:#776c5f;
+      --paper:#17130f; --card:#211c17; --line:#383027; --line-2:#2a241e;
+      --accent:#f2874f;
+      --shadow:0 1px 2px #0006, 0 4px 14px #0004;
+      --shadow-lg:0 6px 14px #0007, 0 18px 40px #0006;
+      --c-games:#f2874f; --c-startup:#8fb0d8; --c-expo:#dd8fb4;
+      --c-dance:#5fbfab; --c-ai:#b09ae2; --c-craft:#e0a05c;
+      --c-music:#d19ad1; --c-stage:#e8899e; --c-books:#a9c065; --c-speak:#dcb75a;
+      --c-social:#6fb2cf; --c-outdoors:#72bd90; --c-wellness:#9bcf78; --c-food:#ef8d80;
+      --d0:#f2874f; --d1:#8fb0d8; --d2:#5fbfab; --d3:#dd8fb4;
+      --d4:#e0a05c; --d5:#b09ae2; --d6:#e8899e;
+      --new:#f2874f; --link:#f2874f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#f4ece0; --ink-2:#d2c6b6; --ink-3:#9e9284; --ink-4:#776c5f;
+    --paper:#17130f; --card:#211c17; --line:#383027; --line-2:#2a241e;
+    --accent:#f2874f;
+    --shadow:0 1px 2px #0006, 0 4px 14px #0004;
+    --shadow-lg:0 6px 14px #0007, 0 18px 40px #0006;
+    --c-games:#f2874f; --c-startup:#8fb0d8; --c-expo:#dd8fb4;
+    --c-dance:#5fbfab; --c-ai:#b09ae2; --c-craft:#e0a05c;
+    --c-music:#d19ad1; --c-stage:#e8899e; --c-books:#a9c065; --c-speak:#dcb75a;
+    --c-social:#6fb2cf; --c-outdoors:#72bd90; --c-wellness:#9bcf78; --c-food:#ef8d80;
+    --d0:#f2874f; --d1:#8fb0d8; --d2:#5fbfab; --d3:#dd8fb4;
+    --d4:#e0a05c; --d5:#b09ae2; --d6:#e8899e;
+    --new:#f2874f; --link:#f2874f;
+  }
+  :root[data-theme="light"]{
+    --ink:#231d17; --ink-2:#4f453a; --ink-3:#7d7164; --ink-4:#a99c8c;
+    --paper:#fdf9f3; --card:#fffefb; --line:#e6dccd; --line-2:#f1e9dc;
+    --accent:#c2410c;
+    --shadow:0 1px 2px #231d1708, 0 4px 14px #231d170d;
+    --shadow-lg:0 6px 14px #231d1712, 0 18px 40px #231d1718;
+    --c-games:#c2410c; --c-startup:#3f5f86; --c-expo:#9c3f6b;
+    --c-dance:#1f6f62; --c-ai:#63459b; --c-craft:#a8621b;
+    --c-music:#8c3a8c; --c-stage:#b23a58; --c-books:#54711f; --c-speak:#8a6512;
+    --c-social:#26647f; --c-outdoors:#2e6b45; --c-wellness:#3f7a3a; --c-food:#a3342b;
+    --d0:#c2410c; --d1:#3f5f86; --d2:#1f6f62; --d3:#9c3f6b;
+    --d4:#a8621b; --d5:#63459b; --d6:#b23a58;
+    --new:#c2410c; --link:#a8360a;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px}
+  a{color:var(--link)}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+    outline:2.5px solid var(--accent); outline-offset:3px; border-radius:4px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{padding:52px 0 0}
+  h1{
+    font-family:var(--serif); font-size:clamp(44px,8vw,78px); font-weight:700;
+    letter-spacing:-.028em; line-height:.95; margin:0; text-wrap:balance;
+  }
+  h1 .dot{color:var(--accent)}
+  .subline{
+    margin:14px 0 0; font-family:var(--serif); font-style:italic;
+    font-size:clamp(17px,2.2vw,22px); color:var(--ink-2);
+  }
+  .tally{margin:14px 0 0; font-size:14.5px; color:var(--ink-3)}
+  .tally b{
+    font-family:var(--serif); font-size:19px; font-weight:700;
+    font-variant-numeric:tabular-nums; color:var(--ink); padding-right:1px;
+  }
+  .tally b.hot{color:var(--accent)}
+  .tally i{font-style:normal; color:var(--ink-4); padding:0 8px}
+  .byline{
+    margin:11px 0 0; font-family:var(--serif); font-style:italic;
+    font-size:14.5px; color:var(--ink-3);
+  }
+  .byline b{
+    font-style:normal; font-weight:700; color:var(--ink-2);
+    letter-spacing:-.004em;
+  }
+  .byline a{
+    font-style:normal; font-weight:700; color:var(--link);
+    text-decoration:none; font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .byline a:hover{text-decoration:underline; text-underline-offset:3px}
+  .byline i{font-style:normal; color:var(--ink-4); padding:0 7px}
+  .perf{
+    height:0; margin:26px 0 0;
+    border-top:2px dashed var(--line);
+  }
+
+  /* ---------- tabs ---------- */
+  .tabs{
+    display:flex; flex-wrap:wrap; gap:7px; margin:22px 0 0;
+  }
+  .tab{
+    font-family:var(--sans); font-size:13.5px; font-weight:600; cursor:pointer;
+    background:var(--card); color:var(--ink-2);
+    border:1.5px solid var(--line); border-radius:999px;
+    padding:8px 17px; line-height:1.3; transition:transform .12s, background .12s, color .12s;
+  }
+  .tab:hover{transform:translateY(-1px); border-color:var(--ink-4); color:var(--ink)}
+  .tab[aria-selected="true"]{
+    background:var(--ink); color:var(--paper); border-color:var(--ink);
+  }
+  .tab .n{
+    font-variant-numeric:tabular-nums; opacity:.55; padding-left:6px; font-weight:500;
+  }
+
+  /* ---------- toolbar ---------- */
+  .controls{
+    position:sticky; top:0; z-index:40; background:var(--paper);
+    padding:14px 24px; margin:18px -24px 0;
+    border-bottom:1.5px solid var(--line);
+  }
+  .toolbar{display:flex; flex-wrap:wrap; gap:9px; align-items:center}
+  .count{
+    font-size:13px; color:var(--ink-3); white-space:nowrap;
+    font-variant-numeric:tabular-nums; margin-left:auto; font-weight:600;
+  }
+
+  .dd{position:relative}
+  .dd-trigger{
+    font-family:var(--sans); font-size:13.5px; font-weight:600; cursor:pointer;
+    background:var(--card); color:var(--ink);
+    border:1.5px solid var(--line); border-radius:11px;
+    padding:9px 13px; display:inline-flex; align-items:center; gap:9px;
+    line-height:1.25; min-height:40px; transition:border-color .12s, box-shadow .12s;
+  }
+  .dd-trigger:hover{border-color:var(--ink-4)}
+  .dd-trigger .lbl{
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:13.5px; color:var(--ink-4);
+  }
+  .dd-trigger .val{max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .dd-trigger .chev{
+    width:9px; height:9px; flex:none; margin-left:1px; opacity:.5;
+    border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+    transform:rotate(45deg) translate(-2px,-2px); transition:transform .15s;
+  }
+  .dd.open .dd-trigger{border-color:var(--ink); box-shadow:0 0 0 3px color-mix(in srgb, var(--ink) 9%, transparent)}
+  .dd.open .dd-trigger .chev{transform:rotate(225deg) translate(-3px,-3px)}
+  .dd-trigger.on{border-color:var(--accent)}
+  .dd-trigger.on .val{color:var(--accent)}
+
+  .dd-menu{
+    display:none; position:absolute; top:calc(100% + 7px); left:0; z-index:60;
+    background:var(--card); border:1.5px solid var(--line); border-radius:13px;
+    box-shadow:var(--shadow-lg); padding:7px; min-width:216px;
+    max-height:min(64vh,420px); overflow:auto;
+  }
+  .dd.open .dd-menu{display:block}
+  .dd-menu.right{left:auto; right:0}
+  .dd-item{
+    font-family:var(--sans); font-size:13.5px; font-weight:500; cursor:pointer;
+    background:none; border:0; border-radius:9px; color:var(--ink-2);
+    padding:8px 11px; width:100%; text-align:left;
+    display:flex; align-items:center; gap:10px; line-height:1.35;
+  }
+  .dd-item:hover{background:var(--line-2); color:var(--ink)}
+  .dd-item .swatch{
+    width:11px; height:11px; border-radius:4px; background:var(--tone,var(--ink-4));
+    flex:none; display:block;
+  }
+  .dd-item .tick{
+    margin-left:auto; flex:none; width:15px; text-align:center;
+    color:var(--accent); font-weight:800; opacity:0;
+  }
+  .dd-item[aria-pressed="true"]{color:var(--ink); font-weight:700; background:var(--line-2)}
+  .dd-item[aria-pressed="true"] .tick{opacity:1}
+  .dd-item .ddmeta{
+    margin-left:auto; font-family:var(--serif); font-style:italic;
+    font-size:12px; color:var(--ink-4); white-space:nowrap; font-weight:400;
+  }
+  .dd-item .ddmeta + .tick{margin-left:8px}
+  #areaRow{min-width:326px}
+  .dd-sep{height:1px; background:var(--line); margin:6px 4px}
+  .dd-note{
+    font-family:var(--serif); font-style:italic; font-size:12.5px;
+    color:var(--ink-4); padding:4px 11px 7px;
+  }
+  .dd-dates{display:flex; align-items:center; gap:7px; padding:2px 11px 8px}
+  input[type="date"],#q{
+    font-family:var(--sans); font-size:13px; padding:7px 9px;
+    background:var(--paper); color:var(--ink);
+    border:1.5px solid var(--line); border-radius:9px;
+  }
+  #q{
+    min-width:190px; flex:1 1 190px; padding:9px 13px;
+    border-radius:11px; background:var(--card); min-height:40px;
+  }
+  .linkbtn{
+    font-family:var(--sans); font-size:13px; font-weight:600; cursor:pointer;
+    background:none; border:0; color:var(--link);
+    text-decoration:underline; text-underline-offset:3px; padding:6px 2px;
+  }
+  .linkbtn:hover{color:var(--ink)}
+  .clearbtn{
+    font-family:var(--sans); font-size:13px; font-weight:600; cursor:pointer;
+    background:none; border:1.5px dashed var(--line); border-radius:11px;
+    color:var(--ink-3); padding:9px 13px; min-height:40px; display:none;
+  }
+  .clearbtn:hover{border-color:var(--accent); color:var(--accent)}
+  .clearbtn.show{display:inline-block}
+
+  /* ---------- views ---------- */
+  .view{display:none}
+  .view.is-on{display:block}
+
+  /* ---------- day rails ---------- */
+  .daygroup{margin:40px 0 0}
+  .dayhead{
+    --day:var(--ink);
+    display:flex; align-items:center; gap:13px; margin:0 0 17px;
+    padding:0 0 9px; border-bottom:2.5px solid var(--day);
+  }
+  .dayhead[data-d="0"]{--day:var(--d0)} .dayhead[data-d="1"]{--day:var(--d1)}
+  .dayhead[data-d="2"]{--day:var(--d2)} .dayhead[data-d="3"]{--day:var(--d3)}
+  .dayhead[data-d="4"]{--day:var(--d4)} .dayhead[data-d="5"]{--day:var(--d5)}
+  .dayhead[data-d="6"]{--day:var(--d6)}
+  .dayhead h2{
+    font-family:var(--serif); font-size:29px; font-weight:700;
+    letter-spacing:-.024em; margin:0; line-height:1.05; color:var(--day);
+  }
+  .dayhead .dnote{
+    font-family:var(--serif); font-style:italic; font-size:14.5px;
+    color:var(--ink-3); flex:1 1 auto; min-width:0;
+  }
+  .dayhead .dn{
+    flex:none; font-size:13px; font-weight:700; color:#fff;
+    background:var(--day); border-radius:999px;
+    min-width:26px; height:26px; padding:0 8px;
+    display:inline-flex; align-items:center; justify-content:center;
+    font-variant-numeric:tabular-nums;
+  }
+  @media (prefers-color-scheme:dark){ .dayhead .dn{color:#17130f} }
+  :root[data-theme="dark"] .dayhead .dn{color:#17130f}
+  :root[data-theme="light"] .dayhead .dn{color:#fff}
+  .dayhead.wknd h2::after{content:" ★"; font-size:16px; vertical-align:2px}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(304px,1fr)); gap:15px}
+  .card{
+    background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+    padding:0 0 15px; display:flex; flex-direction:column; overflow:hidden;
+    box-shadow:var(--shadow); position:relative;
+    transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--tone);
+  }
+  .cbar{height:6px; background:var(--tone)}
+  .cbody{padding:14px 17px 0; display:flex; flex-direction:column; gap:7px; flex:1}
+  .toprow{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
+  .cat{
+    font-size:11.5px; font-weight:700; color:var(--tone);
+    background:color-mix(in srgb, var(--tone) 13%, transparent);
+    border-radius:999px; padding:3px 10px; line-height:1.4;
+  }
+  .tag{
+    font-size:11.5px; font-weight:600; color:var(--ink-3);
+    border:1.5px solid var(--line); border-radius:999px;
+    padding:3px 9px; line-height:1.4;
+  }
+  .tag.isnew{
+    background:var(--new); border-color:var(--new); color:#fff; font-weight:700;
+  }
+  @media (prefers-color-scheme:dark){ .tag.isnew{color:#17130f} }
+  :root[data-theme="dark"] .tag.isnew{color:#17130f}
+  :root[data-theme="light"] .tag.isnew{color:#fff}
+  .card h3{
+    font-family:var(--serif); margin:1px 0 0; font-size:19.5px; font-weight:700;
+    line-height:1.26; letter-spacing:-.014em;
+  }
+  .when{font-size:13px; font-weight:700; color:var(--tone); font-variant-numeric:tabular-nums}
+  .where{font-size:12.5px; color:var(--ink-3); line-height:1.45}
+  .metro{
+    display:flex; flex-wrap:wrap; gap:3px 14px; margin:2px 0 0;
+    font-size:12.5px; color:var(--ink-3);
+  }
+  .metro span{display:inline-flex; align-items:baseline; gap:5px}
+  .metro i{font-family:var(--serif); font-style:italic; color:var(--ink-4)}
+  .metro b{font-weight:700; color:var(--ink-2)}
+  .note{
+    font-family:var(--serif); font-size:14px; color:var(--ink-2);
+    line-height:1.5; margin:2px 0 0;
+  }
+  .foot{
+    margin-top:auto; padding:13px 17px 0; display:flex; flex-wrap:wrap;
+    gap:5px 13px; align-items:baseline; font-size:13px;
+  }
+  .cost{
+    font-weight:700; font-variant-numeric:tabular-nums;
+    background:var(--line-2); border-radius:7px; padding:3px 8px;
+  }
+  .cost.is-free{color:var(--c-outdoors); background:color-mix(in srgb, var(--c-outdoors) 13%, transparent)}
+  .go{
+    font-weight:700; color:var(--link); text-decoration:none;
+  }
+  .go:hover{text-decoration:underline; text-underline-offset:3px}
+  .go::after{content:" →"}
+  .tel{font-size:12.5px; color:var(--ink-3); text-decoration:none}
+  .tel:hover{text-decoration:underline; text-underline-offset:3px}
+  /* Quieter than .go — the ticket link is the card's job, directions are a follow-up. */
+  .map{font-size:12.5px; font-weight:600; color:var(--ink-3); text-decoration:none}
+  .map:hover{color:var(--accent); text-decoration:underline; text-underline-offset:3px}
+  /* a pill, so it reads as a control rather than another line of card metadata.
+     Filled-when-on mirrors .tag.isnew, which is the board's existing "this is on" idiom. */
+  .save{
+    font-family:var(--sans); font-size:11.5px; font-weight:700; cursor:pointer;
+    background:none; color:var(--ink-3);
+    border:1.5px solid var(--line); border-radius:999px;
+    padding:3px 11px; line-height:1.4; margin:0;
+    transition:border-color .12s, color .12s, background .12s;
+  }
+  .save:hover{border-color:var(--accent); color:var(--accent)}
+  .save[aria-pressed="true"]{
+    background:var(--accent); border-color:var(--accent); color:#fff;
+  }
+  @media (prefers-color-scheme:dark){ .save[aria-pressed="true"]{color:#17130f} }
+  :root[data-theme="dark"] .save[aria-pressed="true"]{color:#17130f}
+  :root[data-theme="light"] .save[aria-pressed="true"]{color:#fff}
+  .added{
+    margin-left:auto; font-size:11.5px; color:var(--ink-4);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- sections ---------- */
+  section{margin:34px 0 0; scroll-margin-top:120px}
+  .sechead{margin-bottom:22px}
+  .sechead h2{
+    font-family:var(--serif); font-size:34px; font-weight:700;
+    letter-spacing:-.026em; margin:0; line-height:1.08;
+  }
+  .sechead h2 .rule{
+    display:block; width:64px; height:5px; border-radius:999px;
+    background:var(--accent); margin:13px 0 0;
+  }
+  .sechead p{
+    margin:13px 0 0; font-family:var(--serif); font-style:italic;
+    font-size:15px; color:var(--ink-3); max-width:68ch;
+  }
+
+  /* ---------- tables ---------- */
+  .scroll{
+    overflow-x:auto; border:1.5px solid var(--line);
+    border-radius:16px; background:var(--card);
+  }
+  table{border-collapse:collapse; width:100%; min-width:800px; font-size:13.5px}
+  th,td{text-align:left; padding:13px 15px; border-bottom:1px solid var(--line-2); vertical-align:top}
+  th{
+    font-size:12px; color:var(--ink-3); font-weight:700;
+    background:var(--paper); position:sticky; top:0; white-space:nowrap;
+    border-bottom:1.5px solid var(--line);
+  }
+  tbody tr:hover td{background:var(--line-2)}
+  tbody tr:last-child td{border-bottom:0}
+  td b a,td b{font-weight:700}
+  .v-yes,.v-mid,.v-no{font-weight:700; white-space:nowrap}
+  .v-yes{color:var(--c-outdoors)}
+  .v-mid{color:var(--c-speak)}
+  .v-no{color:var(--ink-4)}
+
+  /* ---------- directory ---------- */
+  .dir{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:15px}
+  .dirbox{
+    background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+    padding:0 17px 18px; overflow:hidden; box-shadow:var(--shadow);
+  }
+  .dirbox .cbar{margin:0 -17px 15px}
+  .dirbox h3{
+    font-family:var(--serif); margin:0 0 14px; font-size:19px; font-weight:700;
+    letter-spacing:-.016em; color:var(--tone); text-transform:none;
+  }
+  .dirbox ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px}
+  .dirbox li{font-size:13.5px; line-height:1.45}
+  .dirbox li > a{font-weight:700; text-decoration:none; color:var(--ink)}
+  .dirbox li > a:hover{color:var(--tone); text-decoration:underline; text-underline-offset:3px}
+  .dirbox li span{
+    display:block; font-family:var(--serif); color:var(--ink-3);
+    font-size:13px; line-height:1.45; margin-top:3px;
+  }
+
+  .empty{
+    display:none; padding:52px 20px; text-align:center; color:var(--ink-3);
+    border:2px dashed var(--line); border-radius:16px;
+    font-family:var(--serif); font-style:italic; font-size:15px;
+  }
+  .empty b{display:block; font-style:normal; font-size:19px; color:var(--ink-2); margin-bottom:6px}
+
+  footer{
+    margin-top:76px; padding-top:24px; border-top:2px dashed var(--line);
+    font-family:var(--serif); font-style:italic;
+    font-size:13.5px; color:var(--ink-3); max-width:72ch;
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 16px 72px}
+    .controls{padding:12px 16px; margin:16px -16px 0}
+    .masthead{padding-top:36px}
+    /* keep the purpose label — without it "What" and "Show" look identical */
+    .dd-trigger{padding:9px 11px; gap:7px}
+    .dd-trigger .val{max-width:112px}
+    #q{min-width:100%; flex-basis:100%}
+    .dayhead{flex-wrap:wrap; gap:9px}
+    .dayhead .dnote{flex-basis:100%; order:3}
+    /* menus span the toolbar instead of running off the right edge */
+    .dd{position:static}
+    .dd-menu,#areaRow{left:12px; right:12px; min-width:0; width:auto}
+    .dd-item .ddmeta{font-size:11.5px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <h1>Mumbai Circle<span class="dot">.</span></h1>
+    <p class="subline">Where to be, every day of the week.</p>
+    <p class="tally"><b id="tCount">—</b> things in range<i>·</i><b id="tFree">—</b> free<i>·</i><b
+      id="tWknd">—</b> on Sat &amp; Sun<i>·</i><b id="tCat">—</b> categories<i>·</i><b
+      id="tNew" class="hot">—</b> added recently<span id="tSavedWrap" style="display:none"><i>·</i><b
+      id="tSaved" class="hot">—</b> saved</span></p>
+    <p class="byline">Managed by <b>Amitoje Singh Bakshi</b><i>·</i><a href="tel:+918287028821">+91 82870 28821</a><i>·</i><span id="swept"></span></p>
+    <div class="perf"></div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" type="button" role="tab" data-view="week"        aria-selected="true">The week</button>
+      <button class="tab" type="button" role="tab" data-view="saved"       aria-selected="false">Saved<span class="n" id="tabSavedN"></span></button>
+      <button class="tab" type="button" role="tab" data-view="classes"     aria-selected="false">Classes</button>
+      <button class="tab" type="button" role="tab" data-view="communities" aria-selected="false">Communities to join</button>
+      <button class="tab" type="button" role="tab" data-view="follow"      aria-selected="false">Follow &amp; connect</button>
+      <button class="tab" type="button" role="tab" data-view="platforms"   aria-selected="false">Where to look</button>
+    </nav>
+  </header>
+
+  <div class="controls" id="controls">
+    <div class="toolbar">
+
+      <div class="dd" id="ddWhen">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">When</span><span class="val" id="valWhen">—</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu">
+          <button class="dd-item" type="button" id="wkBtn">This week<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="m30Btn">Next 30 days<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="thisMonBtn">This month<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="nextMonBtn">Next month<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="allBtn">Everything ahead<span class="tick">✓</span></button>
+          <div class="dd-sep"></div>
+          <div class="dd-note">Or pick your own range</div>
+          <div class="dd-dates">
+            <input type="date" id="from" aria-label="From date">
+            <span style="color:var(--ink-4)">→</span>
+            <input type="date" id="to" aria-label="To date">
+          </div>
+        </div>
+      </div>
+
+      <div class="dd" id="ddWhere">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">Where</span><span class="val" id="valWhere">Anywhere</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu" id="areaRow"></div>
+      </div>
+
+      <div class="dd" id="ddNear">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">Near</span><span class="val" id="valNear">Any distance</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu" id="nearRow">
+          <div class="dd-note" id="nearNote">Set where you are, and every card shows how far it is.</div>
+          <button class="dd-item" type="button" id="locBtn">Use my current location<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="locClearBtn" hidden>Forget my location<span class="tick">✓</span></button>
+        </div>
+      </div>
+
+      <div class="dd" id="ddPrice">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">Price</span><span class="val" id="valPrice">Any price</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu" id="priceRow">
+          <div class="dd-note">Based on the cheapest listed ticket. Cards that only say
+            &ldquo;Ticketed&rdquo; carry no price and are hidden by these.</div>
+        </div>
+      </div>
+
+      <div class="dd" id="ddWhat">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">What</span><span class="val" id="valWhat">Any type</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu" id="catRow"></div>
+      </div>
+
+      <div class="dd" id="ddShow">
+        <button class="dd-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="lbl">Show</span><span class="val" id="valShow">All events</span><span class="chev"></span>
+        </button>
+        <div class="dd-menu">
+          <div class="dd-note">Combine as many as you like</div>
+          <button class="dd-item" type="button" id="savedBtn" aria-pressed="false">Only things I saved<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="newBtn" aria-pressed="false">Only new finds<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="freeBtn" aria-pressed="false">Only free things<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="wkndBtn" aria-pressed="false">Only Sat &amp; Sun<span class="tick">✓</span></button>
+        </div>
+      </div>
+
+      <input id="q" type="search" placeholder="Search a venue, group or area…" aria-label="Search">
+      <button class="clearbtn" type="button" id="clearBtn">Clear all</button>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <div class="view is-on" data-view="week">
+    <div id="days"></div>
+    <div class="empty" id="daysEmpty">
+      <b>Nothing in this range.</b>
+      Widen the dates, or clear a filter.
+    </div>
+  </div>
+
+  <!-- ============ SAVED ============ -->
+  <div class="view" data-view="saved">
+  <section id="savedSec">
+    <div class="sechead">
+      <h2>Things you saved<span class="rule"></span></h2>
+      <p>Everything you've kept, whatever the date — this list ignores the filters on the week board. Stored in this browser on this device, and shared with nobody.</p>
+    </div>
+    <div class="grid" id="savedGrid"></div>
+    <div class="empty" id="savedEmpty">
+      <b>Nothing saved yet.</b>
+      Hit <b style="font-style:normal;display:inline;font-size:15px">Save</b> on any card and it will be waiting here.
+    </div>
+  </section>
+  </div>
+
+  <!-- ============ CLASSES & COURSES ============ -->
+  <div class="view" data-view="classes">
+  <section id="classes">
+    <div class="sechead">
+      <h2>Classes worth committing to<span class="rule"></span></h2>
+      <p>Recurring courses rather than one-night workshops — the kind where you see the same faces each week.</p>
+    </div>
+    <div class="dir" id="classDir"></div>
+  </section>
+  </div>
+
+  <!-- ============ COMMUNITIES ============ -->
+  <div class="view" data-view="communities">
+  <section id="communities">
+    <div class="sechead">
+      <h2>Communities to join<span class="rule"></span></h2>
+      <p>Not yet built. Delhi and Bangalore Circle earned this table by sweeping specific
+        groups' membership counts and meeting cadence week over week — Mumbai Circle is
+        one refresh old, and putting numbers here before they are checked would be a
+        guess dressed up as a fact. It fills in the same way the events board does.</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Where to start today</th><th>What it is</th></tr></thead>
+        <tbody>
+          <tr><td><b><a href="https://www.meetup.com/find/in--mumbai/">Meetup — Mumbai</a></b></td>
+            <td>Search by interest for the city's active recurring groups directly, rather than trust a snapshot that ages the moment it's written.</td></tr>
+          <tr><td><b><a href="https://www.toastmasters.org/Find-a-Club">Toastmasters — Find a Club</a></b></td>
+            <td>Several clubs meet weekly across Mumbai. Search by pin code for the one nearest you before committing to a specific room here.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  </div>
+
+  <!-- ============ PLATFORMS ============ -->
+  <div class="view" data-view="platforms">
+  <section id="platforms">
+    <div class="sechead">
+      <h2>Where to look yourself<span class="rule"></span></h2>
+      <p>The platforms this board is built from — browse them between refreshes.</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Platform</th><th>Best for</th><th>Worth it?</th></tr></thead>
+        <tbody>
+          <tr><td><b><a href="https://www.district.in/activities/comedy-shows-in-mumbai">District — comedy</a></b></td>
+            <td>The single richest source found this refresh — the whole Ink A Laugh (Vile Parle) and Hitchki (Powai) weekly rosters live here</td>
+            <td class="v-yes">Essential</td></tr>
+          <tr><td><b><a href="https://www.district.in/activities/workshops-in-mumbai">District — workshops</a></b></td>
+            <td>Pottery, craft and hands-on sessions, concentrated around Hitchki, Powai</td>
+            <td class="v-yes">Essential</td></tr>
+          <tr><td><b><a href="https://allevents.in/mumbai/all">AllEvents.in</a></b></td>
+            <td>Broadest sweep across every category and area of the city</td>
+            <td class="v-yes">Earliest visibility</td></tr>
+          <tr><td><b><a href="https://www.ncpamumbai.com/genre/theatre/">NCPA — theatre archive</a></b></td>
+            <td>Individually dated productions, not just a homepage calendar. The best weeknight source found — Tuesday and Thursday plays turned up here that no aggregator carried</td>
+            <td class="v-yes">The weeknight unlock</td></tr>
+          <tr><td><b><a href="https://www.meetup.com/find/in--mumbai/">Meetup</a></b></td>
+            <td>Recurring groups with "Every Tue / Every Sat" markers</td>
+            <td class="v-yes">Essential</td></tr>
+          <tr><td><b><a href="https://www.timeout.com/mumbai/mumbai-events-in-august">Time Out Mumbai</a></b></td>
+            <td>The best single roundup for a fast read of what's on — but carries no ticket links, so cross-reference each find on District or AllEvents before trusting the date</td>
+            <td class="v-mid">Good for discovery, not for the final link</td></tr>
+          <tr><td><b><a href="https://warehouse.g5a.org/calendar">G5A Foundation</a></b></td>
+            <td>Contemporary arts and performance in Worli/Mahalaxmi. Genuinely sparse some weeks — check periodically rather than expecting a full calendar</td>
+            <td class="v-mid">Narrow, but real when it's on</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  </div>
+
+  <!-- ============ FOLLOW & CONNECT ============ -->
+  <div class="view" data-view="follow">
+  <section id="connect">
+    <div class="sechead">
+      <h2>Follow &amp; connect<span class="rule"></span></h2>
+      <p>Every link here was opened and checked, and every WhatsApp invite was confirmed live against its real group name. Join these before you move so you land with a calendar already running.</p>
+    </div>
+    <div class="dir">
+
+      <div class="dirbox" style="--tone:var(--c-music)">
+        <div class="cbar"></div>
+        <h3>Venues to follow directly</h3>
+        <ul>
+          <li><a href="https://www.ncpamumbai.com/genre/theatre/">NCPA, Nariman Point</a><span>India's premier performing-arts centre. Its genre archive lists individually dated shows, including several genuine weeknight ones</span></li>
+          <li><a href="https://warehouse.g5a.org/calendar">G5A Foundation, Worli</a><span>Contemporary arts and performance. Runs genuinely dark some weeks — check rather than assume</span></li>
+          <li><a href="https://bombay.afindia.org/events/">Alliance Française de Bombay</a><span>Film club and the French cultural programme — "Rendezvous with French Cinema" runs through August</span></li>
+          <li><a href="https://www.royaloperahouse.in/">Royal Opera House, Girgaon</a><span>Restored 1911 opera house, now a proper touring venue for musicals and drama</span></li>
+          <li><a href="https://prithvitheatre.org/">Prithvi Theatre, Juhu</a><span>The city's best-known intimate stage. Its own site carries no browsable schedule — check BookMyShow or call the box office directly</span></li>
+        </ul>
+      </div>
+
+      <div class="dirbox" style="--tone:var(--c-stage)">
+        <div class="cbar"></div>
+        <h3>Recurring comedy nights — Ink A Laugh, Vile Parle</h3>
+        <ul>
+          <li><a href="https://www.district.in/events/inkalaugh-presents-the-dirty-talk-standup-comedy-show-sep26-2025-buy-tickets">The Dirty Talk</a><span>Sun, Fri and Sat, 2:00–3:30 PM. From ₹149 — the cheapest recurring room on this board</span></li>
+          <li><a href="https://www.district.in/events/inkalaugh-presents-hate-my-job-standup-comedy-show-sep26-2025-buy-tickets">Hate My Job</a><span>Multiple weekly dates from ₹249</span></li>
+          <li><a href="https://www.district.in/events/inkalaugh-presents-roasting-relationships-standup-comedy-show-sep26-2025-buy-tickets">Roasting Relationships</a><span>Sunday through Monday, from ₹249</span></li>
+          <li><a href="https://www.district.in/events/vaidai-gujarati-standup-comedy-show-nov9-2025-buy-tickets">Vaidai — Gujarati stand-up</a><span>Sunday onward, from ₹299</span></li>
+        </ul>
+      </div>
+
+      <div class="dirbox" style="--tone:var(--c-craft)">
+        <div class="cbar"></div>
+        <h3>Weekend craft workshops — Hitchki, Powai</h3>
+        <ul>
+          <li><a href="https://www.district.in/events/hand-built-pottery-date-mumbai-jul19-2026-buy-tickets">Hand Built Pottery Date</a><span>Every Saturday, from ₹1,099</span></li>
+          <li><a href="https://www.district.in/events/coil-pottery-date-mumbai-apr18-2026-buy-tickets">Coil Pottery Date</a><span>Every Saturday, from ₹1,099</span></li>
+          <li><a href="https://www.district.in/events/block-printing-date-mumbai-apr18-2026-buy-tickets">Block Printing Date</a><span>Every Saturday, from ₹1,099</span></li>
+          <li><a href="https://www.district.in/events/boho-texture-art-date-mumbai-apr18-2026-buy-tickets">Boho Texture Art Date</a><span>Every Saturday, from ₹1,299</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+  <footer>
+    <p>Every card carries the nearest railway line and station — the suburban network, not the Metro, since the local is how most of this city actually moves. That is the closest station to the venue's area rather than a door-to-door route, and Powai in particular has no station of its own: the nearest ones still mean an auto at the end. Confirm price and timing on the linked page before you travel; small venues change schedules constantly. Where a night is listed as recurring without a date, it is a standing weekly slot — check the venue before setting off.</p>
+    <p>Anything you <b style="font-style:normal;color:var(--ink-2)">Save</b> is stored in this browser on this device only. There is no account and no server behind this page, so your saved list is yours alone — it is not visible to whoever shared this link with you, and it will not follow you to another phone or laptop. Clearing your browser data clears it.</p>
+    <p>This board is one refresh old — built 15 August 2026 — so it is thinner than its Delhi and Bangalore siblings and will grow the same way they did. Put together and kept current by <b style="font-style:normal;color:var(--ink-2)">Amitoje Singh Bakshi</b> — <a href="tel:+918287028821" style="font-style:normal;font-weight:700;white-space:nowrap">+91 82870 28821</a>. If something here has moved, closed or is worth adding, tell me and it goes in on the next refresh.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Two different "todays", and they must stay apart.
+     TODAY is the date of the last sweep. It is manual, and it drives the New badge and
+     the "last updated" stamp - both are facts about the sweep, not about when someone
+     opens the page, so they have to stay deterministic.
+     NOW (below, once iso() exists) is the reader's real date, and it decides what is
+     still ahead of them. That is what stops a link shared in July from still offering
+     you a 29 July show in September. */
+  var TODAY = "2026-08-15";      // refresh marker — bump on every update
+  var BASELINE = "2026-08-15";   // initial load; entries from this date are not "new"
+  var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
+
+  var CATS = [
+    {k:"games",    label:"Board games",   tone:"--c-games"},
+    {k:"startup",  label:"Startup & business", tone:"--c-startup"},
+    {k:"expo",     label:"Expos & fairs", tone:"--c-expo"},
+    {k:"dance",    label:"Dance socials", tone:"--c-dance"},
+    {k:"ai",       label:"AI & tech",     tone:"--c-ai"},
+    {k:"craft",    label:"Arts & craft",  tone:"--c-craft"},
+    {k:"music",    label:"Music & jams",  tone:"--c-music"},
+    {k:"stage",    label:"Comedy & shows",tone:"--c-stage"},
+    {k:"books",    label:"Books & poetry",tone:"--c-books"},
+    {k:"speak",    label:"Speaking",      tone:"--c-speak"},
+    {k:"social",   label:"Social",        tone:"--c-social"},
+    {k:"outdoors", label:"Outdoors",      tone:"--c-outdoors"},
+    {k:"wellness", label:"Yoga & sound",  tone:"--c-wellness"},
+    {k:"food",     label:"Food & dining", tone:"--c-food"}
+  ];
+  var CATMAP = {}; CATS.forEach(function(c){ CATMAP[c.k] = c; });
+
+  /* areas — each one carries at least three real venues on this board. Navi Mumbai and
+     Thane are real parts of the metro region but had zero verified events on the first
+     sweep (15 Aug 2026) — held back rather than shipped as empty filter options, same
+     rule Delhi applied to its own areas. Re-add once a hunt actually finds them. */
+  var AREAS = [
+    {k:"southmum", label:"South Mumbai (Colaba, Fort, Churchgate)"},
+    {k:"bandra",   label:"Bandra & Khar"},
+    {k:"andheri",  label:"Andheri & Juhu"},
+    {k:"parel",    label:"Lower Parel & Worli"},
+    {k:"powai",    label:"Powai & Vikhroli"},
+    {k:"multi",    label:"Rotating venues"}
+  ];
+  var AREAMAP = {}; AREAS.forEach(function(a){ AREAMAP[a.k] = a; });
+
+  /* nearest railway line + station for the area — Mumbai's defining transit is the
+     Suburban Railway ("the local"), not the Metro, so this names Western/Central/Harbour
+     lines first and only calls out Metro where it is genuinely the closer option (Andheri,
+     Powai/BKC via Metro Line 1/3). An entry overrides this with mt: when its venue sits
+     closer to another station than its area's default. Navi Mumbai (Harbour · Vashi) and
+     Thane (Central · Thane) stay here even though the area is on hold, so re-adding the
+     area later needs no lookup work. */
+  var TRANSIT = {
+    southmum: "Western/Central · Churchgate / CSMT",
+    bandra:   "Western · Bandra",
+    andheri:  "Western + Metro 1 · Andheri",
+    parel:    "Central · Lower Parel / Prabhadevi",
+    powai:    "Central · Vikhroli / Kanjurmarg, then an auto",
+    navimum:  "Harbour · Vashi",
+    thane:    "Central · Thane",
+    multi:    "varies — check the listing"
+  };
+
+  /* ---------------- venue coordinates ----------------
+     GENERATED — do not hand-edit. Run tools\geocode.ps1 to resolve venues against
+     OpenStreetMap, then tools\inject-venues.ps1 to write the result in here.
+
+     Keyed by the same venue fragment mapQuery() builds, so the two stay in step.
+     Each value is [lat, lon, tier]:
+       tier 1  the venue itself resolved   — good to roughly 50 m
+       tier 2  only the locality resolved  — good to roughly 1 km
+     A venue that resolved to neither is absent, and its card shows no distance at all.
+     Nothing is guessed: a wrong distance stated confidently is worse than no distance. */
+  /* VENUES:BEGIN */
+  var VENUES = {
+    "Bal Gandharva Rang Mandir, Prabhadevi":[19.06403,72.83336,1],
+    "CinCin, Bandra West":[19.06089,72.86303,1],
+    "DevX Dynasty, Andheri East":[19.11588,72.85420,2],
+    "Experimental Theatre, NCPA, Nariman Point":[18.92547,72.82009,1],
+    "G5A Foundation, Worli":[19.01174,72.81787,2],
+    "Godrej Dance Theatre, NCPA, Nariman Point":[18.92538,72.82023,1],
+    "Hitchki, Powai":[19.11872,72.90735,2],
+    "Ink A Laugh, Vile Parle West":[19.10391,72.84030,2],
+    "Jamshed Bhabha Theatre, NCPA, Nariman Point":[18.92493,72.81986,1],
+    "Jio World Convention Centre, BKC":[19.06409,72.86739,1],
+    "Jio World Garden, BKC":[19.06712,72.86572,2],
+    "Mahakavi Kalidas Natyamandir, Mulund":[19.17214,72.95670,2],
+    "NCPA, Nariman Point":[18.92516,72.82056,1],
+    "PORT, Worli":[19.01174,72.81787,2],
+    "Royal Opera House, Girgaon":[18.95605,72.81557,1],
+    "Shanmukhananda Hall, Sion":[19.04652,72.86328,2],
+    "Sri Shanmukhananda Fine Arts \u0026 Sangeetha, Sion":[19.04652,72.86328,2],
+    "The J Spot, Juhu":[19.10702,72.82753,2]
+  };
+  /* VENUES:END */
+
+  var DAYNAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  /* Written honestly thin on a one-refresh board: real per-weekday character will
+     sharpen as more sweeps confirm what actually recurs on which night, rather than
+     guessing a pattern from a single pass of research. */
+  var DAYNOTE = {
+    0:"The open-mic and poetry-reading day this refresh found — check what's actually on.",
+    1:"Thin so far on every sweep this board has done. If you know a Monday fixture, say so.",
+    2:"NCPA's theatre archive has turned up the odd Tuesday show — worth a direct check.",
+    3:"Same as Monday and Tuesday — genuinely thin until proven otherwise by more sweeps.",
+    4:"NCPA and Shanmukhananda both carried Thursday shows this refresh — the best weeknight bet so far.",
+    5:"Comedy rooms start their weekend runs, and NCPA's ticketed season carries into the evening.",
+    6:"The full week converges — Hitchki's craft workshops, comedy, theatre and concerts."
+  };
+
+  /* a: see AREAS   cat: see CATS   dow: 0-6 weekly recurring
+     date: "YYYY-MM-DD" one-off   mt: override the TRANSIT station */
+  var E = [
+    /* ================= NCPA, NARIMAN POINT ================= */
+    {date:"2026-08-15", a:"southmum", cat:"stage", name:"Homai Alone",
+     when:"Sat 15 Aug · 5:00 & 7:30 PM", where:"Jamshed Bhabha Theatre, NCPA, Nariman Point",
+     note:"Parsi-Gujarati comedy about a house mistakenly believed vacated. Two shows the same evening, so a missed early slot isn't a missed night.",
+     cost:"₹350–₹2,500", url:"https://www.ncpamumbai.com/event/homai-alone/", added:"2026-08-15"},
+
+    {date:"2026-08-15", a:"southmum", cat:"speak", name:"MIST Festival — Day 1",
+     when:"Sat 15 Aug · 10:00 AM–8:00 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
+     note:"A storytelling festival day that runs Bharatanatyam on Marie Curie's life alongside dastangoi on Kabir — an unusual pairing worth the full day.",
+     cost:"₹300–₹400", url:"https://www.ncpamumbai.com/event/mist-festival-day-1/", added:"2026-08-15"},
+
+    {date:"2026-08-15", a:"southmum", cat:"stage", name:"Strictly Unconventional",
+     when:"Sat 15 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's own archive without a stated time — check the listing before setting off.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/strictly-unconventional-3/", added:"2026-08-15"},
+
+    {date:"2026-08-16", a:"southmum", cat:"speak", name:"MIST Festival — Day 2",
+     when:"Sun 16 Aug · time on the listing", where:"Godrej Dance Theatre, NCPA, Nariman Point",
+     note:"Second day of the storytelling festival.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/mist-festival-day-2/", added:"2026-08-15"},
+
+    {date:"2026-08-16", a:"southmum", cat:"stage", name:"Shikhandi — The Story of the In-betweens",
+     when:"Sun 16 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"A gender-fluid mythological narrative performance.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/shikhandi-the-story-of-the-in-betweens-8/", added:"2026-08-15"},
+
+    {date:"2026-08-18", a:"southmum", cat:"stage", name:"Asymptomatic",
+     when:"Tue 18 Aug · 7:00 PM", where:"Experimental Theatre, NCPA, Nariman Point",
+     note:"A solo play on success and systemic barriers, in English, Hindi and Marathi. A genuine Tuesday-night show — the kind this board exists to surface.",
+     cost:"₹450–₹500", url:"https://www.ncpamumbai.com/event/asymptomatic/", added:"2026-08-15"},
+
+    {date:"2026-08-16", a:"southmum", cat:"music", name:"SOI Autumn 2026 Season",
+     when:"Six concerts, 16–30 Aug · evenings", where:"Jamshed Bhabha Theatre, NCPA, Nariman Point",
+     note:"The Symphony Orchestra of India's 20th-anniversary season, six dates through the month under two different conductors. Pick one date on the listing.",
+     cost:"₹450–₹5,000", url:"https://www.ncpamumbai.com/event/soi-autumn-2026-season/", added:"2026-08-15"},
+
+    {date:"2026-08-27", a:"southmum", cat:"stage", name:"Gamta No Kariye Gulal — Season 2",
+     when:"Thu 27 Aug · 7:30 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
+     note:"Five short Gujarati plays for Vishwa Gujarati Diwas. Another real Thursday-night option.",
+     cost:"₹450–₹500", url:"https://www.ncpamumbai.com/event/gamta-no-kariye-gulal-season-2/", added:"2026-08-15"},
+
+    {date:"2026-08-29", a:"southmum", cat:"stage", name:"Jeene Bhi Do Yaaro",
+     when:"Sat 29 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/jeene-bhi-do-yaaro-14/", added:"2026-08-15"},
+
+    {date:"2026-08-29", a:"southmum", cat:"stage", name:"Yeh Raaste Hain Pyaar Ke",
+     when:"Sat 29 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/yeh-raaste-hain-pyaar-ke-4/", added:"2026-08-15"},
+
+    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Hai Mera Dil",
+     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/hai-mera-dil-10/", added:"2026-08-15"},
+
+    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Equus",
+     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Peter Shaffer's classic, on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/equus/", added:"2026-08-15"},
+
+    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Is There Room on the Broom — A Twisted Tale",
+     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
+     note:"Children's theatre on NCPA's archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/is-there-room-on-the-broom-a-twisted-tale/", added:"2026-08-15"},
+
+    {date:"2026-09-05", a:"southmum", cat:"stage", name:"Hum Dono",
+     when:"Sat 5 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/hum-dono-8/", added:"2026-08-15"},
+
+    {date:"2026-09-05", a:"southmum", cat:"stage", name:"Phone Pe!",
+     when:"Sat 5 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/phone-pe-4/", added:"2026-08-15"},
+
+    {date:"2026-09-09", a:"southmum", cat:"stage", name:"Ghalib, Humen Na Chhed…!",
+     when:"Wed 9 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"A play on Ghalib. Another weeknight slot on NCPA's archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/ghalib-humen-na-chhed/", added:"2026-08-15"},
+
+    {date:"2026-09-13", a:"southmum", cat:"stage", name:"Karn — Women's Series",
+     when:"Sun 13 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Part of a Women's Series double-bill with Mahadev, same day.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/karn-womens-series/", added:"2026-08-15"},
+
+    {date:"2026-09-13", a:"southmum", cat:"stage", name:"Mahadev — Women's Series",
+     when:"Sun 13 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Runs the same day as Karn in the same series.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/mahadev-womens-series/", added:"2026-08-15"},
+
+    {date:"2026-09-20", a:"southmum", cat:"stage", name:"Jigsaw",
+     when:"Sun 20 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/jigsaw/", added:"2026-08-15"},
+
+    {date:"2026-09-26", a:"southmum", cat:"stage", name:"Ajaatshatru",
+     when:"Sat 26 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Listed on NCPA's theatre archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/ajaatshatru-3/", added:"2026-08-15"},
+
+    {date:"2026-09-27", a:"southmum", cat:"music", name:"Mame Khan's Rock 'N' Roots Project",
+     when:"Sun 27 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Folk-rock fusion built on Rajasthani roots.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/mame-khans-rock-n-roots-project/", added:"2026-08-15"},
+
+    {date:"2026-09-27", a:"southmum", cat:"stage", name:"Grufalo — The Twisted Tale",
+     when:"Sun 27 Sep · time on the listing", where:"NCPA, Nariman Point",
+     note:"Children's theatre on NCPA's archive.",
+     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/grufalo-the-twisted-tale-5/", added:"2026-08-15"},
+
+    /* ================= ROYAL OPERA HOUSE, GIRGAON ================= */
+    {date:"2026-08-23", a:"southmum", cat:"stage", name:"The Wizard of Oz",
+     when:"Sun 23 Aug · 11:30 AM & 4:30 PM", where:"Royal Opera House, Girgaon",
+     note:"A restored 1911 opera house turned proper touring venue. Two shows the same day for an English-language family musical.",
+     cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/thewizardofoz-651", added:"2026-08-15"},
+
+    {date:"2026-09-06", a:"southmum", cat:"music", name:"ABBA Tribute Show",
+     when:"Sun 6 Sep · 6:30 PM", where:"Royal Opera House, Girgaon",
+     cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/abbatributeshow-650", added:"2026-08-15",
+     note:"A tribute set inside a genuinely historic room."},
+
+    {date:"2026-10-11", a:"southmum", cat:"stage", name:"Gauhar",
+     when:"Sun 11 Oct · 7:30 PM", where:"Royal Opera House, Girgaon",
+     note:"English-language drama.",
+     cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/gauhar-660", added:"2026-08-15"},
+
+    /* ================= BANDRA & KHAR ================= */
+    {date:"2026-08-23", a:"bandra", cat:"food", name:"Toast & Tunes",
+     when:"Sun 23 Aug · 11:00 AM–1:00 PM", where:"CinCin, Bandra West",
+     note:"A brunch built around a live music set rather than the other way round.",
+     cost:"₹999–₹1,299", url:"https://allevents.in/mumbai/toast-and-tunes-at-cincin-bandra-23rd-aug-11am-1pm-tickets/80005347866528", added:"2026-08-15"},
+
+    {date:"2026-08-26", a:"bandra", cat:"expo", name:"13th Speciality Films & Flexible Packaging Summit",
+     when:"Wed 26–Thu 27 Aug · 7:00 AM–7:00 PM", where:"Jio World Convention Centre, BKC",
+     note:"A B2B packaging-industry summit across two full weekdays — the kind of trade event that never shows up on a consumer aggregator.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/13th-speciality-films-and-flexible-packaging-summit-2026/80007558417837", added:"2026-08-15"},
+
+    {date:"2026-08-30", a:"bandra", cat:"outdoors", name:"Mumbai Half Marathon 2026",
+     when:"Sun 30 Aug · 5:00 AM", where:"Jio World Garden, BKC",
+     note:"5K, 10K and 21K options at the same start line, run by RunnersDuniya.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/mumbai-half-marathon-2026/200030236658650", added:"2026-08-15"},
+
+    /* ================= ANDHERI & JUHU ================= */
+    {date:"2026-08-15", a:"andheri", cat:"stage", name:"Pratyush Chaubey Live",
+     when:"Sat 15 Aug · 6:00 PM", where:"The J Spot, Juhu",
+     note:"District's listing URL carries a stray 2025 date fragment in its slug, but the page itself confirms tonight, 6 PM — the slug is a leftover, not the truth.",
+     cost:"₹499", url:"https://www.district.in/events/pratyush-chaubey-live-aug16-2025-buy-tickets", added:"2026-08-15"},
+
+    {date:"2026-08-15", a:"andheri", cat:"stage", name:"Single vs Married",
+     when:"Sat 15 Aug · 6:00 PM", where:"Ink A Laugh, Vile Parle West",
+     note:"A relationship-themed set at the venue that carries Vile Parle's densest recurring comedy roster.",
+     cost:"₹299+", url:"https://www.district.in/events/single-vs-married-stand-up-comedy-show-feb21-2026-buy-tickets", added:"2026-08-15"},
+
+    {date:"2026-08-22", a:"andheri", cat:"ai", name:"How Founders Use AI — Mumbai Edition",
+     when:"Sat 22 Aug · 11:00 AM–1:00 PM", where:"DevX Dynasty, Andheri East",
+     note:"An eChai founder panel on applied AI. The startup-meetup format that already works well on the Delhi board, now with a real Mumbai date.",
+     cost:"Ticketed", url:"https://echai.ventures/events/how-founders-use-ai-mumbai-edition-aug-22-2026", added:"2026-08-15"},
+
+    {date:"2026-08-29", a:"andheri", cat:"stage", name:"Adultrated — A Stand-up Comedy Show",
+     when:"Sat 29 Aug · 8:00 PM", where:"Ink A Laugh, Vile Parle West",
+     cost:"₹299+", url:"https://www.district.in/events/adultrated-a-standup-comedy-show-jun27-2026-buy-tickets", added:"2026-08-15",
+     note:"A named set rather than one of the venue's recurring nights."},
+
+    {date:"2026-09-26", a:"andheri", cat:"startup", name:"eChai Startup Demo Day — Mumbai",
+     when:"Sat 26 Sep · 11:00 AM–1:00 PM", where:"DevX Dynasty, Andheri East",
+     note:"The Mumbai leg of eChai's multi-city demo day series, already a Saturday-morning fixture on the Delhi board.",
+     cost:"Ticketed", url:"https://echai.ventures/events/echai-startup-demo-day-in-mumbai-sep-26-2026", added:"2026-08-15"},
+
+    /* ================= LOWER PAREL & WORLI ================= */
+    {date:"2026-08-28", a:"parel", cat:"food", name:"Dinner Service by PORT",
+     when:"Fri 28 Aug · 7:00–8:45 PM", where:"PORT, Worli",
+     note:"A community dinner series inside G5A's building — new dishes each sitting, with the kitchen team talking through each course.",
+     cost:"Ticketed", url:"https://warehouse.g5a.org/calendar/dinner-service-by-port-2/?occurrence=2026-08-28", added:"2026-08-15"},
+
+    {date:"2026-09-05", a:"parel", cat:"stage", name:"IMPROV with Sahir",
+     when:"Sat 5 Sep · 11:30 AM–5:00 PM · more dates through 27 Sep", where:"G5A Foundation, Worli",
+     note:"A recurring improv workshop series — pick a date on the listing if this one doesn't suit.",
+     cost:"Ticketed", url:"https://warehouse.g5a.org/calendar/improv-with-sahir2-0/?occurrence=2026-09-05", added:"2026-08-15"},
+
+    /* ================= POWAI & VIKHROLI ================= */
+    {dow:6, a:"powai", cat:"craft", name:"Hand Built Pottery Date — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"Hand-building rather than the wheel — a slower, more conversational session than a throwing class.",
+     cost:"₹1,099+", url:"https://www.district.in/events/hand-built-pottery-date-mumbai-jul19-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"Coil Pottery Date — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"A different pottery technique from the same weekly slot at Hitchki.",
+     cost:"₹1,099+", url:"https://www.district.in/events/coil-pottery-date-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"Pottery Hug — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"A partner-format pottery session, built for two.",
+     cost:"₹1,499+", url:"https://www.district.in/events/pottery-hug-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"Boho Texture Art Date — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"Texture painting rather than pottery — the same venue's non-clay option.",
+     cost:"₹1,299+", url:"https://www.district.in/events/boho-texture-art-date-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"DIY Shell Mirror — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"A take-home craft piece rather than a wheel session.",
+     cost:"₹1,499+", url:"https://www.district.in/events/diy-shell-mirror-mumbai-aug8-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"Block Printing Date — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"Fabric block-printing, the same recurring Saturday format.",
+     cost:"₹1,099+", url:"https://www.district.in/events/block-printing-date-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
+
+    {dow:6, a:"powai", cat:"craft", name:"Terrarium Workshop Date — Hitchki",
+     when:"Every Saturday", where:"Hitchki, Powai",
+     note:"Small enough to carry home on the train. The priciest of Hitchki's Saturday craft slate.",
+     cost:"₹1,999+", url:"https://www.district.in/events/terrarium-workshop-date-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
+
+    {date:"2026-08-22", a:"powai", cat:"music", name:"SoundRise",
+     when:"Sat 22 Aug · 7:00–9:00 PM", where:"Interio by Godrej — exact locality unconfirmed",
+     note:"Placed here on Godrej's Vikhroli base, but the listing itself doesn't pin the address — confirm the room before travelling far.",
+     cost:"₹699", url:"https://allevents.in/mumbai/soundrise-at-interio-by-godrej-22nd-aug-7pm-9pm-tickets/80003022674609", added:"2026-08-15"},
+
+    /* ================= MULTI / ROTATING ================= */
+    {date:"2026-08-15", a:"multi", cat:"speak", name:"The Unspoken Circle — Poetry & Storytelling",
+     when:"Sat 15 Aug · 6:00–8:00 PM", where:"Ghantaghar — exact locality unconfirmed",
+     note:"An open mic for poetry and storytelling rather than comedy.",
+     cost:"₹199", url:"https://allevents.in/mumbai/the-unspoken-circle-tickets/80002723631392", added:"2026-08-15"},
+
+    {date:"2026-08-16", a:"multi", cat:"speak", name:"Mumbai Open Mic",
+     when:"Sun 16 Aug · 3:30–4:30 PM", where:"Rasā — The Stage",
+     note:"A short, community-run open mic slot.",
+     cost:"₹149–₹199", url:"https://allevents.in/mumbai/mumbai-open-mic-16th-august-2026-tickets/80003659526488", added:"2026-08-15"},
+
+    {date:"2026-08-16", a:"multi", cat:"speak", name:"LIT-MIC — Edition 21",
+     when:"Sun 16 Aug · 4:00–7:00 PM", where:"Rasā — The Stage",
+     note:"Poetry, music, comedy and storytelling in one longer slot, same venue and day as the shorter Mumbai Open Mic.",
+     cost:"₹169–₹239", url:"https://allevents.in/mumbai/lit-mic-mumbai-open-mic-poetry-music-comedy-storytelling-edition-21-tickets/80001068749953", added:"2026-08-15"},
+
+    {date:"2026-08-20", a:"multi", cat:"music", name:"Mika Singh in Mumbai",
+     when:"Thu 20 Aug · 7:00–9:00 PM", where:"Shanmukhananda Hall, Sion",
+     note:"A playback-singer concert on a Thursday — one of this refresh's better weeknight finds.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/mika-singh-in-mumbai/3300030278384954", added:"2026-08-15"},
+
+    {date:"2026-08-21", a:"multi", cat:"stage", name:"Kal Ki Chinta Nahi Karta — Ravi Gupta",
+     when:"Fri 21 Aug · 7:30–9:30 PM", where:"Sri Shanmukhananda Fine Arts & Sangeetha, Sion",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/kal-ki-chinta-nahi-karta-ft-ravi-gupta/3900030185655350", added:"2026-08-15",
+     note:"A full solo stand-up hour."},
+
+    {date:"2026-08-22", a:"multi", cat:"music", name:"Soul India",
+     when:"Sat 22 Aug · 7:30–10:00 PM", where:"Shanmukhananda Hall, Sion",
+     note:"A music concert in the same Sion hall that carries several of this refresh's finds.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/soul-india/3900030397772143", added:"2026-08-15"},
+
+    {date:"2026-08-22", a:"multi", cat:"music", name:"Usha Uthup Live in Concert",
+     when:"Sat 22 Aug · 8:30–10:30 PM", where:"Mahakavi Kalidas Natyamandir, Mulund",
+     note:"A short-tour date — a second Usha Uthup show later in the month plays Navi Mumbai instead, so check the venue before booking.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/usha-uthup-live-in-concert-mumbai/3900030057244357", added:"2026-08-15"},
+
+    {date:"2026-08-23", a:"multi", cat:"books", name:"Kusumagraj — Marathi Open Mic",
+     when:"Sun 23 Aug · 6:00 PM", where:"Kitaabghar Reading Room and Bookshop",
+     note:"A Marathi literature and poetry celebration in a small independent bookshop.",
+     cost:"Not specified", url:"https://allevents.in/mumbai/kusumagraj-marathi-open-mic/3900030462720230", added:"2026-08-15"},
+
+    {date:"2026-08-27", a:"multi", cat:"music", name:"Harshdeep Kaur — Noor-e-Ishq",
+     when:"Thu 27 Aug · 7:00 PM", where:"Shanmukhananda Hall, Sion",
+     note:"A Sufi and playback set on a Thursday — this refresh's third weeknight find at this same hall.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/noor-e-ishq-harshdeep-kaur/3900030279946537", added:"2026-08-15"},
+
+    {date:"2026-09-05", a:"multi", cat:"stage", name:"Love, Death & Ketchup — Varun Grover",
+     when:"Sat 5 Sep · 4:30 PM", where:"Bal Gandharva Rang Mandir, Prabhadevi",
+     note:"The same touring stand-up/storytelling special already on the Delhi board, now with a real Mumbai date.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/love-death-and-ketchup-by-varun-grover/3900030183204406", added:"2026-08-15"}
+  ];
+
+  var CLASSES = [
+    {tone:"--c-craft", title:"Hitchki, Powai — the anchor venue", items:[
+      {n:"Hand Built Pottery Date", u:"https://www.district.in/events/hand-built-pottery-date-mumbai-jul19-2026-buy-tickets",
+       d:"Every Saturday, ₹1,099+. One of seven distinct craft slots this venue runs weekly — the fullest single-venue programme found in Powai."},
+      {n:"Terrarium Workshop Date", u:"https://www.district.in/events/terrarium-workshop-date-mumbai-apr18-2026-buy-tickets",
+       d:"Every Saturday, ₹1,999+. A take-home piece rather than a wheel session."},
+      {n:"Pottery Hug", u:"https://www.district.in/events/pottery-hug-mumbai-apr18-2026-buy-tickets",
+       d:"Every Saturday, ₹1,499+. A partner-format session, built for two."}
+    ]},
+    {tone:"--c-stage", title:"Ink A Laugh, Vile Parle West — the anchor venue", items:[
+      {n:"The Dirty Talk", u:"https://www.district.in/events/inkalaugh-presents-the-dirty-talk-standup-comedy-show-sep26-2025-buy-tickets",
+       d:"Sunday, Friday and Saturday, 2:00–3:30 PM, from ₹149 — the cheapest recurring room found this refresh."},
+      {n:"Hate My Job", u:"https://www.district.in/events/inkalaugh-presents-hate-my-job-standup-comedy-show-sep26-2025-buy-tickets",
+       d:"Multiple weekly dates, from ₹249."},
+      {n:"Roasting Relationships", u:"https://www.district.in/events/inkalaugh-presents-roasting-relationships-standup-comedy-show-sep26-2025-buy-tickets",
+       d:"Sunday through Monday, from ₹249."}
+    ]}
+  ];
+
+  /* ---------------- helpers ---------------- */
+  function d(s){ var p = s.split("-"); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function iso(dt){
+    return dt.getFullYear() + "-" +
+      String(dt.getMonth()+1).padStart(2,"0") + "-" +
+      String(dt.getDate()).padStart(2,"0");
+  }
+  function daysBetween(a,b){ return Math.round((d(b) - d(a)) / 86400000); }
+  function addDays(s,n){ var dt = d(s); dt.setDate(dt.getDate()+n); return iso(dt); }
+
+  /* the reader's real date, read from their browser at load */
+  var NOW = iso(new Date());
+  /* far end of "Everything ahead" — ~18 months out, relative so it never goes stale */
+  var HORIZON = addDays(NOW, 550);
+
+  /* ---------------- saved events ----------------
+     Saves live in this browser's localStorage and nowhere else. There is no
+     account and no server behind this page, so a save cannot travel to anyone
+     else's copy of the board - including the person who shared it with you. */
+  var SAVE_KEY = "mumbaiCircle.saved.v1";
+  var saved = (function(){
+    try { return JSON.parse(localStorage.getItem(SAVE_KEY) || "[]"); }
+    catch (err) { return []; }        // private mode / storage disabled
+  })();
+  function keyOf(e){ return e.name + "|" + (e.date || ("d" + e.dow)); }
+  function isSaved(e){ return saved.indexOf(keyOf(e)) !== -1; }
+  function toggleSaved(k){
+    var i = saved.indexOf(k);
+    if (i === -1) saved.push(k); else saved.splice(i, 1);
+    try { localStorage.setItem(SAVE_KEY, JSON.stringify(saved)); } catch (err) {}
+  }
+  /* keys carry & and quotes, so they must be escaped before going in an attribute */
+  function attr(s){
+    return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+  }
+  function isNew(e){
+    if (e.added <= BASELINE) return false;   // baseline load is not "new"
+    var age = daysBetween(e.added, TODAY);
+    return age >= 0 && age < NEW_WINDOW_DAYS;
+  }
+  function fmtAdded(s){
+    var p = s.split("-");
+    var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return +p[2] + " " + m[+p[1]-1];
+  }
+  /* which weekdays occur between two dates (inclusive).
+     Stops as soon as all seven are seen — ranges now run to 2028, and walking
+     550 days one at a time to learn "yes, all of them" is pointless. */
+  function dowsInRange(from, to){
+    var set = {}, cur = d(from), end = d(to), n = 0, found = 0;
+    while (cur <= end && n < 400){
+      if (!set[cur.getDay()]){ set[cur.getDay()] = true; if (++found === 7) break; }
+      cur.setDate(cur.getDate()+1); n++;
+    }
+    return set;
+  }
+  /* the When label: carry the year only when the range straddles two of them */
+  function fmtWhen(a, b){
+    var ya = a.slice(0,4), yb = b.slice(0,4), span = ya !== yb;
+    return fmtAdded(a) + (span ? " " + ya : "") + " – " + fmtAdded(b) + (span ? " " + yb : "");
+  }
+
+  /* opens on the coming week — a 550-day default piles every Saturday between now and
+     2028 into one column, which is not what this view is shaped for */
+  var DEF_FROM = NOW, DEF_TO = addDays(NOW, 6);
+  /* areas and cats are lists, not single values - "Bandra or Powai" and "board games
+     AND startup" are both normal things to want to ask for. Empty list = no filter. */
+  var state = {areas:[], cats:[], free:false, onlyNew:false, wknd:false,
+               onlySaved:false, q:"", near:0, price:"", from:DEF_FROM, to:DEF_TO};
+
+  /* ---------------- what it costs ----------------
+     The cost strings are written for readers: "₹599–₹1,599", "₹499+", "Free as guest",
+     "Ticketed". Banding them needs a number, so take the FIRST rupee figure in the
+     string — the cheapest ticket, which is what "under ₹500" means to someone deciding
+     whether to go.
+
+     Two things are deliberately NOT parsed:
+       - anything without a ₹. "Ticketed", "Cover charge", "Venue spend", "Varies" carry
+         no number at all, and 59 cards say only "Ticketed". Guessing a band for those
+         would put made-up prices in front of the reader.
+       - foreign currency. "USD 54–748" would otherwise read as ₹54, which is off by a
+         factor of nearly a hundred.
+     Unknown is unknown: those cards drop out of a price band rather than being assumed
+     cheap. The menu says so, because a filter that silently hides a third of the board
+     is worse than one that explains itself. */
+  var PRICE_OPTS = [
+    {k:"u300",  label:"Under ₹300",     lo:0,    hi:299},
+    {k:"u500",  label:"Under ₹500",     lo:0,    hi:499},
+    {k:"u1000", label:"Under ₹1,000",   lo:0,    hi:999},
+    {k:"o1000", label:"₹1,000 and over", lo:1000, hi:Infinity}
+  ];
+  var PRICEMAP = {}; PRICE_OPTS.forEach(function(o){ PRICEMAP[o.k] = o; });
+
+  function priceOf(e){
+    if (e.free) return 0;                       // the board's own free flag wins
+    var s = String(e.cost || "");
+    if (/USD|EUR|\$/i.test(s)) return null;     // not rupees, not comparable
+    var m = s.replace(/,/g, "").match(/₹\s*(\d+)/);
+    return m ? Number(m[1]) : null;
+  }
+
+  /* Radii, not travel times. 3 km is "walk or one short auto", 20 km is "most of NCR". */
+  var NEAR_OPTS = [
+    {km:3,  label:"Within 3 km"},
+    {km:5,  label:"Within 5 km"},
+    {km:10, label:"Within 10 km"},
+    {km:20, label:"Within 20 km"}
+  ];
+
+  function inRange(e, dows){
+    if (e.date) return e.date >= state.from && e.date <= state.to;
+    return !!dows[e.dow];
+  }
+  function matches(e){
+    if (state.areas.length && state.areas.indexOf(e.a) === -1) return false;
+    if (state.cats.length && state.cats.indexOf(e.cat) === -1) return false;
+    if (state.free && !e.free) return false;
+    if (state.onlyNew && !isNew(e)) return false;
+    if (state.onlySaved && !isSaved(e)) return false;
+    if (state.wknd){
+      var day = e.date ? d(e.date).getDay() : e.dow;
+      if (day !== 0 && day !== 6) return false;
+    }
+    if (state.price){
+      var band = PRICEMAP[state.price];
+      if (band){
+        var pr = priceOf(e);
+        /* no listed price cannot claim to be under ₹300 */
+        if (pr === null || pr < band.lo || pr > band.hi) return false;
+      }
+    }
+    if (state.near && origin){
+      var km = distanceKm(e);
+      /* A venue with no coordinates cannot honestly claim to be within the radius, so
+         it drops out rather than being assumed near. */
+      if (km === null || km > state.near) return false;
+    }
+    if (state.q){
+      var hay = (e.name+" "+e.where+" "+e.note+" "+e.when+" "
+                 +(e.mt || TRANSIT[e.a] || "")+" "+(CATMAP[e.cat]||{}).label).toLowerCase();
+      if (hay.indexOf(state.q) === -1) return false;
+    }
+    return true;
+  }
+
+  /* ---------------- directions ----------------
+     Google is handed the venue and works out the origin from the reader's own device,
+     so the board never asks for a location and never stores one. Live traffic and the
+     real route come from their Maps app, which is better than anything this page could
+     estimate on its own.
+
+     The venue strings are written for humans, not geocoders: "TOT Studio — Lajpat Nagar /
+     GK / Defence Colony" names three branches, and a query carrying all three lands
+     nowhere. So cut at the first separator and send the first, most specific fragment.
+     Append the city only when the string doesn't already name one, or Maps drifts to the
+     wrong Nehru Place. */
+  var CITY_WORDS = /mumbai|bombay|thane|navi mumbai|maharashtra/i;
+  /* Some venues are not places you can be routed to: a bare city name, a venue that is
+     only disclosed after you register, or a walking route across a whole precinct.
+     Sending those to Maps drops the reader at a city centre and quietly pretends that
+     is the venue — worse than offering nothing. Those cards get no Directions link. */
+  var UNROUTABLE = /^(south\s+)?mumbai$|^bombay$|^navi\s+mumbai$|^thane$|^(bandra|andheri|powai|parel|worli|juhu|khar)$|varies|venue shared|venue on|to be announced|rotating|multiple venues|across the city/i;
+  /* One fragment rule, used by both the Directions link and the coordinate lookup, so a
+     venue can never be routable for one and unknown to the other. tools\geocode.ps1
+     carries the same rule — change it in both places or distances go missing. */
+  function venueFragment(e){
+    var q = String(e.where || "").split(/\s+[\/·]\s+|\s+—\s+/)[0].trim();
+    return (!q || UNROUTABLE.test(q)) ? "" : q;
+  }
+  function mapQuery(e){
+    var q = venueFragment(e);
+    if (!q) return "";
+    if (!CITY_WORDS.test(q)) q += ", Mumbai";
+    return "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q);
+  }
+
+  /* ---------------- how far away it is ----------------
+     Straight-line distance from wherever the reader says they are. This is NOT drive
+     time: Mumbai's roads and the sea-facing detours around it run well past the
+     crow-flies distance, and traffic does the rest. It is shown as an approximation and
+     never dressed up as a travel time — the Directions link exists for the real answer.
+
+     The reader's position is asked for once, kept in this browser's localStorage and
+     sent nowhere. There is no server to send it to. */
+  var ORIGIN_KEY = "mumbaiCircle.origin.v1";
+  var origin = null;                    // {lat, lon, label}
+
+  function readOrigin(){
+    try {
+      var o = JSON.parse(localStorage.getItem(ORIGIN_KEY) || "null");
+      return (o && isFinite(o.lat) && isFinite(o.lon)) ? o : null;
+    } catch (err) { return null; }
+  }
+  function writeOrigin(o){
+    try {
+      if (o) localStorage.setItem(ORIGIN_KEY, JSON.stringify(o));
+      else localStorage.removeItem(ORIGIN_KEY);
+    } catch (err) {}
+  }
+
+  function haversine(aLat, aLon, bLat, bLon){
+    var R = 6371, rad = Math.PI / 180;
+    var dLat = (bLat - aLat) * rad, dLon = (bLon - aLon) * rad;
+    var s = Math.sin(dLat/2) * Math.sin(dLat/2)
+          + Math.cos(aLat*rad) * Math.cos(bLat*rad) * Math.sin(dLon/2) * Math.sin(dLon/2);
+    return 2 * R * Math.asin(Math.min(1, Math.sqrt(s)));
+  }
+
+  /* km from the reader, or null when either end is unknown */
+  function distanceKm(e){
+    if (!origin) return null;
+    var v = VENUES[venueFragment(e)];
+    if (!v) return null;
+    return haversine(origin.lat, origin.lon, v[0], v[1]);
+  }
+  /* Tier 2 venues are only located to their neighbourhood, so a tenth of a kilometre
+     would be false precision — those round to whole kilometres and keep the "about". */
+  function distanceLabel(e){
+    var km = distanceKm(e);
+    if (km === null) return "";
+    var tier = (VENUES[venueFragment(e)] || [])[2];
+    if (tier === 1) return (km < 10 ? km.toFixed(1) : Math.round(km)) + " km away";
+    return "about " + Math.max(1, Math.round(km)) + " km away";
+  }
+
+  function cardHTML(e){
+    var c = CATMAP[e.cat] || {label:e.cat, tone:"--c-social"};
+    var dir = mapQuery(e);
+    var sv = isSaved(e);
+    var area = AREAMAP[e.a]
+      ? '<span class="tag">' + AREAMAP[e.a].label + '</span>' : '';
+    var far = distanceLabel(e);
+    var metro = ''
+      + '<div class="metro">'
+      +   '<span><i>station</i> <b>' + (e.mt || TRANSIT[e.a] || "—") + '</b></span>'
+      +   (far ? '<span><i>distance</i> <b>' + far + '</b></span>' : '')
+      + '</div>';
+    return ''
+      + '<article class="card" style="--tone:var(' + c.tone + ')">'
+      +   '<div class="cbar"></div>'
+      +   '<div class="cbody">'
+      +     '<div class="toprow">'
+      +       '<span class="cat">' + c.label + '</span>' + area
+      +       (isNew(e) ? '<span class="tag isnew">New</span>' : '')
+      +     '</div>'
+      +     '<h3>' + e.name + '</h3>'
+      +     '<div class="when">' + e.when + '</div>'
+      +     '<div class="where">' + e.where + '</div>'
+      +     metro
+      +     '<p class="note">' + e.note + '</p>'
+      +   '</div>'
+      +   '<div class="foot">'
+      +     '<span class="cost' + (e.free ? ' is-free' : '') + '">' + e.cost + '</span>'
+      +     (e.url ? '<a class="go" href="' + e.url + '">Open</a>' : '')
+      +     (dir ? '<a class="map" href="' + attr(dir) + '" target="_blank" rel="noopener">Directions</a>' : '')
+      +     (e.tel ? '<a class="tel" href="tel:' + e.tel + '">' + e.tel.replace("+91","") + '</a>' : '')
+      +     '<button class="save" type="button" data-k="' + attr(keyOf(e)) + '"'
+      +       ' aria-pressed="' + (sv ? 'true' : 'false') + '">'
+      +       (sv ? '★ Saved' : 'Save') + '</button>'
+      +     '<span class="added">Added ' + fmtAdded(e.added) + '</span>'
+      +   '</div>'
+      + '</article>';
+  }
+
+  function render(){
+    var dows = dowsInRange(state.from, state.to);
+    var shown = E.filter(function(e){ return inRange(e, dows) && matches(e); });
+
+    /* group by weekday: Mon..Sun so the working week reads first */
+    var order = [1,2,3,4,5,6,0];
+    var buckets = {}; order.forEach(function(i){ buckets[i] = []; });
+    shown.forEach(function(e){
+      var day = e.date ? d(e.date).getDay() : e.dow;
+      buckets[day].push(e);
+    });
+
+    var html = "";
+    order.forEach(function(i){
+      var rows = buckets[i];
+      if (!rows.length) return;
+      var wknd = (i === 0 || i === 6);
+      html += '<div class="daygroup">'
+           +    '<div class="dayhead' + (wknd ? ' wknd' : '') + '" data-d="' + i + '">'
+           +      '<h2>' + DAYNAMES[i] + '</h2>'
+           +      '<span class="dnote">' + DAYNOTE[i] + '</span>'
+           +      '<span class="dn">' + rows.length + '</span>'
+           +    '</div>'
+           +    '<div class="grid">' + rows.map(cardHTML).join("") + '</div>'
+           + '</div>';
+    });
+
+    document.getElementById("days").innerHTML = html;
+    document.getElementById("daysEmpty").style.display = shown.length ? "none" : "block";
+    document.getElementById("count").textContent =
+      shown.length + (shown.length === 1 ? " thing" : " things");
+
+    document.getElementById("tCount").textContent = shown.length;
+    document.getElementById("tNew").textContent = shown.filter(isNew).length;
+    document.getElementById("tFree").textContent = shown.filter(function(e){return e.free;}).length;
+    document.getElementById("tWknd").textContent = shown.filter(function(e){
+      var day = e.date ? d(e.date).getDay() : e.dow; return day === 0 || day === 6;
+    }).length;
+    document.getElementById("tCat").textContent =
+      Object.keys(shown.reduce(function(a,e){ a[e.cat]=1; return a; }, {})).length;
+
+    /* the saved count only earns a place in the tally once there is one */
+    var nSaved = shown.filter(isSaved).length;
+    document.getElementById("tSaved").textContent = nSaved;
+    document.getElementById("tSavedWrap").style.display = nSaved ? "" : "none";
+
+    renderSaved();
+    syncLabels();
+    writeHash();
+  }
+
+  /* The saved list deliberately ignores the date range and every filter. A saved thing
+     you cannot find because the week moved on would defeat the point of saving it. */
+  function renderSaved(){
+    var items = E.filter(isSaved).sort(function(a, b){
+      var ad = a.date || "", bd = b.date || "";
+      if (ad && bd) return ad < bd ? -1 : (ad > bd ? 1 : 0);
+      if (ad) return -1;                       // dated things first, soonest first
+      if (bd) return 1;
+      var ao = (a.dow === 0 ? 7 : a.dow), bo = (b.dow === 0 ? 7 : b.dow);
+      return ao - bo;                          // then weekly ones, Mon through Sun
+    });
+    document.getElementById("savedGrid").innerHTML = items.map(cardHTML).join("");
+    document.getElementById("savedEmpty").style.display = items.length ? "none" : "block";
+    document.getElementById("tabSavedN").textContent = items.length ? items.length : "";
+  }
+
+  /* Delegated on document, not on #days - the same buttons appear in the Saved tab, and
+     cards are rebuilt as HTML on every render so per-button listeners would not survive. */
+  document.addEventListener("click", function(ev){
+    var btn = ev.target.closest && ev.target.closest(".save");
+    if (!btn) return;
+    toggleSaved(btn.getAttribute("data-k"));
+    render();
+  });
+
+  /* ---------------- build the What menu ---------------- */
+  var catRow = document.getElementById("catRow");
+  catRow.appendChild(Object.assign(document.createElement("div"),
+    {className:"dd-note", textContent:"Pick as many types as you like"}));
+  var allBtn = document.createElement("button");
+  allBtn.className = "dd-item"; allBtn.type = "button";
+  allBtn.setAttribute("data-cat","all");
+  allBtn.setAttribute("aria-pressed","true");
+  allBtn.innerHTML = 'Any type of event<span class="tick">✓</span>';
+  catRow.appendChild(allBtn);
+  catRow.appendChild(Object.assign(document.createElement("div"), {className:"dd-sep"}));
+  CATS.forEach(function(c){
+    var b = document.createElement("button");
+    b.className = "dd-item"; b.type = "button";
+    b.setAttribute("data-cat", c.k);
+    b.setAttribute("aria-pressed","false");
+    b.style.setProperty("--tone","var("+c.tone+")");
+    b.innerHTML = '<span class="swatch"></span>' + c.label + '<span class="tick">✓</span>';
+    catRow.appendChild(b);
+  });
+
+  /* ---------------- build the Where menu ---------------- */
+  var areaRow = document.getElementById("areaRow");
+  areaRow.appendChild(Object.assign(document.createElement("div"),
+    {className:"dd-note", textContent:"Pick as many areas as you like"}));
+  var anyArea = document.createElement("button");
+  anyArea.className = "dd-item"; anyArea.type = "button";
+  anyArea.setAttribute("data-area","all");
+  anyArea.setAttribute("aria-pressed","true");
+  anyArea.innerHTML = 'Anywhere in Mumbai<span class="tick">✓</span>';
+  areaRow.appendChild(anyArea);
+  areaRow.appendChild(Object.assign(document.createElement("div"), {className:"dd-sep"}));
+  AREAS.forEach(function(a){
+    var b = document.createElement("button");
+    b.className = "dd-item"; b.type = "button";
+    b.setAttribute("data-area", a.k);
+    b.setAttribute("aria-pressed","false");
+    b.innerHTML = a.label
+      + '<span class="ddmeta">' + (TRANSIT[a.k] || "—") + '</span>'
+      + '<span class="tick">✓</span>';
+    areaRow.appendChild(b);
+  });
+
+  /* One helper drives both What and Where: click an "all" pill to clear, click any
+     other to toggle it in or out of the list. Identical shape, so one function. */
+  var multiSyncers = [];
+  function setupMultiSelect(attr, key){
+    function sync(){
+      Array.prototype.slice.call(document.querySelectorAll("[data-"+attr+"]")).forEach(function(b){
+        var v = b.getAttribute("data-"+attr);
+        var on = (v === "all") ? (state[key].length === 0) : (state[key].indexOf(v) !== -1);
+        b.setAttribute("aria-pressed", String(on));
+      });
+    }
+    Array.prototype.slice.call(document.querySelectorAll("[data-"+attr+"]")).forEach(function(b){
+      b.addEventListener("click", function(){
+        var v = b.getAttribute("data-"+attr);
+        if (v === "all") {
+          state[key] = [];
+        } else {
+          var i = state[key].indexOf(v);
+          if (i === -1) { state[key].push(v); } else { state[key].splice(i, 1); }
+        }
+        sync();
+        render();
+      });
+    });
+    multiSyncers.push(sync);
+    return sync;
+  }
+  setupMultiSelect("cat", "cats");
+  setupMultiSelect("area", "areas");
+  function syncMultiSelects(){ multiSyncers.forEach(function(s){ s(); }); }
+
+  function toggle(id, key){
+    var b = document.getElementById(id);
+    b.addEventListener("click", function(){
+      state[key] = !state[key];
+      b.setAttribute("aria-pressed", String(state[key]));
+      render();
+    });
+  }
+  toggle("freeBtn","free");
+  toggle("newBtn","onlyNew");
+  toggle("wkndBtn","wknd");
+  toggle("savedBtn","onlySaved");
+
+  /* ---------------- price ----------------
+     One band at a time: "under ₹300" and "under ₹500" overlap, so letting both be lit
+     would only ever mean the wider one. Clicking the lit band clears it. */
+  var priceRow = document.getElementById("priceRow");
+  PRICE_OPTS.forEach(function(o){
+    var b = document.createElement("button");
+    b.className = "dd-item"; b.type = "button";
+    b.setAttribute("data-price", o.k);
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML = o.label + '<span class="tick">✓</span>';
+    b.addEventListener("click", function(){
+      state.price = (state.price === o.k) ? "" : o.k;
+      syncPrice(); render();
+    });
+    priceRow.appendChild(b);
+  });
+  function syncPrice(){
+    Array.prototype.slice.call(priceRow.querySelectorAll("[data-price]")).forEach(function(b){
+      b.setAttribute("aria-pressed", String(state.price === b.getAttribute("data-price")));
+    });
+  }
+  syncPrice();
+
+  /* ---------------- near me ----------------
+     The radius buttons only appear once there is a location to measure from, because
+     "Within 5 km" of nothing is a control that cannot do anything. */
+  var nearRow     = document.getElementById("nearRow");
+  var nearNote    = document.getElementById("nearNote");
+  var locBtn      = document.getElementById("locBtn");
+  var locClearBtn = document.getElementById("locClearBtn");
+
+  NEAR_OPTS.forEach(function(o){
+    var b = document.createElement("button");
+    b.className = "dd-item"; b.type = "button";
+    b.setAttribute("data-km", String(o.km));
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML = o.label + '<span class="tick">✓</span>';
+    b.addEventListener("click", function(){
+      state.near = (state.near === o.km) ? 0 : o.km;   // clicking the lit one clears it
+      syncNear(); render();
+    });
+    nearRow.insertBefore(b, locBtn);
+  });
+
+  function syncNear(){
+    var have = !!origin;
+    Array.prototype.slice.call(nearRow.querySelectorAll("[data-km]")).forEach(function(b){
+      b.hidden = !have;
+      b.setAttribute("aria-pressed", String(have && state.near === Number(b.getAttribute("data-km"))));
+    });
+    locBtn.hidden = have;
+    locClearBtn.hidden = !have;
+    nearNote.textContent = have
+      ? "Straight-line distance from where you are — not drive time. Tap Directions for that."
+      : "Set where you are, and every card shows how far it is.";
+  }
+
+  locBtn.addEventListener("click", function(){
+    if (!navigator.geolocation){
+      nearNote.textContent = "This browser will not share a location.";
+      return;
+    }
+    nearNote.textContent = "Asking your browser…";
+    navigator.geolocation.getCurrentPosition(function(pos){
+      origin = {lat:pos.coords.latitude, lon:pos.coords.longitude, label:"current location"};
+      writeOrigin(origin);
+      syncNear(); render();
+    }, function(err){
+      /* denial is a legitimate answer, so say what happened and leave the board alone */
+      nearNote.textContent = (err && err.code === 1)
+        ? "Location permission was declined. The board works fine without it."
+        : "Could not get a location just now.";
+    }, {enableHighAccuracy:false, timeout:12000, maximumAge:600000});
+  });
+
+  locClearBtn.addEventListener("click", function(){
+    origin = null; state.near = 0;
+    writeOrigin(null);
+    syncNear(); render();
+  });
+
+  origin = readOrigin();
+  syncNear();
+
+  var from = document.getElementById("from"), to = document.getElementById("to");
+  function onDate(){
+    if (from.value) state.from = from.value;
+    if (to.value)   state.to   = to.value;
+    if (state.to < state.from){ state.to = state.from; to.value = state.to; }
+    render();
+  }
+  from.addEventListener("change", onDate);
+  to.addEventListener("change", onDate);
+
+  /* every preset anchors on NOW, never on the sweep date */
+  function setRange(a, b){ from.value = a; to.value = b; onDate(); }
+  document.getElementById("wkBtn").addEventListener("click", function(){
+    setRange(NOW, addDays(NOW, 6));
+  });
+  document.getElementById("m30Btn").addEventListener("click", function(){
+    setRange(NOW, addDays(NOW, 30));
+  });
+  document.getElementById("allBtn").addEventListener("click", function(){
+    setRange(NOW, HORIZON);
+  });
+
+  /* Calendar months, which is how people actually think about "August".
+     offset 0 = the month we are in, 1 = the one after it, and so on.
+     "This month" starts at NOW, never at the 1st - the first half of a month that has
+     already happened is not something anyone wants back on the board. */
+  function monthWindow(offset){
+    var d0 = d(NOW);
+    var first = new Date(d0.getFullYear(), d0.getMonth() + offset, 1);
+    var last  = new Date(d0.getFullYear(), d0.getMonth() + offset + 1, 0); // day 0 = last of prev
+    var from  = (offset === 0) ? NOW : iso(first);
+    return [from, iso(last)];
+  }
+  function monthShort(offset){
+    var d0 = d(NOW);
+    var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return m[new Date(d0.getFullYear(), d0.getMonth() + offset, 1).getMonth()];
+  }
+  /* name the months on the buttons, so "Next month" is unambiguous in August */
+  document.getElementById("thisMonBtn").innerHTML =
+    "This month · " + monthShort(0) + '<span class="tick">✓</span>';
+  document.getElementById("nextMonBtn").innerHTML =
+    "Next month · " + monthShort(1) + '<span class="tick">✓</span>';
+  document.getElementById("thisMonBtn").addEventListener("click", function(){
+    var r = monthWindow(0); setRange(r[0], r[1]);
+  });
+  document.getElementById("nextMonBtn").addEventListener("click", function(){
+    var r = monthWindow(1); setRange(r[0], r[1]);
+  });
+
+  var q = document.getElementById("q");
+  q.addEventListener("input", function(){
+    state.q = q.value.trim().toLowerCase(); render();
+  });
+
+  /* ---------------- classes directory ---------------- */
+  document.getElementById("classDir").innerHTML = CLASSES.map(function(g){
+    return '<div class="dirbox" style="--tone:var(' + g.tone + ')">'
+         +   '<div class="cbar"></div><h3>' + g.title + '</h3><ul>'
+         +   g.items.map(function(i){
+                return '<li><a href="' + i.u + '">' + i.n + '</a><span>' + i.d + '</span></li>';
+              }).join("")
+         +   '</ul></div>';
+  }).join("");
+
+  /* ---------------- dropdowns ---------------- */
+  var dds = Array.prototype.slice.call(document.querySelectorAll(".dd"));
+
+  function closeAll(except){
+    dds.forEach(function(dd){
+      if (dd === except) return;
+      dd.classList.remove("open");
+      dd.querySelector(".dd-trigger").setAttribute("aria-expanded","false");
+    });
+  }
+
+  dds.forEach(function(dd){
+    var trigger = dd.querySelector(".dd-trigger");
+    var menu    = dd.querySelector(".dd-menu");
+
+    trigger.addEventListener("click", function(ev){
+      ev.stopPropagation();
+      var willOpen = !dd.classList.contains("open");
+      closeAll(dd);
+      dd.classList.toggle("open", willOpen);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    /* clicks inside a menu must not bubble to the document closer */
+    menu.addEventListener("click", function(ev){ ev.stopPropagation(); });
+  });
+
+  /* only When closes on pick now - Where, What and Show all stack, so they stay open */
+  Array.prototype.slice.call(
+    document.querySelectorAll("#ddWhen .dd-item")
+  ).forEach(function(b){
+    b.addEventListener("click", function(){ closeAll(null); });
+  });
+
+  document.addEventListener("click", function(){ closeAll(null); });
+  document.addEventListener("keydown", function(ev){
+    if (ev.key === "Escape" || ev.key === "Esc") closeAll(null);
+  });
+
+  /* ---------------- trigger labels ---------------- */
+  /* AREAMAP supplies the Where label */
+
+  function setVal(id, text, active){
+    var el = document.getElementById(id);
+    el.textContent = text;
+    el.parentNode.classList.toggle("on", !!active);
+  }
+
+  function syncLabels(){
+    setVal("valWhen", fmtWhen(state.from, state.to), false);
+    /* area labels are long, so only one gets spelled out; past that, a count */
+    var areaTxt = "Anywhere";
+    if (state.areas.length === 1) {
+      areaTxt = (AREAMAP[state.areas[0]] || {}).label || state.areas[0];
+    } else if (state.areas.length > 1) {
+      areaTxt = state.areas.length + " areas";
+    }
+    setVal("valWhere", areaTxt, state.areas.length > 0);
+    /* one or two types read better spelled out; beyond that the trigger gets too wide */
+    var catTxt = "Any type";
+    if (state.cats.length === 1) {
+      catTxt = (CATMAP[state.cats[0]] || {}).label || state.cats[0];
+    } else if (state.cats.length === 2) {
+      catTxt = state.cats.map(function(k){ return (CATMAP[k] || {}).label || k; }).join(", ");
+    } else if (state.cats.length > 2) {
+      catTxt = state.cats.length + " types";
+    }
+    setVal("valWhat", catTxt, state.cats.length > 0);
+
+    var on = [];
+    if (state.onlySaved) on.push("Saved");
+    if (state.onlyNew)   on.push("New");
+    if (state.free)      on.push("Free");
+    if (state.wknd)      on.push("Sat & Sun");
+    setVal("valShow", on.length ? on.join(", ") : "All events", on.length > 0);
+
+    setVal("valPrice", state.price ? PRICEMAP[state.price].label : "Any price", !!state.price);
+
+    var nearTxt = "Any distance";
+    if (!origin) nearTxt = "Any distance";
+    else if (state.near) nearTxt = "Within " + state.near + " km";
+    else nearTxt = "Location set";
+    setVal("valNear", nearTxt, !!state.near);
+
+    var dirty = state.areas.length || state.cats.length || state.near || state.price
+             || state.free || state.onlyNew || state.wknd || state.onlySaved || state.q;
+    document.getElementById("clearBtn").classList.toggle("show", !!dirty);
+  }
+
+  /* ---------------- clear all ---------------- */
+  document.getElementById("clearBtn").addEventListener("click", function(){
+    /* clears the filters only - it must never wipe what you have saved */
+    state.areas = []; state.cats = [];
+    state.free = false; state.onlyNew = false; state.wknd = false;
+    state.onlySaved = false; state.q = ""; state.near = 0; state.price = "";
+    syncPrice();
+    /* clears the radius, keeps the location — same rule as Saves: Clear all is for
+       filters, not for the things you told this browser about yourself */
+    syncNear();
+    q.value = "";
+    syncMultiSelects();
+    ["newBtn","freeBtn","wkndBtn","savedBtn"].forEach(function(id){
+      document.getElementById(id).setAttribute("aria-pressed","false");
+    });
+    closeAll(null);
+    render();
+  });
+
+  /* ---------------- shareable filter state ----------------
+     The filters live in the URL hash, so "the board, filtered to Bandra board games"
+     is a link you can send rather than three dropdowns you have to describe.
+     Only non-default values are written, so an untouched board has a clean URL. */
+  function writeHash(){
+    var p = [], show = [];
+    if (state.areas.length) p.push("area=" + state.areas.join(","));
+    if (state.cats.length)  p.push("cat="  + state.cats.join(","));
+    if (state.onlySaved) show.push("saved");
+    if (state.onlyNew)   show.push("new");
+    if (state.free)      show.push("free");
+    if (state.wknd)      show.push("wknd");
+    if (show.length) p.push("show=" + show.join(","));
+    if (state.price) p.push("price=" + state.price);
+    if (state.q)     p.push("q=" + encodeURIComponent(state.q));
+    if (state.from !== DEF_FROM) p.push("from=" + state.from);
+    if (state.to   !== DEF_TO)   p.push("to="   + state.to);
+    var h = p.length ? "#" + p.join("&") : "";
+    if (h !== location.hash) {
+      /* replaceState, not a hash assignment: every filter click should not become a
+         separate back-button step, and replaceState does not re-fire hashchange */
+      history.replaceState(null, "", location.pathname + location.search + h);
+    }
+  }
+
+  var ISO_RE = /^\d{4}-\d{2}-\d{2}$/;
+  function readHash(){
+    var h = location.hash.replace(/^#/, "");
+    /* A hash describes the WHOLE view, not a patch on the current one. Reset first, or
+       following one shared link after another silently keeps the earlier filters - and
+       an unrecognised key would leave the reader looking at someone else's board. */
+    state.areas = []; state.cats = [];
+    state.free = false; state.onlyNew = false; state.wknd = false; state.onlySaved = false;
+    state.q = ""; state.price = ""; state.from = DEF_FROM; state.to = DEF_TO;
+    if (!h) return false;
+    var got = false;
+    h.split("&").forEach(function(kv){
+      var i = kv.indexOf("="); if (i < 0) return;
+      var k = kv.slice(0, i), v = decodeURIComponent(kv.slice(i + 1));
+      /* validate against the real maps - a stale or mistyped link should fall back to
+         the normal board, never render an empty one with no explanation */
+      if (k === "area") {
+        state.areas = v.split(",").filter(function(a){ return AREAMAP[a]; });
+        got = true;
+      }
+      else if (k === "cat") {
+        /* keep only the ones that still exist - a link written before a category was
+           renamed should degrade to the rest, not to an empty board */
+        state.cats = v.split(",").filter(function(c){ return CATMAP[c]; });
+        got = true;
+      }
+      else if (k === "price"){
+        /* a band that no longer exists degrades to no price filter, never an empty board */
+        if (PRICEMAP[v]) { state.price = v; got = true; }
+      }
+      else if (k === "show"){
+        v.split(",").forEach(function(s){
+          if (s === "saved") state.onlySaved = true;
+          if (s === "new")   state.onlyNew   = true;
+          if (s === "free")  state.free      = true;
+          if (s === "wknd")  state.wknd      = true;
+        });
+        got = true;
+      }
+      else if (k === "q") { state.q = v.trim().toLowerCase(); got = true; }
+      else if (k === "from" && ISO_RE.test(v)) { state.from = v; got = true; }
+      else if (k === "to"   && ISO_RE.test(v)) { state.to   = v; got = true; }
+    });
+    if (state.to < state.from) state.to = state.from;
+    return got;
+  }
+
+  /* push whatever state we ended up with back onto the controls */
+  function applyStateToUI(){
+    syncMultiSelects();
+    syncPrice();
+    document.getElementById("savedBtn").setAttribute("aria-pressed", String(state.onlySaved));
+    document.getElementById("newBtn").setAttribute("aria-pressed",   String(state.onlyNew));
+    document.getElementById("freeBtn").setAttribute("aria-pressed",  String(state.free));
+    document.getElementById("wkndBtn").setAttribute("aria-pressed",  String(state.wknd));
+    q.value    = state.q;
+    from.value = state.from;
+    to.value   = state.to;
+  }
+
+  /* someone pasting a different hash, or arriving from an external link */
+  window.addEventListener("hashchange", function(){
+    readHash(); applyStateToUI(); render();
+  });
+
+  /* ---------------- section tabs ---------------- */
+  var tabs  = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  var views = Array.prototype.slice.call(document.querySelectorAll(".view"));
+  var controlsEl = document.getElementById("controls");
+
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(){
+      var v = t.getAttribute("data-view");
+      tabs.forEach(function(o){ o.setAttribute("aria-selected", String(o === t)); });
+      views.forEach(function(x){ x.classList.toggle("is-on", x.getAttribute("data-view") === v); });
+      /* the filter bar only governs the week board */
+      controlsEl.style.display = (v === "week") ? "" : "none";
+      closeAll(null);
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  });
+
+  /* ---------------- boot ---------------- */
+  /* How fresh is this board? Says so plainly, and admits it when it has been a while -
+     a shared link with no date on it gives a reader no way to judge it. */
+  (function(){
+    var age = daysBetween(TODAY, NOW);
+    var txt = "last updated " + fmtAdded(TODAY);
+    if (age >= 14) txt += " — " + Math.floor(age / 7) + " weeks ago";
+    document.getElementById("swept").textContent = txt;
+  })();
+
+  readHash();          // a shared link wins over the defaults
+  applyStateToUI();    // then the controls are made to match whatever we ended up with
+  render();
+})();
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("sw.js").catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

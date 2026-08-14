@@ -1,0 +1,11 @@
+# This directory is PUBLIC. Everything is ignored by default and allowed one file at a
+# time, so a stray note can never be published by accident.
+*
+!index.html
+!.nojekyll
+!.gitignore
+!manifest.json
+!sw.js
+!icon-192.png
+!icon-512.png
+!apple-touch-icon.png
