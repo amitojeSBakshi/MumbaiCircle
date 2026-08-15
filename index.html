@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260814-194527-8299">
+<meta name="build" content="20260815-075420-8315">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -16,6 +16,17 @@
 <meta name="apple-mobile-web-app-title" content="Mumbai Circle">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="mobile-web-app-capable" content="yes">
+<!-- Google tag (gtag.js) - one shared "Circle" GA4 property across the hub and all three
+     city boards. 'city' rides on every hit as a custom parameter so the four sites stay
+     distinguishable inside one property rather than needing four separate dashboards. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88F80YY2NQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('set', 'city', 'Mumbai');
+  gtag('config', 'G-88F80YY2NQ');
+</script>
 </head>
 <body><style>
   :root{
@@ -1580,7 +1591,7 @@
       +   '</div>'
       +   '<div class="foot">'
       +     '<span class="cost' + (e.free ? ' is-free' : '') + '">' + e.cost + '</span>'
-      +     (e.url ? '<a class="go" href="' + e.url + '">Open</a>' : '')
+      +     (e.url ? '<a class="go" href="' + e.url + '" data-name="' + attr(e.name) + '" data-cat="' + e.cat + '" data-area="' + e.a + '">Open</a>' : '')
       +     (dir ? '<a class="map" href="' + attr(dir) + '" target="_blank" rel="noopener">Directions</a>' : '')
       +     (e.tel ? '<a class="tel" href="tel:' + e.tel + '">' + e.tel.replace("+91","") + '</a>' : '')
       +     '<button class="save" type="button" data-k="' + attr(keyOf(e)) + '"'
@@ -1657,6 +1668,22 @@
     document.getElementById("savedEmpty").style.display = items.length ? "none" : "block";
     document.getElementById("tabSavedN").textContent = items.length ? items.length : "";
   }
+
+  /* What people actually click through to, for the GA4 dashboard. Never blocks the
+     navigation - gtag queues the beacon and the browser follows the href immediately
+     after, same tab-opening behaviour as before this existed. Silently does nothing if
+     gtag failed to load (ad blockers, offline), so a missing analytics script can never
+     break the one thing this button is actually for. */
+  document.addEventListener("click", function(ev){
+    var go = ev.target.closest && ev.target.closest(".go");
+    if (go && typeof gtag === "function") {
+      gtag("event", "ticket_click", {
+        event_name: go.getAttribute("data-name"),
+        category:   go.getAttribute("data-cat"),
+        area:       go.getAttribute("data-area")
+      });
+    }
+  });
 
   /* Delegated on document, not on #days - the same buttons appear in the Saved tab, and
      cards are rebuilt as HTML on every render so per-button listeners would not survive. */
