@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260815-212105-7376">
+<meta name="build" content="20260816-002908-4293">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -109,9 +109,18 @@
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:var(--sans); font-size:15px; line-height:1.55;
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased; position:relative;
   }
-  .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px}
+  #bgCanvas{ position:fixed; inset:0; z-index:0; pointer-events:none; width:100%; height:100% }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px; position:relative; z-index:1}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:6px; font-family:var(--sans); font-weight:800;
+    font-size:10.5px; letter-spacing:.28em; color:var(--accent); margin:0 0 10px;
+  }
+  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--accent);
+    animation:eyebrowPulse 1.8s ease-in-out infinite }
+  @keyframes eyebrowPulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
+  @media (prefers-reduced-motion:reduce){ .eyebrow .dot{ animation:none } }
   a{color:var(--link)}
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
     outline:2.5px solid var(--accent); outline-offset:3px; border-radius:4px;
@@ -150,7 +159,7 @@
   }
   .byline b{
     font-style:normal; font-weight:700; color:var(--ink-2);
-    letter-spacing:-.004em;
+    letter-spacing:-.004em; white-space:nowrap;
   }
   .byline a{
     font-style:normal; font-weight:700; color:var(--link);
@@ -485,6 +494,79 @@
   @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
 </style>
 
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<script>
+/* Purely decorative ambient background - self-contained, touches nothing else on the
+   page. Same soft drifting-orb effect as the inthecircle.in hub, for visual family
+   resemblance. Reads --accent off the page's own theme so it matches whichever colors
+   are active (light/dark/explicit toggle) without needing its own config. */
+(function(){
+  var canvas = document.getElementById("bgCanvas");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function hexToRgb(hex){
+    var m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec((hex||"").trim());
+    return m ? [parseInt(m[1],16), parseInt(m[2],16), parseInt(m[3],16)] : [192,57,43];
+  }
+  var accentHex = getComputedStyle(document.documentElement).getPropertyValue("--accent") || "#c0392b";
+  var rgbStr = hexToRgb(accentHex).join(",");
+
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+  function resize(){
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + "px"; canvas.style.height = H + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  var COUNT = 3;
+  var balls = [];
+  for (var i = 0; i < COUNT; i++) {
+    var r = 70 + Math.random() * 60;
+    balls.push({
+      x: Math.random() * W, y: Math.random() * H, r: r,
+      vx: (Math.random() < 0.5 ? -1 : 1) * (0.12 + Math.random() * 0.16),
+      vy: (Math.random() < 0.5 ? -1 : 1) * (0.12 + Math.random() * 0.16)
+    });
+  }
+
+  function drawFrame(){
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < balls.length; i++) {
+      var b = balls[i];
+      var g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+      g.addColorStop(0, "rgba(" + rgbStr + ",0.07)");
+      g.addColorStop(1, "rgba(" + rgbStr + ",0)");
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  if (reduceMotion) { drawFrame(); return; }
+
+  function step(){
+    for (var i = 0; i < balls.length; i++) {
+      var b = balls[i];
+      b.x += b.vx; b.y += b.vy;
+      if (b.x - b.r < 0) { b.x = b.r; b.vx *= -1; }
+      else if (b.x + b.r > W) { b.x = W - b.r; b.vx *= -1; }
+      if (b.y - b.r < 0) { b.y = b.r; b.vy *= -1; }
+      else if (b.y + b.r > H) { b.y = H - b.r; b.vy *= -1; }
+    }
+    drawFrame();
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+</script>
+
 <div class="wrap">
 
   <header class="masthead">
@@ -492,6 +574,7 @@
       <svg viewBox="0 0 1024 1024"><circle cx="437" cy="466" r="185"/><circle cx="587" cy="466" r="185"/><circle cx="512" cy="586" r="185"/></svg>
       In The Circle
     </a>
+    <div class="eyebrow"><span class="dot"></span>LIVE THIS WEEK</div>
     <h1>Mumbai Circle<span class="dot">.</span></h1>
     <p class="subline">Where to be, every day of the week.</p>
     <p class="tally"><b id="tCount">—</b> things in range<i>·</i><b id="tFree">—</b> free<i>·</i><b
