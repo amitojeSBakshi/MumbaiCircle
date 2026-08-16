@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260816-002908-4293">
+<meta name="build" content="20260816-033544-9014">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -113,14 +113,13 @@
   }
   #bgCanvas{ position:fixed; inset:0; z-index:0; pointer-events:none; width:100%; height:100% }
   .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px; position:relative; z-index:1}
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:6px; font-family:var(--sans); font-weight:800;
-    font-size:10.5px; letter-spacing:.28em; color:var(--accent); margin:0 0 10px;
+  .masthead-links{ display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-bottom:20px }
+  .wa-mini{
+    display:inline-flex; align-items:center; gap:5px; text-decoration:none; color:var(--ink-3);
+    font-family:var(--sans); font-size:12px; font-weight:700; transition:color .15s;
   }
-  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--accent);
-    animation:eyebrowPulse 1.8s ease-in-out infinite }
-  @keyframes eyebrowPulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
-  @media (prefers-reduced-motion:reduce){ .eyebrow .dot{ animation:none } }
+  .wa-mini:hover{ color:#25D366 }
+  .wa-mini svg{ width:13px; height:13px; fill:currentColor; flex:0 0 auto }
   a{color:var(--link)}
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
     outline:2.5px solid var(--accent); outline-offset:3px; border-radius:4px;
@@ -130,7 +129,7 @@
   .masthead{padding:52px 0 0}
   .hub-back{
     display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink-3);
-    font-family:var(--serif); font-size:13.5px; font-weight:700; margin-bottom:20px;
+    font-family:var(--serif); font-size:13.5px; font-weight:700;
     transition:color .15s;
   }
   .hub-back:hover{ color:var(--accent) }
@@ -157,6 +156,7 @@
     margin:11px 0 0; font-family:var(--serif); font-style:italic;
     font-size:14.5px; color:var(--ink-3);
   }
+  .byline.byline-2{ margin-top:3px }
   .byline b{
     font-style:normal; font-weight:700; color:var(--ink-2);
     letter-spacing:-.004em; white-space:nowrap;
@@ -570,18 +570,23 @@
 <div class="wrap">
 
   <header class="masthead">
-    <a class="hub-back" href="https://inthecircle.in/">
-      <svg viewBox="0 0 1024 1024"><circle cx="437" cy="466" r="185"/><circle cx="587" cy="466" r="185"/><circle cx="512" cy="586" r="185"/></svg>
-      In The Circle
-    </a>
-    <div class="eyebrow"><span class="dot"></span>LIVE THIS WEEK</div>
+    <div class="masthead-links">
+      <a class="hub-back" href="https://inthecircle.in/">
+        <svg viewBox="0 0 1024 1024"><circle cx="437" cy="466" r="185"/><circle cx="587" cy="466" r="185"/><circle cx="512" cy="586" r="185"/></svg>
+        In The Circle
+      </a>
+      <a class="wa-mini" href="https://chat.whatsapp.com/CyXadI3fYLsH31WUedPeil?s=hd&p=i&mlu=4&amv=2" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.1c-.24.68-1.4 1.33-1.94 1.4-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.15-4.9-4.34-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        Join on WhatsApp
+      </a>
+    </div>
     <h1>Mumbai Circle<span class="dot">.</span></h1>
-    <p class="subline">Where to be, every day of the week.</p>
-    <p class="tally"><b id="tCount">—</b> things in range<i>·</i><b id="tFree">—</b> free<i>·</i><b
-      id="tWknd">—</b> on Sat &amp; Sun<i>·</i><b id="tCat">—</b> categories<i>·</i><b
-      id="tNew" class="hot">—</b> added recently<span id="tSavedWrap" style="display:none"><i>·</i><b
-      id="tSaved" class="hot">—</b> saved</span></p>
-    <p class="byline">Managed by <b>Amitoje Singh Bakshi</b><i>·</i><a href="tel:+918287028821">+91 82870 28821</a><i>·</i><span id="swept"></span></p>
+    <p class="subline">Mumbai never stops. Keep up.</p>
+    <p class="tally"><b id="tCount">—</b> events found<i>·</i><b
+      id="tWknd">—</b> on Sat &amp; Sun<i>·</i><b id="tCat">—</b> categories<span id="tSavedWrap" style="display:none"><i>·</i><b
+      id="tSaved" class="hot">—</b> saved</span><span style="display:none"><b id="tFree">—</b><b id="tNew" class="hot">—</b></span></p>
+    <p class="byline">Managed by <b>Amitoje Singh Bakshi</b></p>
+    <p class="byline byline-2"><a href="tel:+918287028821">+91 82870 28821</a><i>·</i><span id="swept"></span></p>
     <div class="perf"></div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
       <button class="tab" type="button" role="tab" data-view="week"        aria-selected="true">The week</button>
