@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260816-033544-9014">
+<meta name="build" content="20260816-200150-6270">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -115,11 +115,12 @@
   .wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px; position:relative; z-index:1}
   .masthead-links{ display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-bottom:20px }
   .wa-mini{
-    display:inline-flex; align-items:center; gap:5px; text-decoration:none; color:var(--ink-3);
-    font-family:var(--sans); font-size:12px; font-weight:700; transition:color .15s;
+    display:inline-flex; align-items:center; gap:6px; text-decoration:none; color:#fff;
+    background:#25D366; font-family:var(--sans); font-size:12.5px; font-weight:700;
+    padding:6px 13px; border-radius:999px; transition:transform .12s, filter .12s;
   }
-  .wa-mini:hover{ color:#25D366 }
-  .wa-mini svg{ width:13px; height:13px; fill:currentColor; flex:0 0 auto }
+  .wa-mini:hover{ filter:brightness(1.06); transform:translateY(-1px) }
+  .wa-mini svg{ width:14px; height:14px; fill:currentColor; flex:0 0 auto }
   a{color:var(--link)}
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
     outline:2.5px solid var(--accent); outline-offset:3px; border-radius:4px;
@@ -356,6 +357,22 @@
     line-height:1.26; letter-spacing:-.014em;
   }
   .when{font-size:13px; font-weight:700; color:var(--tone); font-variant-numeric:tabular-nums}
+  .when-next{font-size:12px; font-weight:600; color:var(--ink-3); font-variant-numeric:tabular-nums}
+
+  .info-btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:22px; height:22px; border-radius:50%; border:1.5px solid var(--ink-4);
+    background:none; cursor:pointer; color:var(--ink-4); font-family:var(--serif);
+    font-size:13px; font-weight:700; font-style:italic; margin-left:8px;
+    vertical-align:middle; padding:0; transition:border-color .12s, color .12s;
+  }
+  .info-btn:hover{border-color:var(--accent); color:var(--accent)}
+  .info-panel{
+    display:none; margin:10px 0 0; font-family:var(--serif); font-style:italic;
+    font-size:14.5px; color:var(--ink-2); line-height:1.55; max-width:68ch;
+    border-left:3px solid var(--accent); padding:4px 0 4px 14px;
+  }
+  .info-panel.open{display:block}
   .where{font-size:12.5px; color:var(--ink-3); line-height:1.45}
   .metro{
     display:flex; flex-wrap:wrap; gap:3px 14px; margin:2px 0 0;
@@ -664,7 +681,7 @@
           <div class="dd-note">Combine as many as you like</div>
           <button class="dd-item" type="button" id="savedBtn" aria-pressed="false">Only things I saved<span class="tick">✓</span></button>
           <button class="dd-item" type="button" id="newBtn" aria-pressed="false">Only new finds<span class="tick">✓</span></button>
-          <button class="dd-item" type="button" id="freeBtn" aria-pressed="false">Only free things<span class="tick">✓</span></button>
+          <button class="dd-item" type="button" id="freeBtn" aria-pressed="false">Free finds<span class="tick">✓</span></button>
           <button class="dd-item" type="button" id="wkndBtn" aria-pressed="false">Only Sat &amp; Sun<span class="tick">✓</span></button>
         </div>
       </div>
@@ -676,6 +693,7 @@
   </div>
 
   <div class="view is-on" data-view="week">
+    <div class="sechead"><h2>The week <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2><p class="info-panel">Your week at a glance. Every event is grouped by day, with the ones you can still attend shown first. Filter by area, category, price or how new it is — then tap a card to open the booking page.</p></div>
     <div id="days"></div>
     <div class="empty" id="daysEmpty">
       <b>Nothing in this range.</b>
@@ -687,7 +705,8 @@
   <div class="view" data-view="saved">
   <section id="savedSec">
     <div class="sechead">
-      <h2>Things you saved<span class="rule"></span></h2>
+      <h2>Things you saved <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2>
+      <p class="info-panel">Tap Save on any event and it lands here, so the things you liked don't disappear when the week moves on. This list ignores the date filters and stays on this device only.</p>
       <p>Everything you've kept, whatever the date — this list ignores the filters on the week board. Stored in this browser on this device, and shared with nobody.</p>
     </div>
     <div class="grid" id="savedGrid"></div>
@@ -702,7 +721,8 @@
   <div class="view" data-view="classes">
   <section id="classes">
     <div class="sechead">
-      <h2>Classes worth committing to<span class="rule"></span></h2>
+      <h2>Classes worth committing to <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2>
+      <p class="info-panel">Recurring courses rather than one-off workshops — the kind where you see the same faces every week, which is what actually builds a circle. Pick one and commit.</p>
       <p>Recurring courses rather than one-night workshops — the kind where you see the same faces each week.</p>
     </div>
     <div class="dir" id="classDir"></div>
@@ -713,7 +733,8 @@
   <div class="view" data-view="communities">
   <section id="communities">
     <div class="sechead">
-      <h2>Communities to join<span class="rule"></span></h2>
+      <h2>Communities to join <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2>
+      <p class="info-panel">Standing groups and organisations ranked by how useful they'll be to you. Join these once and they keep paying out every week, unlike a single dated event.</p>
       <p>Not yet built. Delhi and Bangalore Circle earned this table by sweeping specific
         groups' membership counts and meeting cadence week over week — Mumbai Circle is
         one refresh old, and putting numbers here before they are checked would be a
@@ -737,7 +758,8 @@
   <div class="view" data-view="platforms">
   <section id="platforms">
     <div class="sechead">
-      <h2>Where to look yourself<span class="rule"></span></h2>
+      <h2>Where to look yourself <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2>
+      <p class="info-panel">The platforms this board is built from. Browse these yourself between refreshes when you want something that isn't listed yet.</p>
       <p>The platforms this board is built from — browse them between refreshes.</p>
     </div>
     <div class="scroll">
@@ -775,7 +797,8 @@
   <div class="view" data-view="follow">
   <section id="connect">
     <div class="sechead">
-      <h2>Follow &amp; connect<span class="rule"></span></h2>
+      <h2>Follow &amp; connect <button class="info-btn" aria-label="About this section">i</button><span class="rule"></span></h2>
+      <p class="info-panel">The accounts and WhatsApp groups to follow so new events come to you instead of you having to hunt for them. Join the WhatsApp groups before you go.</p>
       <p>Every link here was opened and checked, and every WhatsApp invite was confirmed live against its real group name. Join these before you move so you land with a calendar already running.</p>
     </div>
     <div class="dir">
@@ -1455,6 +1478,20 @@
   function daysBetween(a,b){ return Math.round((d(b) - d(a)) / 86400000); }
   function addDays(s,n){ var dt = d(s); dt.setDate(dt.getDate()+n); return iso(dt); }
 
+  var DAYSHORT = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var MONTHSHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function upcomingDowDates(dow, n){
+    var cur = d(NOW); var arr = [];
+    for (var i = 0; arr.length < n && i < 60; i++){
+      var dt = new Date(cur.getFullYear(), cur.getMonth(), cur.getDate() + i);
+      if (dt.getDay() === dow) arr.push(dt);
+    }
+    return arr;
+  }
+  function fmtShortDate(dt){
+    return DAYSHORT[dt.getDay()] + " " + dt.getDate() + " " + MONTHSHORT[dt.getMonth()];
+  }
+
   /* the reader's real date, read from their browser at load */
   var NOW = iso(new Date());
   /* far end of "Everything ahead" — ~18 months out, relative so it never goes stale */
@@ -1682,6 +1719,11 @@
       +   '<span><i>station</i> <b>' + (e.mt || TRANSIT[e.a] || "—") + '</b></span>'
       +   (far ? '<span><i>distance</i> <b>' + far + '</b></span>' : '')
       + '</div>';
+    var upcoming = '';
+    if (e.date == null && e.dow != null) {
+      var ds = upcomingDowDates(e.dow, 3);
+      upcoming = '<div class="when-next">' + ds.map(fmtShortDate).join(' · ') + '</div>';
+    }
     return ''
       + '<article class="card" style="--tone:var(' + c.tone + ')">'
       +   '<div class="cbar"></div>'
@@ -1692,6 +1734,7 @@
       +     '</div>'
       +     '<h3>' + e.name + '</h3>'
       +     '<div class="when">' + e.when + '</div>'
+      +     upcoming
       +     '<div class="where">' + e.where + '</div>'
       +     metro
       +     '<p class="note">' + e.note + '</p>'
@@ -2229,6 +2272,14 @@
     from.value = state.from;
     to.value   = state.to;
   }
+
+  /* ---------------- info button toggle ---------------- */
+  document.addEventListener("click", function(ev){
+    var btn = ev.target.closest && ev.target.closest(".info-btn");
+    if (!btn) return;
+    var panel = btn.closest(".sechead").querySelector(".info-panel");
+    if (panel) panel.classList.toggle("open");
+  });
 
   /* someone pasting a different hash, or arriving from an external link */
   window.addEventListener("hashchange", function(){
