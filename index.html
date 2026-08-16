@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260816-200150-6270">
+<meta name="build" content="20260816-202222-2315">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -603,7 +603,6 @@
       id="tWknd">—</b> on Sat &amp; Sun<i>·</i><b id="tCat">—</b> categories<span id="tSavedWrap" style="display:none"><i>·</i><b
       id="tSaved" class="hot">—</b> saved</span><span style="display:none"><b id="tFree">—</b><b id="tNew" class="hot">—</b></span></p>
     <p class="byline">Managed by <b>Amitoje Singh Bakshi</b></p>
-    <p class="byline byline-2"><a href="tel:+918287028821">+91 82870 28821</a><i>·</i><span id="swept"></span></p>
     <div class="perf"></div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
       <button class="tab" type="button" role="tab" data-view="week"        aria-selected="true">The week</button>
@@ -844,7 +843,7 @@
   <footer>
     <p>Every card carries the nearest railway line and station — the suburban network, not the Metro, since the local is how most of this city actually moves. That is the closest station to the venue's area rather than a door-to-door route, and Powai in particular has no station of its own: the nearest ones still mean an auto at the end. Confirm price and timing on the linked page before you travel; small venues change schedules constantly. Where a night is listed as recurring without a date, it is a standing weekly slot — check the venue before setting off.</p>
     <p>Anything you <b style="font-style:normal;color:var(--ink-2)">Save</b> is stored in this browser on this device only. There is no account and no server behind this page, so your saved list is yours alone — it is not visible to whoever shared this link with you, and it will not follow you to another phone or laptop. Clearing your browser data clears it.</p>
-    <p>This board is one refresh old — built 15 August 2026 — so it is thinner than its Delhi and Bangalore siblings and will grow the same way they did. Put together and kept current by <b style="font-style:normal;color:var(--ink-2)">Amitoje Singh Bakshi</b> — <a href="tel:+918287028821" style="font-style:normal;font-weight:700;white-space:nowrap">+91 82870 28821</a>. If something here has moved, closed or is worth adding, tell me and it goes in on the next refresh.</p>
+    <p>This board is one refresh old — built 15 August 2026 — so it is thinner than its Delhi and Bangalore siblings and will grow the same way they did. Put together and kept current by <b style="font-style:normal;color:var(--ink-2)">Amitoje Singh Bakshi</b>. If something here has moved, closed or is worth adding, tell me and it goes in on the next refresh.</p>
   </footer>
 </div>
 
@@ -2304,15 +2303,6 @@
   });
 
   /* ---------------- boot ---------------- */
-  /* How fresh is this board? Says so plainly, and admits it when it has been a while -
-     a shared link with no date on it gives a reader no way to judge it. */
-  (function(){
-    var age = daysBetween(TODAY, NOW);
-    var txt = "last updated " + fmtAdded(TODAY);
-    if (age >= 14) txt += " — " + Math.floor(age / 7) + " weeks ago";
-    document.getElementById("swept").textContent = txt;
-  })();
-
   readHash();          // a shared link wins over the defaults
   applyStateToUI();    // then the controls are made to match whatever we ended up with
   render();
