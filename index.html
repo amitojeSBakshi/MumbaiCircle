@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260817-165055-2654">
+<meta name="build" content="20260818-174036-7297">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -190,6 +190,31 @@
   .tab .n{
     font-variant-numeric:tabular-nums; opacity:.55; padding-left:6px; font-weight:500;
   }
+  .tab-dd{position:relative}
+  .tab-trigger{
+    font-family:var(--sans); font-size:13.5px; font-weight:600; cursor:pointer;
+    background:var(--card); color:var(--ink-2);
+    border:1.5px solid var(--line); border-radius:999px;
+    padding:8px 17px; line-height:1.3; min-height:0;
+    display:inline-flex; align-items:center; gap:7px;
+    transition:transform .12s, background .12s, color .12s;
+  }
+  .tab-trigger:hover{transform:translateY(-1px); border-color:var(--ink-4); color:var(--ink)}
+  .tab-trigger .chev{
+    width:9px; height:9px; flex:none; opacity:.5;
+    border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+    transform:rotate(45deg) translate(-2px,-2px); transition:transform .15s;
+  }
+  .tab-dd.open .tab-trigger .chev{transform:rotate(225deg) translate(-3px,-3px)}
+  .tab-trigger.is-active{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  .dd-menu .tab{
+    font-family:var(--sans); font-size:13.5px; font-weight:500; cursor:pointer;
+    background:none; border:0; border-radius:9px; color:var(--ink-2);
+    padding:8px 11px; width:100%; text-align:left;
+    display:flex; align-items:center; gap:10px; line-height:1.35; transform:none;
+  }
+  .dd-menu .tab:hover{background:var(--line-2); color:var(--ink); transform:none; border-color:transparent}
+  .dd-menu .tab[aria-selected="true"]{background:var(--accent); color:#fff}
 
   /* ---------- toolbar ---------- */
   .controls{
@@ -292,7 +317,11 @@
   .view.is-on{display:block}
 
   /* ---------- day rails ---------- */
-  .daygroup{margin:40px 0 0}
+  .daygroup{margin:40px 0 0; border-radius:18px; transition:background .14s ease}
+  .daygroup:has(.dayhead.wknd){
+    background:color-mix(in srgb, var(--accent) 5%, transparent);
+    padding:14px 14px 6px; margin-left:-14px; margin-right:-14px;
+  }
   .dayhead{
     --day:var(--ink);
     display:flex; align-items:center; gap:13px; margin:0 0 17px;
@@ -325,7 +354,9 @@
   /* ---------- cards ---------- */
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(304px,1fr)); gap:15px}
   .card{
-    background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+    background:var(--card);
+    border:1.5px solid color-mix(in srgb, var(--tone) 22%, var(--line));
+    border-radius:16px;
     padding:0 0 15px; display:flex; flex-direction:column; overflow:hidden;
     box-shadow:var(--shadow); position:relative;
     transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
@@ -338,7 +369,7 @@
   .toprow{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
   .cat{
     font-size:11.5px; font-weight:700; color:var(--tone);
-    background:color-mix(in srgb, var(--tone) 13%, transparent);
+    background:color-mix(in srgb, var(--tone) 20%, transparent);
     border-radius:999px; padding:3px 10px; line-height:1.4;
   }
   .tag{
@@ -394,6 +425,8 @@
     background:var(--line-2); border-radius:7px; padding:3px 8px;
   }
   .cost.is-free{color:var(--c-outdoors); background:color-mix(in srgb, var(--c-outdoors) 13%, transparent)}
+  .cost.is-budget{color:var(--c-social); background:color-mix(in srgb, var(--c-social) 13%, transparent)}
+  .cost.is-premium{color:var(--c-craft); background:color-mix(in srgb, var(--c-craft) 15%, transparent)}
   .go{
     font-weight:700; color:var(--link); text-decoration:none;
   }
@@ -607,10 +640,17 @@
     <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
       <button class="tab" type="button" role="tab" data-view="week"        aria-selected="true">The week</button>
       <button class="tab" type="button" role="tab" data-view="saved"       aria-selected="false">Saved<span class="n" id="tabSavedN"></span></button>
-      <button class="tab" type="button" role="tab" data-view="classes"     aria-selected="false">Classes</button>
-      <button class="tab" type="button" role="tab" data-view="communities" aria-selected="false">Communities to join</button>
-      <button class="tab" type="button" role="tab" data-view="follow"      aria-selected="false">Follow &amp; connect</button>
-      <button class="tab" type="button" role="tab" data-view="platforms"   aria-selected="false">Where to look</button>
+      <div class="dd tab-dd" id="ddMore">
+        <button class="dd-trigger tab-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+          More in the Circle<span class="chev"></span>
+        </button>
+        <div class="dd-menu">
+          <button class="dd-item tab" type="button" role="tab" data-view="classes"     aria-selected="false">Classes</button>
+          <button class="dd-item tab" type="button" role="tab" data-view="communities" aria-selected="false">Communities to join</button>
+          <button class="dd-item tab" type="button" role="tab" data-view="follow"      aria-selected="false">Follow &amp; connect</button>
+          <button class="dd-item tab" type="button" role="tab" data-view="platforms"   aria-selected="false">Where to look</button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -1865,6 +1905,9 @@
     var c = CATMAP[e.cat] || {label:e.cat, tone:"--c-social"};
     var dir = mapQuery(e);
     var sv = isSaved(e);
+    var costCls = 'cost';
+    if (e.free) costCls += ' is-free';
+    else { var pr = priceOf(e); if (pr !== null) costCls += (pr < 500 ? ' is-budget' : ' is-premium'); }
     var area = AREAMAP[e.a]
       ? '<span class="tag">' + AREAMAP[e.a].label + '</span>' : '';
     var far = distanceLabel(e);
@@ -1894,7 +1937,7 @@
       +     '<p class="note">' + e.note + '</p>'
       +   '</div>'
       +   '<div class="foot">'
-      +     '<span class="cost' + (e.free ? ' is-free' : '') + '">' + e.cost + '</span>'
+      +     '<span class="' + costCls + '">' + e.cost + '</span>'
       +     (e.url ? '<a class="go" href="' + e.url + '" data-name="' + attr(e.name) + '" data-cat="' + e.cat + '" data-area="' + e.a + '">Open</a>' : '')
       +     (dir ? '<a class="map" href="' + attr(dir) + '" target="_blank" rel="noopener">Directions</a>' : '')
       +     (e.tel ? '<a class="tel" href="tel:' + e.tel + '">' + e.tel.replace("+91","") + '</a>' : '')
@@ -2444,6 +2487,7 @@
   var tabs  = Array.prototype.slice.call(document.querySelectorAll(".tab"));
   var views = Array.prototype.slice.call(document.querySelectorAll(".view"));
   var controlsEl = document.getElementById("controls");
+  var moreTrigger = document.querySelector("#ddMore .tab-trigger");
 
   tabs.forEach(function(t){
     t.addEventListener("click", function(){
@@ -2452,6 +2496,8 @@
       views.forEach(function(x){ x.classList.toggle("is-on", x.getAttribute("data-view") === v); });
       /* the filter bar only governs the week board */
       controlsEl.style.display = (v === "week") ? "" : "none";
+      /* the dropdown trigger reads "selected" whenever one of its own items is picked */
+      if (moreTrigger) moreTrigger.classList.toggle("is-active", t.closest("#ddMore") !== null);
       closeAll(null);
       window.scrollTo({top:0, behavior:"smooth"});
     });
