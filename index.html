@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260825-202928-9408">
+<meta name="build" content="20260831-232130-7932">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -905,7 +905,7 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-08-19";      // refresh marker — bump on every update
+  var TODAY = "2026-09-01";      // refresh marker — bump on every update
   var BASELINE = "2026-08-15";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
@@ -974,21 +974,30 @@
   /* VENUES:BEGIN */
   var VENUES = {
     "3 Art House, Khar West":[19.06986,72.82980,2],
+    "Ajivasan Music Academy, Santacruz West":[19.08440,72.83729,2],
     "ASDA — The Step Up Studio, Vile Parle East":[19.10975,72.83654,2],
+    "Aspee Auditorium, Malad West":[19.18529,72.83586,2],
     "BackSpace, Bandra":[19.05498,72.84022,2],
+    "Backspace, Bandra West":[19.05834,72.83027,2],
     "Backspace, Lodha Boulevard Mall, Majiwada":[19.21303,72.97849,2],
+    "Backspace, Lower Parel":[18.99568,72.83028,2],
     "Bal Gandharva Rang Mandir, Bandra West":[19.06403,72.83336,1],
     "Bal Gandharva Rang Mandir, Prabhadevi":[19.06403,72.83336,1],
     "Base Camp Board Gaming Library, Borivali West":[19.22981,72.84714,2],
+    "Bayroute, Palladium Mall, Lower Parel":[18.99568,72.83028,2],
     "BHIVE Platinum Plus, BKC":[19.06066,72.85468,2],
+    "BKC Dive, BKC":[19.06066,72.85468,2],
     "Bombay Bunts Association Banquet Hall, Nerul":[19.03359,73.01816,2],
     "CinCin, Bandra West":[19.06089,72.86303,1],
+    "Conçu, Colaba":[18.91509,72.82597,2],
     "Culinary Craft, Hiranandani, Powai":[19.11872,72.90735,2],
+    "Culinary Craft, Powai":[19.11872,72.90735,2],
     "Dadar West":[19.02389,72.83822,1],
     "Desai House, Uthalsar, Thane":[19.20214,72.97623,2],
     "DevX Dynasty, Andheri East":[19.11588,72.85420,2],
     "DevX, Dynasty Business Park, Andheri East":[19.11294,72.86591,1],
     "District 11, Linking Road, Bandra West":[19.05834,72.83027,2],
+    "Dome, SVP Stadium, Worli":[19.00722,72.81365,1],
     "DORANGOS, Pali Hill, Bandra West":[19.06119,72.82675,1],
     "Dublin Square, Phoenix Marketcity, Kurla West":[19.06860,72.87658,2],
     "Effingut Brewpub, Belapur, Navi Mumbai":[19.00517,73.02829,2],
@@ -1003,10 +1012,12 @@
     "Hall 3 \u0026 4, Bombay Exhibition Centre, Goregaon":[19.16487,72.84955,2],
     "Hitchki, BKC":[19.06954,72.86983,1],
     "Hitchki, Powai":[19.11872,72.90735,2],
+    "HYLO, Fort":[18.92197,72.83457,2],
     "Ink A Laugh, Vile Parle West":[19.10391,72.84030,2],
     "Interio by Godrej, Vikhroli West":[19.11454,72.92572,2],
     "ISKCON Auditorium, Juhu":[19.10702,72.82753,2],
     "Jamshed Bhabha Theatre, NCPA, Nariman Point":[18.92493,72.81986,1],
+    "Jio World Centre, BKC":[19.06387,72.86661,1],
     "Jio World Convention Centre, BKC":[19.06409,72.86739,1],
     "Jio World Garden (Covered Arena), BKC":[19.06066,72.85468,2],
     "Jio World Garden, BKC":[19.06712,72.86572,2],
@@ -1015,10 +1026,15 @@
     "Khwaab The Studio, Andheri West":[19.11725,72.83397,2],
     "Kohinoor Continental, Andheri East":[19.11241,72.86807,1],
     "Laguna by TGS, Santacruz West":[19.08440,72.83729,2],
+    "Level 1, Art House, NMACC, BKC":[19.05500,72.86920,1],
+    "Lord of the Drinks, Worli":[19.01174,72.81787,2],
     "Love \u0026 Latte, Juhu":[19.11127,72.82674,1],
     "M.K. School, Borivali West":[18.95605,72.80735,1],
     "Mahakavi Kalidas Natyamandir, Mulund":[19.17214,72.95670,2],
+    "Meeting point: McDonald\u0027s opp. CST Station, Fort":[18.92197,72.83457,2],
+    "MSSU I-Spark Foundation Incubator, Vidyavihar":[19.07954,72.89712,2],
     "Mukti Manch, Versova, Andheri West":[19.11725,72.83397,2],
+    "Mutuswami Cafe, Dadar East":[19.01625,72.85223,2],
     "Namaste Yoga Classes, Khar West":[19.06986,72.82980,2],
     "NCPA, Nariman Point":[18.92516,72.82056,1],
     "Nehru Centre, Worli":[18.98834,72.81545,1],
@@ -1026,17 +1042,24 @@
     "New Acropolis, Bandra":[19.05498,72.84022,2],
     "Nirvahan Studio, Andheri West":[19.11725,72.83397,2],
     "Olive Café \u0026 Bar, BKC":[19.06712,72.86572,2],
+    "Olive Cafe and Bar, BKC":[19.06066,72.85468,2],
     "Palm Beach Road, Navi Mumbai":[19.05502,73.00488,1],
+    "Phoenix Marketcity, Kurla West":[19.08628,72.88922,1],
     "PORT, Worli":[19.01174,72.81787,2],
+    "Powai Social, Powai":[19.11872,72.90735,2],
+    "Prabodhankar Thackeray Auditorium, Borivali West":[19.22981,72.84714,2],
     "Prabodhankar Thackeray Natya Mandir, Borivali West":[19.22981,72.84714,2],
     "Radio Raga, Sakinaka":[19.10042,72.88261,2],
+    "Rajhans Helix 3, Ghatkopar West":[19.08974,72.90480,2],
     "Ram Ganesh Gadkari Rangayatan, Thane West":[19.19410,72.97411,1],
     "Real Tech Park, Vashi":[19.06325,72.99880,2],
     "Richardson \u0026 Cruddas, Byculla":[18.96571,72.83349,1],
     "Royal Opera House, Girgaon":[18.95605,72.81557,1],
     "Sanjay Gandhi National Park, Borivali":[19.20932,72.91633,1],
     "Shanmukhananda Hall, Sion":[19.04652,72.86328,2],
+    "Shree Shivaji Mandir, Dadar West":[19.02389,72.83822,2],
     "Soda Bottle Opener Wala, BKC":[19.06347,72.86223,1],
+    "Sofitel Mumbai BKC":[19.06776,72.86878,1],
     "Sophia Bhabha Auditorium, Breach Candy":[18.97144,72.80515,2],
     "Sri Shanmukhananda Fine Arts \u0026 Sangeetha, Sion":[19.04652,72.86328,2],
     "Tambe Nagar, Mulund":[19.16744,72.97537,2],
@@ -1046,8 +1069,13 @@
     "The J Spot, Juhu":[19.10702,72.82753,2],
     "The Library Cafe, Bandra West":[19.07074,72.82243,1],
     "The St. Regis Mumbai, Lower Parel":[18.99409,72.82401,1],
+    "The Studio Theatre, NMACC, BKC":[19.06555,72.86678,1],
     "THERAPY, Dadar West":[19.13006,72.82168,1],
+    "Tim Hortons, Bandra West":[19.06536,72.83240,1],
+    "Urban Platter, Mahim West":[19.13029,72.82235,1],
+    "Veranda, Khar":[19.06824,72.84004,2],
     "Vishnudas Bhave Natyagruha, Vashi":[19.07590,72.99843,1],
+    "Woodside Inn, Andheri West":[19.11725,72.83397,2],
     "Yashwant Natya Mandir, Matunga West":[19.02686,72.84315,1]
   };
   /* VENUES:END */
@@ -1070,72 +1098,7 @@
      date: "YYYY-MM-DD" one-off   mt: override the TRANSIT station */
   var E = [
     /* ================= NCPA, NARIMAN POINT ================= */
-    {date:"2026-08-15", a:"southmum", cat:"stage", name:"Homai Alone",
-     when:"Sat 15 Aug · 5:00 & 7:30 PM", where:"Jamshed Bhabha Theatre, NCPA, Nariman Point",
-     note:"Parsi-Gujarati comedy about a house mistakenly believed vacated. Two shows the same evening, so a missed early slot isn't a missed night.",
-     cost:"₹350–₹2,500", url:"https://www.ncpamumbai.com/event/homai-alone/", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"southmum", cat:"speak", name:"MIST Festival — Day 1",
-     when:"Sat 15 Aug · 10:00 AM–8:00 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
-     note:"A storytelling festival day that runs Bharatanatyam on Marie Curie's life alongside dastangoi on Kabir — an unusual pairing worth the full day.",
-     cost:"₹300–₹400", url:"https://www.ncpamumbai.com/event/mist-festival-day-1/", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"southmum", cat:"stage", name:"Strictly Unconventional",
-     when:"Sat 15 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Listed on NCPA's own archive without a stated time — check the listing before setting off.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/strictly-unconventional-3/", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"southmum", cat:"speak", name:"MIST Festival — Day 2",
-     when:"Sun 16 Aug · time on the listing", where:"Godrej Dance Theatre, NCPA, Nariman Point",
-     note:"Second day of the storytelling festival.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/mist-festival-day-2/", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"southmum", cat:"stage", name:"Shikhandi — The Story of the In-betweens",
-     when:"Sun 16 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"A gender-fluid mythological narrative performance.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/shikhandi-the-story-of-the-in-betweens-8/", added:"2026-08-15"},
-
-    {date:"2026-08-18", a:"southmum", cat:"stage", name:"Asymptomatic",
-     when:"Tue 18 Aug · 7:00 PM", where:"Experimental Theatre, NCPA, Nariman Point",
-     note:"A solo play on success and systemic barriers, in English, Hindi and Marathi. A genuine Tuesday-night show — the kind this board exists to surface.",
-     cost:"₹450–₹500", url:"https://www.ncpamumbai.com/event/asymptomatic/", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"southmum", cat:"music", name:"SOI Autumn 2026 Season",
-     when:"Six concerts, 16–30 Aug · evenings", where:"Jamshed Bhabha Theatre, NCPA, Nariman Point",
-     note:"The Symphony Orchestra of India's 20th-anniversary season, six dates through the month under two different conductors. Pick one date on the listing.",
-     cost:"₹450–₹5,000", url:"https://www.ncpamumbai.com/event/soi-autumn-2026-season/", added:"2026-08-15"},
-
-    {date:"2026-08-27", a:"southmum", cat:"stage", name:"Gamta No Kariye Gulal — Season 2",
-     when:"Thu 27 Aug · 7:30 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
-     note:"Five short Gujarati plays for Vishwa Gujarati Diwas. Another real Thursday-night option.",
-     cost:"₹450–₹500", url:"https://www.ncpamumbai.com/event/gamta-no-kariye-gulal-season-2/", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"southmum", cat:"stage", name:"Jeene Bhi Do Yaaro",
-     when:"Sat 29 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Listed on NCPA's theatre archive.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/jeene-bhi-do-yaaro-14/", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"southmum", cat:"stage", name:"Yeh Raaste Hain Pyaar Ke",
-     when:"Sat 29 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Listed on NCPA's theatre archive.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/yeh-raaste-hain-pyaar-ke-4/", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Hai Mera Dil",
-     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Listed on NCPA's theatre archive.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/hai-mera-dil-10/", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Equus",
-     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Peter Shaffer's classic, on NCPA's theatre archive.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/equus/", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"southmum", cat:"stage", name:"Is There Room on the Broom — A Twisted Tale",
-     when:"Sun 30 Aug · time on the listing", where:"NCPA, Nariman Point",
-     note:"Children's theatre on NCPA's archive.",
-     cost:"Ticketed", url:"https://www.ncpamumbai.com/event/is-there-room-on-the-broom-a-twisted-tale/", added:"2026-08-15"},
-
-    {date:"2026-09-05", a:"southmum", cat:"stage", name:"Hum Dono",
+                                                        {date:"2026-09-05", a:"southmum", cat:"stage", name:"Hum Dono",
      when:"Sat 5 Sep · time on the listing", where:"NCPA, Nariman Point",
      note:"Listed on NCPA's theatre archive.",
      cost:"Ticketed", url:"https://www.ncpamumbai.com/event/hum-dono-8/", added:"2026-08-15"},
@@ -1181,12 +1144,7 @@
      cost:"Ticketed", url:"https://www.ncpamumbai.com/event/grufalo-the-twisted-tale-5/", added:"2026-08-15"},
 
     /* ================= ROYAL OPERA HOUSE, GIRGAON ================= */
-    {date:"2026-08-23", a:"southmum", cat:"stage", name:"The Wizard of Oz",
-     when:"Sun 23 Aug · 11:30 AM & 4:30 PM", where:"Royal Opera House, Girgaon",
-     note:"A restored 1911 opera house turned proper touring venue. Two shows the same day for an English-language family musical.",
-     cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/thewizardofoz-651", added:"2026-08-15"},
-
-    {date:"2026-09-06", a:"southmum", cat:"music", name:"ABBA Tribute Show",
+        {date:"2026-09-06", a:"southmum", cat:"music", name:"ABBA Tribute Show",
      when:"Sun 6 Sep · 6:30 PM", where:"Royal Opera House, Girgaon",
      cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/abbatributeshow-650", added:"2026-08-15",
      note:"A tribute set inside a genuinely historic room."},
@@ -1197,54 +1155,14 @@
      cost:"Ticketed", url:"https://www.royaloperahouse.in/upcoming-shows/gauhar-660", added:"2026-08-15"},
 
     /* ================= BANDRA & KHAR ================= */
-    {date:"2026-08-23", a:"bandra", cat:"food", name:"Toast & Tunes",
-     when:"Sun 23 Aug · 11:00 AM–1:00 PM", where:"CinCin, Bandra West",
-     note:"A brunch built around a live music set rather than the other way round.",
-     cost:"Starting at ₹1,799", url:"https://allevents.in/mumbai/toast-and-tunes-at-cincin-bandra-23rd-aug-11am-1pm-tickets/80005347866528", added:"2026-08-15"},
-
-    {date:"2026-08-26", a:"bandra", cat:"expo", name:"13th Speciality Films & Flexible Packaging Summit",
-     when:"Wed 26–Thu 27 Aug · 7:00 AM–7:00 PM", where:"Jio World Convention Centre, BKC",
-     note:"A B2B packaging-industry summit across two full weekdays — the kind of trade event that never shows up on a consumer aggregator.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/13th-speciality-films-and-flexible-packaging-summit-2026/80007558417837", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"bandra", cat:"outdoors", name:"Mumbai Half Marathon 2026",
-     when:"Sun 30 Aug · 5:00 AM", where:"Jio World Garden, BKC",
-     note:"5K, 10K and 21K options at the same start line, run by RunnersDuniya.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/mumbai-half-marathon-2026/200030236658650", added:"2026-08-15"},
-
-    /* ================= ANDHERI & JUHU ================= */
-    {date:"2026-08-15", a:"andheri", cat:"stage", name:"Pratyush Chaubey Live",
-     when:"Sat 15 Aug · 6:00 PM", where:"The J Spot, Juhu",
-     note:"District's listing URL carries a stray 2025 date fragment in its slug, but the page itself confirms tonight, 6 PM — the slug is a leftover, not the truth.",
-     cost:"₹499", url:"https://www.district.in/events/pratyush-chaubey-live-aug16-2025-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"andheri", cat:"stage", name:"Single vs Married",
-     when:"Sat 15 Aug · 6:00 PM", where:"Ink A Laugh, Vile Parle West",
-     note:"A relationship-themed set at the venue that carries Vile Parle's densest recurring comedy roster.",
-     cost:"₹299+", url:"https://www.district.in/events/single-vs-married-stand-up-comedy-show-feb21-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"andheri", cat:"ai", name:"How Founders Use AI — Mumbai Edition",
-     when:"Sat 22 Aug · 11:00 AM–1:00 PM", where:"DevX Dynasty, Andheri East",
-     note:"An eChai founder panel on applied AI. The startup-meetup format that already works well on the Delhi board, now with a real Mumbai date.",
-     cost:"Ticketed", url:"https://echai.ventures/events/how-founders-use-ai-mumbai-edition-aug-22-2026", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"andheri", cat:"stage", name:"Adultrated — A Stand-up Comedy Show",
-     when:"Sat 29 Aug · 8:00 PM", where:"Ink A Laugh, Vile Parle West",
-     cost:"₹299+", url:"https://www.district.in/events/adultrated-a-standup-comedy-show-jun27-2026-buy-tickets", added:"2026-08-15",
-     note:"A named set rather than one of the venue's recurring nights."},
-
-    {date:"2026-09-26", a:"andheri", cat:"startup", name:"eChai Startup Demo Day — Mumbai",
+                /* ================= ANDHERI & JUHU ================= */
+                    {date:"2026-09-26", a:"andheri", cat:"startup", name:"eChai Startup Demo Day — Mumbai",
      when:"Sat 26 Sep · 11:00 AM–1:00 PM", where:"DevX Dynasty, Andheri East",
      note:"The Mumbai leg of eChai's multi-city demo day series, already a Saturday-morning fixture on the Delhi board.",
      cost:"Ticketed", url:"https://echai.ventures/events/echai-startup-demo-day-in-mumbai-sep-26-2026", added:"2026-08-15"},
 
     /* ================= LOWER PAREL & WORLI ================= */
-    {date:"2026-08-28", a:"parel", cat:"food", name:"Dinner Service by PORT",
-     when:"Fri 28 Aug · 7:00–8:45 PM", where:"PORT, Worli",
-     note:"A community dinner series inside G5A's building — new dishes each sitting, with the kitchen team talking through each course.",
-     cost:"Ticketed", url:"https://warehouse.g5a.org/calendar/dinner-service-by-port-2/?occurrence=2026-08-28", added:"2026-08-15"},
-
-    {date:"2026-09-05", a:"parel", cat:"stage", name:"IMPROV with Sahir",
+        {date:"2026-09-05", a:"parel", cat:"stage", name:"IMPROV with Sahir",
      when:"Sat 5 Sep · 11:30 AM–1:00 PM · more dates through 27 Sep", where:"G5A Foundation, Worli",
      note:"A recurring improv workshop series — pick a date on the listing if this one doesn't suit.",
      cost:"Ticketed", url:"https://warehouse.g5a.org/calendar/improv-with-sahir2-0/?occurrence=2026-09-05", added:"2026-08-15"},
@@ -1285,100 +1203,20 @@
      note:"Small enough to carry home on the train. The priciest of Hitchki's Saturday craft slate.",
      cost:"₹1,999+", url:"https://www.district.in/events/terrarium-workshop-date-mumbai-apr18-2026-buy-tickets", added:"2026-08-15"},
 
-    {date:"2026-08-22", a:"powai", cat:"music", name:"SoundRise",
-     when:"Sat 22 Aug · 7:00–9:00 PM", where:"Interio by Godrej, Vikhroli West",
-     note:"Confirmed on the 19 Aug refresh — the exact locality (Vikhroli West) is now named on the live page, resolving an earlier unconfirmed-address caveat.",
-     cost:"₹699", url:"https://allevents.in/mumbai/soundrise-at-interio-by-godrej-22nd-aug-7pm-9pm-tickets/80003022674609", added:"2026-08-15"},
-
-    /* ================= MULTI / ROTATING ================= */
-    {date:"2026-08-15", a:"multi", cat:"speak", name:"The Unspoken Circle — Poetry & Storytelling",
-     when:"Sat 15 Aug · 6:00–8:00 PM", where:"Ghantaghar — exact locality unconfirmed",
-     note:"An open mic for poetry and storytelling rather than comedy.",
-     cost:"₹199", url:"https://allevents.in/mumbai/the-unspoken-circle-tickets/80002723631392", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"multi", cat:"speak", name:"Mumbai Open Mic",
-     when:"Sun 16 Aug · 3:30–4:30 PM", where:"Rasā — The Stage",
-     note:"A short, community-run open mic slot.",
-     cost:"₹149–₹199", url:"https://allevents.in/mumbai/mumbai-open-mic-16th-august-2026-tickets/80003659526488", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"multi", cat:"speak", name:"LIT-MIC — Edition 21",
-     when:"Sun 16 Aug · 4:00–7:00 PM", where:"Rasā — The Stage",
-     note:"Poetry, music, comedy and storytelling in one longer slot, same venue and day as the shorter Mumbai Open Mic.",
-     cost:"₹169–₹239", url:"https://allevents.in/mumbai/lit-mic-mumbai-open-mic-poetry-music-comedy-storytelling-edition-21-tickets/80001068749953", added:"2026-08-15"},
-
-    {date:"2026-08-20", a:"multi", cat:"music", name:"Mika Singh in Mumbai",
-     when:"Thu 20 Aug · 7:00–9:00 PM", where:"Shanmukhananda Hall, Sion",
-     note:"A playback-singer concert on a Thursday — one of this refresh's better weeknight finds.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/mika-singh-in-mumbai/3300030278384954", added:"2026-08-15"},
-
-    {date:"2026-09-26", a:"parel", cat:"stage", name:"Kal Ki Chinta Nahi Karta — Ravi Gupta",
+        /* ================= MULTI / ROTATING ================= */
+                    {date:"2026-09-26", a:"parel", cat:"stage", name:"Kal Ki Chinta Nahi Karta — Ravi Gupta",
      when:"Sat 26 Sep · 7:00–9:00 PM", where:"The Fine Arts Society, Chembur",
      cost:"Ticketed", url:"https://allevents.in/mumbai/kal-ki-chinta-nahi-karta-ft-ravi-gupta/3900030185655350", added:"2026-08-15",
      note:"Genuinely rescheduled — the live page moved both the date (from 21 Aug) and venue (from Sri Shanmukhananda, Sion) since this card was written. Updated rather than dropped since the same URL still leads to a real, live show."},
 
-    {date:"2026-08-22", a:"multi", cat:"music", name:"Soul India",
-     when:"Sat 22 Aug · 7:30–10:00 PM", where:"Shanmukhananda Hall, Sion",
-     note:"A music concert in the same Sion hall that carries several of this refresh's finds.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/soul-india/3900030397772143", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"multi", cat:"music", name:"Usha Uthup Live in Concert",
-     when:"Sat 22 Aug · 8:30–10:30 PM", where:"Mahakavi Kalidas Natyamandir, Mulund",
-     note:"A short-tour date — a second Usha Uthup show later in the month plays Navi Mumbai instead, so check the venue before booking.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/usha-uthup-live-in-concert-mumbai/3900030057244357", added:"2026-08-15"},
-
-    {date:"2026-08-23", a:"multi", cat:"books", name:"Kusumagraj — Marathi Open Mic",
-     when:"Sun 23 Aug · 6:00 PM", where:"Kitaabghar Reading Room and Bookshop",
-     note:"A Marathi literature and poetry celebration in a small independent bookshop.",
-     cost:"Not specified", url:"https://allevents.in/mumbai/kusumagraj-marathi-open-mic/3900030462720230", added:"2026-08-15"},
-
-    {date:"2026-08-27", a:"multi", cat:"music", name:"Harshdeep Kaur — Noor-e-Ishq",
-     when:"Thu 27 Aug · 7:00 PM", where:"Shanmukhananda Hall, Sion",
-     note:"A Sufi and playback set on a Thursday — this refresh's third weeknight find at this same hall.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/noor-e-ishq-harshdeep-kaur/3900030279946537", added:"2026-08-15"},
-
-    {date:"2026-09-05", a:"multi", cat:"stage", name:"Love, Death & Ketchup — Varun Grover",
+                    {date:"2026-09-05", a:"multi", cat:"stage", name:"Love, Death & Ketchup — Varun Grover",
      when:"Sat 5 Sep · 4:30 PM", where:"Bal Gandharva Rang Mandir, Prabhadevi",
      note:"The same touring stand-up/storytelling special already on the Delhi board, now with a real Mumbai date.",
      cost:"Ticketed", url:"https://allevents.in/mumbai/love-death-and-ketchup-by-varun-grover/3900030183204406", added:"2026-08-15"},
 
     /* ================= SOUTH MUMBAI — round 2 ================= */
-    {date:"2026-08-18", a:"southmum", cat:"games", name:"Effingut x Mutiny Pub Quiz — Colaba",
-     when:"Tue 18 Aug · evening", where:"Effingut, Colaba",
-     note:"A weekly pub quiz at a craft brewpub — a genuine Tuesday-night find in a part of the city this board has otherwise struggled to give weeknights.",
-     cost:"₹100+", url:"https://www.district.in/events/mutiny-x-effingut-colaba-pub-quiz-aug4-2026-buy-tickets", added:"2026-08-15"},
-
-    /* ================= BANDRA & KHAR — round 2 ================= */
-    {date:"2026-08-29", a:"bandra", cat:"startup", name:"Money Expo India 2026",
-     when:"Sat 29–Sun 30 Aug · 10:00 AM–6:00 PM", where:"Jio World Convention Centre, BKC",
-     note:"A trading and fintech expo with 160+ exhibitors — finance-networking territory rather than the startup-founder meetups already on this board, which is exactly why it earns a separate card.",
-     cost:"₹199+", url:"https://www.district.in/events/money-expo-india-aug29-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"bandra", cat:"stage", name:"Comedy in Bandra — Opening Week",
-     when:"Sat 15 Aug · multiple dates", where:"BackSpace, Bandra",
-     note:"Launch week for a brand-new comedy room — a star-studded lineup marking the opening rather than a standing weekly slot.",
-     cost:"₹399+", url:"https://www.district.in/events/comedy-in-bandra-opening-week-may15-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"bandra", cat:"games", name:"Murder Mystery — 3 Art House",
-     when:"Sat 22 Aug", where:"3 Art House, Khar West",
-     note:"A two-hour interactive live murder-mystery by author Varun Gwalani — a genuinely different format from the pub quizzes and trivia nights elsewhere on the board.",
-     cost:"₹1,099+", url:"https://www.district.in/events/murder-mystery-aug22-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-23", a:"bandra", cat:"games", name:"Mafia Night — 3 Art House",
-     when:"Sun 23 Aug", where:"3 Art House, Khar West",
-     note:"Social deduction party game night at the Khar arts space.",
-     cost:"₹399+", url:"https://www.district.in/events/mafia-night-aug23-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"bandra", cat:"games", name:"Game Night — 3 Art House",
-     when:"Sat 29 Aug", where:"3 Art House, Khar West",
-     note:"A general board and party game night at the same Khar venue running Murder Mystery and Mafia Night.",
-     cost:"₹499+", url:"https://www.district.in/events/game-night-aug29-2026-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-20", a:"bandra", cat:"games", name:"Bombay Trivia Night — District 11",
-     when:"Thu 20 Aug · 8:30 PM", where:"District 11, Linking Road, Bandra West",
-     note:"A table-vs-table trivia game show over two hours, 18+ — a proper Thursday-night option on Linking Road.",
-     cost:"₹2,000 (redeemable on food & drink)", url:"https://www.district.in/events/bombay-trivia-night-aug20-2026-buy-tickets", added:"2026-08-15"},
-
-    {dow:6, a:"bandra", cat:"games", name:"Board Games Meetup — Hitchki BKC",
+        /* ================= BANDRA & KHAR — round 2 ================= */
+                            {dow:6, a:"bandra", cat:"games", name:"Board Games Meetup — Hitchki BKC",
      when:"Every Saturday · 5:00–6:00 PM", where:"Hitchki, BKC",
      note:"A different Hitchki branch from the Powai craft cluster already on this board — same chain, board games rather than pottery.",
      cost:"₹199+", url:"https://www.district.in/events/board-games-meetup-mumbai-jun28-2026-buy-tickets", added:"2026-08-15"},
@@ -1414,110 +1252,15 @@
      note:"A weekly open mic for comedy, music and poetry in Sakinaka, Andheri East.",
      cost:"₹300", url:"https://www.district.in/events/open-mic-night-jul5-2026-buy-tickets", added:"2026-08-15"},
 
-    {date:"2026-08-18", a:"andheri", cat:"games", name:"Effingut x Mutiny Pub Quiz — NESCO",
-     when:"Tue 18 Aug", where:"Effingut Brewpub, NESCO, Goregaon East",
-     note:"Goregaon sits just north of Andheri on the same Western Line corridor — the sister pub quiz to Effingut's Colaba night, same organisers.",
-     cost:"₹100+", url:"https://www.district.in/events/mutiny-x-effingut-nesco-pub-quiz-aug4-2026-buy-tickets", added:"2026-08-15"},
-
-    /* ================= MULTI / ROTATING — round 2 ================= */
-    {date:"2026-08-15", a:"multi", cat:"games", name:"Beginner Friendly Board Games Meetup",
-     when:"Sat 15 Aug", where:"Base Camp Board Gaming Library, Borivali West",
-     note:"A dedicated board-game library rather than a café running games on the side — worth the trip north for the collection alone.",
-     cost:"₹350+", url:"https://www.district.in/events/beginner-friendly-board-games-meetup-2025-buy-tickets", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"multi", cat:"games", name:"Board Games Event — Kalaantara",
-     when:"Sat 15 Aug · multiple dates", where:"Aromas Café & Lounge",
-     note:"Casual board-game evenings — the listing doesn't pin the exact locality, so treat this as a rough plan rather than a fixed address.",
-     cost:"₹99+", url:"https://www.district.in/events/board-games-event-kalaantara-may10-2026-buy-tickets", added:"2026-08-15"},
-
-    /* ================= NAVI MUMBAI — round 2, first entries for this area ================= */
-    {date:"2026-08-15", a:"navimum", cat:"music", name:"Karaoke — Independence Day Celebration",
-     when:"Sat 15 Aug · 6:00 PM", where:"Kharghar, Navi Mumbai",
-     note:"A community karaoke night for Independence Day — the listing doesn't name the exact venue within Kharghar.",
-     cost:"Not specified", url:"https://allevents.in/navi-mumbai/karaoke-independence-day-celebration/200030544913451", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"navimum", cat:"ai", name:"SkillCircle Masterclass — Digital Marketing + AI",
-     when:"Sat 22 Aug · 12:00–1:00 PM", where:"Real Tech Park, Vashi",
-     note:"A free intro masterclass on starting a career in digital marketing and AI — genuinely free, not just cheap.",
-     cost:"Free", free:true, url:"https://allevents.in/navi-mumbai/skillcircle-masterclass-navi-mumbai-start-your-career-with-digital-marketing-ai-tickets/80001529973081", added:"2026-08-15"},
-
-    {date:"2026-08-23", a:"navimum", cat:"outdoors", name:"Palm Beach 10K Run 2026",
-     when:"Sun 23 Aug · 5:30 AM", where:"Palm Beach Road, Navi Mumbai",
-     note:"A community 10K road run along Navi Mumbai's best-known running stretch.",
-     cost:"Not specified", url:"https://allevents.in/navi-mumbai/palm-beach-10k-run-2026/200030557386606", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"navimum", cat:"dance", name:"Aqua Pool Party — Belly Dance, DJ, Ramp Show",
-     when:"Sat 29 Aug · 6:30–11:30 PM", where:"Navi Mumbai — venue confirmed on registration",
-     note:"Pool party with a belly-dance performance, DJ, ramp show and games. The listing doesn't name a venue ahead of registration.",
-     cost:"Free", free:true, url:"https://allevents.in/navi-mumbai/aqua-pool-party-belly-dance-dj-ramp-show-games-buffet-dinner-and-drinks/100001983663491903", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"navimum", cat:"craft", name:"Kalabuzz 2026",
-     when:"Sun 30 Aug · 12:00 PM", where:"Bhoomiputra Bhawan, Navi Mumbai",
-     note:"A community art and craft festival.",
-     cost:"Free", free:true, url:"https://allevents.in/navi-mumbai/kalabuzz-2026-tickets/80003277530852", added:"2026-08-15"},
-
-    {date:"2026-08-30", a:"navimum", cat:"music", name:"Usha Uthup in Navi Mumbai",
-     when:"Sun 30 Aug · 8:40–10:40 PM", where:"Vishnudas Bhave Natyagruha, Vashi",
-     note:"A second date on the same short tour that plays Mulund a week earlier — different city, different hall, so check which one you actually booked.",
-     cost:"₹999+", url:"https://allevents.in/navi-mumbai/usha-uthup-in-navi-mumbai/3300030222253348", added:"2026-08-15"},
-
-    {date:"2026-09-05", a:"navimum", cat:"stage", name:"Kahanibaaz — Ashish Vidyarthi",
+        /* ================= MULTI / ROTATING — round 2 ================= */
+            /* ================= NAVI MUMBAI — round 2, first entries for this area ================= */
+                            {date:"2026-09-05", a:"navimum", cat:"stage", name:"Kahanibaaz — Ashish Vidyarthi",
      when:"Sat 5 Sep · 8:00–9:30 PM", where:"Bombay Bunts Association Banquet Hall, Nerul",
      note:"A storytelling performance from the actor, in a community banquet hall rather than a theatre.",
      cost:"₹499–₹1,999", url:"https://allevents.in/navi-mumbai/kahanibaaz-by-ashish-vidyarthi/4100030402742733", added:"2026-08-15"},
 
     /* ================= THANE — round 2, first entries for this area ================= */
-    {date:"2026-08-15", a:"thane", cat:"stage", name:"Mohd Suhel Live — Thane",
-     when:"Sat 15 Aug · 8:30–10:00 PM", where:"Backspace, Lodha Boulevard Mall, Majiwada",
-     note:"The same touring comic already on the Andheri and Delhi boards, now with a Thane date.",
-     cost:"₹499–₹899", url:"https://allevents.in/thane/mohd-suhel-live/4100030415705708", added:"2026-08-15"},
-
-    {date:"2026-08-15", a:"thane", cat:"music", name:"Jam with Kabir Kollective",
-     when:"Sat 15 Aug · 5:00–7:00 PM", where:"Kabir's Music School, Thane",
-     note:"A live music jam session at a music school rather than a venue — the room is smaller and the crowd is other musicians.",
-     cost:"₹149", url:"https://allevents.in/thane/jam-with-kabir-kollective-tickets/80003645420142", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"thane", cat:"craft", name:"3D Lippan Art Workshop",
-     when:"Sun 16 Aug · 11:00 AM", where:"Desai House, Uthalsar, Thane West",
-     note:"Traditional mirror-work craft — the first of several recurring Desai House workshops this refresh found.",
-     cost:"Not specified", url:"https://allevents.in/thane/3d-lippan-art-workshop/200030109172611", added:"2026-08-15"},
-
-    {date:"2026-08-16", a:"thane", cat:"craft", name:"Embroidery Art Masterclass",
-     when:"Sun 16–Sat 22 Aug · 11:00 AM–6:00 PM", where:"Desai House, Uthalsar, Thane",
-     note:"A multi-day embroidery skills workshop.",
-     cost:"Not specified", url:"https://allevents.in/thane/embroidery-art-masterclass/200029694409128", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"thane", cat:"startup", name:"BharatNext Business Growth Summit",
-     when:"Sat 22 Aug · 7:15–11:30 AM", where:"Vihang's Palm Club, Thane",
-     note:"An early-morning business-growth networking summit.",
-     cost:"₹799–₹999", url:"https://allevents.in/thane/bharatnext-business-growth-summit-tickets/80008315447780", added:"2026-08-15"},
-
-    {date:"2026-08-22", a:"thane", cat:"craft", name:"Resin Art Photo Frame Workshop",
-     when:"Sat 22–Sun 23 Aug · 11:00 AM–5:00 PM", where:"Desai House, Uthalsar, Thane",
-     note:"A resin-art craft workshop, same recurring Desai House venue.",
-     cost:"Not specified", url:"https://allevents.in/thane/resin-art-photo-frame-workshop/200030128204256", added:"2026-08-15"},
-
-    {date:"2026-08-23", a:"thane", cat:"craft", name:"Hand Block Printing Masterclass",
-     when:"Sun 23–Sat 29 Aug · 11:00 AM–6:00 PM", where:"Desai House, Uthalsar, Thane",
-     note:"Traditional block-printing, same recurring venue as the other Desai House workshops.",
-     cost:"Not specified", url:"https://allevents.in/thane/hand-block-printing-masterclass/200029734411808", added:"2026-08-15"},
-
-    {date:"2026-08-26", a:"thane", cat:"craft", name:"Fabric Painting — Ganapati Backdrop Workshop",
-     when:"Wed 26 Aug · 11:00 AM", where:"Desai House, Uthalsar, Thane",
-     note:"A festival-themed fabric-painting workshop ahead of Ganeshotsav — a genuine Wednesday option.",
-     cost:"Not specified", url:"https://allevents.in/thane/fabric-painting-ganapati-backdrop-workshop/200030148903552", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"thane", cat:"craft", name:"Ganapati Makhar Making Workshop",
-     when:"Sat 29–Sun 30 Aug · 11:00 AM–5:00 PM", where:"Desai House, Uthalsar, Thane",
-     note:"Festival decor-making, ahead of Ganeshotsav.",
-     cost:"Not specified", url:"https://allevents.in/thane/ganapati-makhar-making-workshop/200030160860713", added:"2026-08-15"},
-
-    {date:"2026-08-29", a:"thane", cat:"wellness", name:"GMCKS — Achieving Oneness with the Higher Soul",
-     when:"Sat 29–Sun 30 Aug · from 9:30 AM", where:"Tambe Nagar, Mulund",
-     note:"A pranic-healing and meditation retreat workshop, just over the Thane border in Mulund.",
-     cost:"Not specified", url:"https://allevents.in/thane/gmcks-achieving-oneness-with-the-higher-soul-workshop/200030275874309", added:"2026-08-15"},
-
-    {date:"2026-09-05", a:"thane", cat:"startup", name:"Thane Business Network — Business Networking 2026",
+                                            {date:"2026-09-05", a:"thane", cat:"startup", name:"Thane Business Network — Business Networking 2026",
      when:"Sat 5 Sep · 10:30 AM–1:30 PM", where:"Suyash Tripathi & Co., Thane",
      note:"A local business-networking meetup. Two other organisers list what looks like the same gathering at the same venue and time — this is the one card standing in for all three, to avoid triple-counting one room.",
      cost:"₹475", url:"https://allevents.in/thane/thane-business-network-business-networking-2026-tickets/80002380325732", added:"2026-08-15"},
@@ -1528,12 +1271,7 @@
      cost:"Free", free:true, url:"https://allevents.in/thane/thanes-biggest-study-abroad-fair/100001995184733246", added:"2026-08-15"},
 
     /* ================= NCPA, NARIMAN POINT ================= */
-    {date:"2026-08-27", a:"southmum", cat:"stage", name:"GAMTA NO KARIYE GULAL — Season 2",
-     when:"Thu 27 Aug · 7:30 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
-     note:"An NCPA Off-Stage evening of five original Gujarati monologues for Vishwa Gujarati Diwas, marriage to inheritance to a classic-literature retelling played for humour and emotion.",
-     cost:"₹450–₹500", url:"https://www.ncpamumbai.com/event/gamta-no-kariye-gulal-season-2/", added:"2026-08-15"},
-
-    /* ================= NCPA — round 2 (swept 17 Aug) ================= */
+        /* ================= NCPA — round 2 (swept 17 Aug) ================= */
     {date:"2026-09-06", a:"southmum", cat:"stage", name:"M se Maa",
      when:"Sun 6 Sep · 5:00 & 7:30 PM", where:"Godrej Dance Theatre, NCPA, Nariman Point",
      note:"A multidisciplinary piece on motherhood — movement, music and storytelling across the lives of a mother and daughter and of mothers in very different worlds. Two shows the same evening, directed by Ulka Mayur.",
@@ -1565,35 +1303,7 @@
      cost:"₹500–₹1,200", url:"https://www.ncpamumbai.com/event/death-and-the-maiden-2/", added:"2026-08-17"},
 
     /* ================= CONCERTS & BIG SHOWS — round 2 ================= */
-    {date:"2026-08-22", a:"multi", cat:"music", name:"Hariharan in Mumbai",
-     when:"Sat 22 Aug · 7:30–9:30 PM", where:"Shanmukhananda Hall, Sion",
-     note:"The ghazal and playback voice — Hanuman Chalisa to Venmegam — in the same Sion hall that carries several of this board's finds. A different vocal register entirely from the pop and Sufi nights also playing the hall this month.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/hariharan-in-mumbai/3300030436397904", added:"2026-08-17"},
-
-    {date:"2026-08-27", a:"multi", cat:"stage", name:"Vipul Goyal Unleashed — Borivali",
-     when:"Thu 27 Aug · 8:15 PM (second show 8:30 PM)", where:"Prabodhankar Thackeray Natya Mandir, Borivali West",
-     note:"An hour-plus of Vipul Goyal's best jokes in his first Borivali show of 2026, in a hall just off Borivali station. Two Thursday shows — the strongest weeknight comedy option this refresh found north of Andheri.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/vipul-goyal-unleashed-live-in-borivali/3900030491163627", added:"2026-08-17",
-     mt:"Western · Borivali"},
-
-    {date:"2026-08-23", a:"multi", cat:"music", name:"GRRR Nights × Underground — Seedhe Maut",
-     when:"Sun 23 Aug · 2:00–10:00 PM", where:"Richardson & Cruddas, Byculla",
-     note:"Royal Enfield's machine-culture festival with a live Seedhe Maut set inside a Byculla heritage factory site — stunts, drags, custom builds and MMA around the music. Eight hours for ₹499 early-bird makes it the day-long draw of the weekend.",
-     cost:"₹499+", url:"https://allevents.in/mumbai/royal-enfield-grrr-nights-x-underground-feat-seedhe-maut/4100030552774755", added:"2026-08-17",
-     mt:"Central · Byculla"},
-
-    {date:"2026-08-30", a:"bandra", cat:"music", name:"Unstoppable — Dino James",
-     when:"Sun 30 Aug · 7:30–9:00 PM", where:"Bal Gandharva Rang Mandir, Bandra West",
-     note:"A storytelling show rather than a straight concert — Dino James traces his journey from self-doubt to a national following inside an intimate Bandra auditorium. 16+; the songs come woven between the stories that made them.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/unstoppable-by-dino-james/3900030523299752", added:"2026-08-17"},
-
-    {date:"2026-08-28", a:"southmum", cat:"music", name:"Rashmeet Kaur Live",
-     when:"Fri 28 Aug · 7:00–9:00 PM", where:"Sophia Bhabha Auditorium, Breach Candy",
-     note:"Thumkeshwari and Nadiyon Paar live on a Friday at Sophia Bhabha's small hall — the desi-pop singer's single Mumbai date this month. Breach Candy sits a short auto from Mahalaxmi station, closer than the Sion halls for south-side travellers.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/rashmeet-kaur-in-mumbai/3300030488540314", added:"2026-08-17",
-     mt:"Western · Mahalaxmi"},
-
-    {date:"2026-09-06", a:"bandra", cat:"music", name:"Abhi Na Jao Chhod Kar — Celebrate Asha Ji",
+                        {date:"2026-09-06", a:"bandra", cat:"music", name:"Abhi Na Jao Chhod Kar — Celebrate Asha Ji",
      when:"Sun 6 Sep · 6:30–9:30 PM", where:"Jio World Garden (Covered Arena), BKC",
      note:"An Asha Bhosle tribute with Sudesh Bhosale, Madhura Datar and Nitin Shankar backed by a live orchestra, with RJ Anmol telling the stories between songs. Three hours across cabaret, ghazal and classical in the covered BKC arena.",
      cost:"Ticketed", url:"https://allevents.in/mumbai/abhi-na-jao-chhod-kar-celebrate-asha-ji/3900030477376915", added:"2026-08-17"},
@@ -1604,102 +1314,33 @@
      cost:"Ticketed", url:"https://allevents.in/mumbai/two-types-of-people-by-kenny-sebastian/3900030562375256", added:"2026-08-17"},
 
     /* ================= THANE — round 2 ================= */
-    {date:"2026-08-23", a:"thane", cat:"books", name:"Ayushyavar Bolu Kahi — Thane",
-     when:"Sun 23 Aug · 8:00–10:30 PM", where:"Ram Ganesh Gadkari Rangayatan, Thane West",
-     note:"Sandeep Khare and Saleel Kulkarni's Marathi poetry-and-music mehfil — 2,000+ shows over 23 years, from Maharashtra villages to 18 countries — lands at Thane's biggest auditorium. The same room hosts the Hits of Bollywood concert three days later.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/ayushyavar-bolu-kahi-thane/3900030397845521", added:"2026-08-17"},
-
-    {date:"2026-08-25", a:"thane", cat:"music", name:"Hits of Bollywood Live in Concert",
-     when:"Tue 25 Aug · 7:30–10:30 PM", where:"Ram Ganesh Gadkari Rangayatan, Thane West",
-     note:"DC Entertainment's live-band evening of Bollywood hits from 1960s soulful classics to modern dance numbers, with Mumbai vocalists and top session musicians. The board's first Tuesday-night find in Thane — a genuine weeknight unlock.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/hits-of-bollywood-live-in-concert/3900030525646231", added:"2026-08-17"},
-
-    /* ================= COMEDY — round 2 ================= */
-    {date:"2026-08-29", a:"multi", cat:"stage", name:"Harsh'O'Ullas ft. Harsh Gujral",
-     when:"Sat 29 Aug · 7:30 PM", where:"The Fine Arts Society, Chembur",
-     note:"Harsh Gujral's big-hall Mumbai date — 6,800+ marked interested, a step up from the club rooms that dominate this board. Balcony early-bird at ₹799 is the cheap way into the set beneath the Chembur monorail terminal.",
-     cost:"₹799+", url:"https://allevents.in/mumbai/harshoullas-ft-harsh-gujral/3900030321210213", added:"2026-08-17",
-     mt:"Harbour · Chembur"},
-
-    {date:"2026-08-30", a:"multi", cat:"stage", name:"Aise Kaise — Amit Tandon",
-     when:"Sun 30 Aug · 4:30 & 7:30 PM", where:"Lata Mangeshkar NatyaGruha, Mira Road East",
-     note:"Amit Tandon's new show on changing times, rituals and the logic — or lack of it — behind family behaviour, in Hindi. Two shows in the northernmost venue on this board, just past Dahisar on the Western Line.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/aise-kaise-by-amit-tandon/3900030400906600", added:"2026-08-17",
-     mt:"Western · Mira Road"},
-
-    /* ================= DANCE — round 2 (thin slot) ================= */
-    {date:"2026-08-22", a:"andheri", cat:"dance", name:"Salsa Dance Social",
-     when:"Sat 22 Aug · 7:30–8:30 PM", where:"Khwaab The Studio, Andheri West",
-     note:"An introductory salsa class followed by open social dancing — no partner needed, and 1,500+ people have marked interest. Khwaab on Veera Desai Road is a dedicated dance studio rather than a bar with a dancefloor bolted on.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/salsa-dance-social/3900030565916517", added:"2026-08-17"},
-
-    {date:"2026-09-03", a:"southmum", cat:"dance", name:"Roja Kannan & Kashmira Trivedi @ NCPA",
+            /* ================= COMEDY — round 2 ================= */
+            /* ================= DANCE — round 2 (thin slot) ================= */
+        {date:"2026-09-03", a:"southmum", cat:"dance", name:"Roja Kannan & Kashmira Trivedi @ NCPA",
      when:"Thu 3 Sep · 6:30–8:30 PM", where:"Experimental Theatre, NCPA, Nariman Point",
      note:"A Bharatanatyam double bill — Antaranveshanam on the search within, then Mahātattva weaving five classical dance forms around the five elements with 35 artists. A proper Thursday-night dance programme, and the Experimental Theatre rewards early seats.",
      cost:"Ticketed", url:"https://allevents.in/mumbai/roja-kannan-and-kashmira-trivedi-ncpa/3900030563242248", added:"2026-08-17"},
 
-    {date:"2026-08-23", a:"southmum", cat:"dance", name:"Geeta Govind Masterclass — Dr Sonal Mansingh",
-     when:"Sun 23 Aug · 11:00 AM–2:00 PM (also Mon 24 Aug)", where:"Godrej Dance Theatre, NCPA, Nariman Point",
-     note:"Two-day classical dance masterclass on Jayadeva's Geeta Govind with the Padma Vibhushan dancer, at the NCPA's August dance residency. The ₹2,000 registration covers both days — an intensive rather than a performance.",
-     cost:"₹2,000 (both days)", url:"https://allevents.in/mumbai/geeta-govind-masterclass-by-dr-sonal-mansingh-ncpa/3900030477639308", added:"2026-08-17"},
-
-    /* ================= WELLNESS — round 2 (thin slot) ================= */
-    {date:"2026-08-22", a:"bandra", cat:"wellness", name:"Sound Bath Meditation",
-     when:"Sat 22 Aug · 10:00–11:00 AM", where:"Namaste Yoga Classes, Khar West",
-     note:"Singing bowls, gongs, chimes and bamboo rainsticks at a Khar studio near the gymkhana — an immersive sound-bath session rather than a lecture about one. A Saturday-morning reset within walking distance of Khar station.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/sound-bath-meditation/3900030393860425", added:"2026-08-17"},
-
-    {date:"2026-08-29", a:"parel", cat:"wellness", name:"India Health & Wellness Expo 2026",
-     when:"Sat 29–Sun 30 Aug · 10:00 AM–7:00 PM", where:"Nehru Centre, Worli",
-     note:"The seventh edition of the two-day wellness trade fair — preventive health, ayurveda, fitness, nutrition and holistic therapy exhibitors with live demos and free consultations. ₹50 entry covers both days at the Worli hall.",
-     cost:"₹50", url:"https://allevents.in/mumbai/india-health-and-wellness-expo-2026-tickets/80001693949861", added:"2026-08-17"},
-
-    {date:"2026-08-30", a:"andheri", cat:"wellness", name:"The Inner Reset — Osho Meditation Day",
-     when:"Sun 30 Aug · 10:00 AM–1:00 PM", where:"ASDA — The Step Up Studio, Vile Parle East",
-     note:"Active Osho meditations, techniques from The Book of Secrets and a discourse, in a three-hour Sunday-morning session near E Square. Contribution ₹750, seats limited — register by phone or the form on the listing.",
-     cost:"₹750", url:"https://www.meetup.com/oshoglimpsemumbai/events/316017952/", added:"2026-08-17"},
-
-    {date:"2026-09-06", a:"bandra", cat:"wellness", name:"Music Therapy #190 — Dr Ojas Joshi",
+        /* ================= WELLNESS — round 2 (thin slot) ================= */
+                {date:"2026-09-06", a:"bandra", cat:"wellness", name:"Music Therapy #190 — Dr Ojas Joshi",
      when:"Sun 6 Sep · 5:00–7:00 PM", where:"Soda Bottle Opener Wala, BKC",
      note:"A music-based de-stress session — live music, singing, rhythm and guided activities — from the therapist behind a 190-session-long series. No musical experience needed; tickets via the Instamojo link on the listing.",
      cost:"Ticketed", url:"https://www.meetup.com/music-theraphy-for-stress-anxiety-and-depression/events/316071435/", added:"2026-08-17"},
 
     /* ================= SOCIAL & GAMES — round 2 ================= */
-    {date:"2026-08-22", a:"multi", cat:"social", name:"The August Affair — Taylor Swift Fan Experience",
-     when:"Sat 22 Aug · 5:00–9:00 PM", where:"Laguna by TGS, Santacruz West",
-     note:"A four-hour Swiftie evening in Santacruz — 40+ songs across the eras, trivia, friendship-bracelet trading and era dress-up. Built for solo arrivals: the description promises strangers who become friends by the last bridge.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/the-august-affair-taylor-swift-fan-experience/3900030525149721", added:"2026-08-17",
-     mt:"Western · Santacruz"},
-
-    {date:"2026-08-18", a:"navimum", cat:"games", name:"Mutiny x Effingut Belapur Pub Quiz",
-     when:"Tue 18 Aug · 8:00 PM", where:"Effingut Brewpub, Belapur, Navi Mumbai",
-     note:"The same weekly Mutiny quiz circuit as the Colaba and NESCO nights already on this board, now on the Navi Mumbai side — winners take free Mutiny movie tickets. ₹100 entry makes it the cheapest standing Tuesday night on the board.",
-     cost:"₹100+", url:"https://www.district.in/events/mutiny-x-effingut-belapur-pub-quiz-aug4-2026-buy-tickets", added:"2026-08-17",
-     mt:"Harbour · Belapur"},
-
-    /* ================= CRAFT — round 2 ================= */
+            /* ================= CRAFT — round 2 ================= */
     {dow:6, a:"powai", cat:"craft", name:"Japanese Ikebana — Hitchki",
      when:"Every Saturday", where:"Hitchki, Powai",
      note:"A guided Japanese flower-arrangement workshop — balanced lines and calm focus rather than the wheel-throwing that dominates this venue's Saturdays. ₹1,499 with all materials; beginners are the target audience.",
      cost:"₹1,499+", url:"https://www.district.in/events/japanese-ikebana-mumbai-aug1-2026-buy-tickets", added:"2026-08-17"},
 
-    {date:"2026-08-28", a:"andheri", cat:"craft", name:"Fabelle Chocolate Masterclass — ITC Maratha",
-     when:"Fri 28–Sun 30 Aug · multiple slots", where:"Fabelle Chocolates, ITC Maratha, Chakala",
-     note:"A bean-to-bar masterclass with guided tastings and chocolate tempering, ending with you plating your own dessert — timed for Raksha Bandhan weekend. Two hours at the ITC Maratha counter in Chakala, Andheri East.",
-     cost:"₹995+", url:"https://www.district.in/events/raksha-bandhan-exclusive-fabelle-chocolate-masterclass-itc-maratha-aug28-2026-buy-tickets", added:"2026-08-17"},
-
-    /* ================= 19 AUG REFRESH ================= */
+        /* ================= 19 AUG REFRESH ================= */
     {date:"2026-09-06", a:"southmum", cat:"stage", name:"Sawal – Jawab",
      when:"Sun 6 Sep · 4:00 PM", where:"Experimental Theatre, NCPA, Nariman Point",
      note:"A Marathi musical on censorship and free speech, part of the same 6 Sep NCPA day as Choggo and M se Maa already on the board.",
      cost:"₹450–₹600", url:"https://www.ncpamumbai.com/event/sawal-jawab/", added:"2026-08-19"},
 
-    {date:"2026-08-27", a:"andheri", cat:"stage", name:"The Mumbai Harold Project",
-     when:"Thu 27 Aug · 8:30 PM", where:"Mukti Manch, Versova, Andheri West",
-     note:"A Harold-format long-form improv night — a genuine Thursday find in Andheri.",
-     cost:"₹399", url:"https://www.district.in/events/the-mumbai-harold-project-aug27-2026-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-09-26", a:"bandra", cat:"stage", name:"Rupali Tyagi Live",
+        {date:"2026-09-26", a:"bandra", cat:"stage", name:"Rupali Tyagi Live",
      when:"Sat 26 Sep · 7:00 PM", where:"The Habitat, Khar West",
      note:"A named stand-up special at one of Khar's most reliable comedy rooms.",
      cost:"₹499+", url:"https://www.district.in/events/rupali-tyagi-live-sep26-2026-buy-tickets", added:"2026-08-19"},
@@ -1714,17 +1355,7 @@
      note:"A distinct comedy room from the Habitat/Ink A Laugh cluster already covered on this board.",
      cost:"₹999+", url:"https://www.district.in/events/cry-daddy-ft-anirban-dasgupta-kcc-mar22-2026-buy-tickets", added:"2026-08-19"},
 
-    {date:"2026-08-24", a:"andheri", cat:"stage", name:"Ministry of Jokes: Juhu",
-     when:"From Mon 24 Aug, gates 9:50 PM", where:"Love & Latte, Juhu",
-     note:"A new venue for this board's Juhu/Andheri comedy coverage.",
-     cost:"₹299+", url:"https://www.district.in/events/ministry-of-jokes-mar14-2025-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-08-27", a:"andheri", cat:"stage", name:"Comedy Unfiltered — Thursday Dose of Comedy",
-     when:"Thu 27 Aug · 8:30 PM", where:"Funkaar, Andheri West",
-     note:"A real Thursday-night comedy slot west of the airport corridor.",
-     cost:"₹257", url:"https://www.district.in/events/comedy-unfiltered-thursday-dose-of-comedy-may14-2026-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-09-13", a:"multi", cat:"stage", name:"Stand Up Theka — Pirated Artist",
+            {date:"2026-09-13", a:"multi", cat:"stage", name:"Stand Up Theka — Pirated Artist",
      when:"Sun 13 Sep · 6:30 PM", where:"Rasā — The Stage",
      note:"A trilingual (English/Hindi/Marathi) open-mic-style show at a venue this board already trusts for open mics.",
      cost:"₹249+", url:"https://www.district.in/events/stand-up-theka-by-pirated-artist-sep13-2026-buy-tickets", added:"2026-08-19"},
@@ -1734,17 +1365,7 @@
      note:"A recurring weekly comedy-game format — the listing confirms \"every Saturday\" despite a stale-looking slug, the same pattern already accepted for this board's Pratyush Chaubey Live card.",
      cost:"₹199", url:"https://www.district.in/events/comedy-wheel-unlimited-laughter-edition-mar13-2022-buy-tickets", added:"2026-08-19"},
 
-    {date:"2026-08-23", a:"andheri", cat:"stage", name:"Are You Wet? — A Standup Comedy Show",
-     when:"From Sun 23 Aug through 31 Aug · 10:45 PM", where:"Ink A Laugh, Vile Parle West",
-     note:"A distinct late-night title at an anchor venue this board already tracks — later than the usual early-evening shows there.",
-     cost:"₹249+", url:"https://www.district.in/events/are-you-wet-a-standup-comedy-show-jun12-2026-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-08-24", a:"andheri", cat:"stage", name:"Dubai Return — Rohan Chawda",
-     when:"From Mon 24 Aug, gates 7:30 PM", where:"Ink A Laugh, Vile Parle West",
-     note:"Another distinct named show at the same venue, different comic and time slot.",
-     cost:"₹249+", url:"https://www.district.in/events/dubai-return-stand-up-comedy-by-rohan-chawda-oct24-2025-buy-tickets", added:"2026-08-19"},
-
-    {dow:6, a:"bandra", cat:"craft", name:"Moroccan Lamp — Mumbai",
+            {dow:6, a:"bandra", cat:"craft", name:"Moroccan Lamp — Mumbai",
      when:"Every Saturday · multiple slots", where:"Hitchki, BKC",
      note:"Adds to the Hitchki BKC craft slate already partly represented via games nights.",
      cost:"₹1,799+", url:"https://www.district.in/events/moroccan-lamp-mumbai-aug8-2026-buy-tickets", added:"2026-08-19"},
@@ -1754,17 +1375,7 @@
      note:"An eighth distinct weekly craft slot at this board's densest single venue, and its cheapest.",
      cost:"₹749", url:"https://www.district.in/events/small-world-lippan-art-aug22-2026-buy-tickets", added:"2026-08-19"},
 
-    {date:"2026-08-30", a:"powai", cat:"craft", name:"Macarons Class | With Eggs",
-     when:"Sun 30 Aug · 10:00 AM", where:"Culinary Craft, Hiranandani, Powai",
-     note:"A genuine bakery skills class, a different format from Hitchki's pottery/art slate in the same neighbourhood.",
-     cost:"₹2,950", url:"https://www.district.in/events/macarons-class-with-eggs-apr7-2026-buy-tickets", added:"2026-08-19"},
-
-    {date:"2026-08-26", a:"bandra", cat:"craft", name:"The Picante Workshop",
-     when:"From Wed 26 Aug, multiple dates", where:"District 11, Linking Road, Bandra West",
-     note:"A genuine weeknight (Wednesday) craft slot at a venue already known for trivia nights.",
-     cost:"₹1,599", url:"https://www.district.in/events/the-picante-workshop-aug19-2026-buy-tickets", added:"2026-08-19"},
-
-    {dow:0, a:"bandra", cat:"craft", name:"DIY Sock Puppet — Mumbai",
+            {dow:0, a:"bandra", cat:"craft", name:"DIY Sock Puppet — Mumbai",
      when:"Every Sunday · multiple slots", where:"Olive Café & Bar, BKC",
      note:"Adds a craft option at Olive Café, currently only on the board for games nights.",
      cost:"₹1,499+", url:"https://www.district.in/events/diy-sock-puppet-mumbai-aug2-2026-buy-tickets", added:"2026-08-19"},
@@ -1789,52 +1400,12 @@
      note:"A new venue for this board — a co-working café/bar in Dadar running an affordable weekend pottery slot.",
      cost:"₹799", url:"https://www.district.in/events/mini-clay-planters-aug1-2026-buy-tickets", added:"2026-08-19"},
 
-    {date:"2026-08-26", a:"andheri", cat:"expo", name:"Fi India 2026",
-     when:"Wed 26–Fri 28 Aug", where:"Hall 3 & 4, Bombay Exhibition Centre, Goregaon",
-     note:"A 20th-edition food-ingredients trade fair — the B2B expo texture this board specifically hunts for at NESCO/BEC.",
-     cost:"Registration required", url:"https://allevents.in/mumbai/fi-india-2026/200030556764618", added:"2026-08-19"},
-
-    {date:"2026-08-23", a:"parel", cat:"expo", name:"Bridal Curator",
-     when:"Sun 23–Mon 24 Aug", where:"The St. Regis Mumbai, Lower Parel",
-     note:"A curated bridal-shopping event — previously held back for lacking an exact URL; now has one.",
-     cost:"Not specified", url:"https://allevents.in/mumbai/bridal-curator/200030561206732", added:"2026-08-19"},
-
-    {date:"2026-08-28", a:"andheri", cat:"music", name:"Radha Krishna Utsav 2026",
-     when:"Fri 28 Aug · 7:15–9:15 PM", where:"ISKCON Auditorium, Juhu",
-     note:"A devotional music-and-dance festival at a venue not yet on this board.",
-     cost:"Not specified", url:"https://allevents.in/mumbai/radha-krishna-utsav-2026/3900030598626559", added:"2026-08-19"},
-
-    {date:"2026-09-12", a:"bandra", cat:"music", name:"Strings and Sing",
+                {date:"2026-09-12", a:"bandra", cat:"music", name:"Strings and Sing",
      when:"Sat 12 Sep · 7:00 PM", where:"The Grand Theatre, NMACC, BKC",
      note:"First NMACC entry for this board — a major cultural venue in BKC not yet represented.",
      cost:"Not specified", url:"https://allevents.in/mumbai/strings-and-sing/3900030279975438", added:"2026-08-19"},
 
-    {date:"2026-08-29", a:"bandra", cat:"music", name:"Arghya Shakti Naad — The Spirit of Shakti",
-     when:"Sat 29 Aug · 5:45–8:30 PM", where:"Bal Gandharva Rang Mandir, Bandra West",
-     note:"An all-women classical ensemble across three generations, led by Padma Vibhushan violinist Dr N. Rajam.",
-     cost:"Not specified", url:"https://allevents.in/mumbai/arghya-shakti-naad-the-spirit-of-shakti/3900030437394918", added:"2026-08-19"},
-
-    {date:"2026-08-30", a:"multi", cat:"music", name:"Pankh — Kaushiki Chakraborty",
-     when:"Sun 30 Aug · 9:30–11:30 PM", where:"Yashwant Natya Mandir, Matunga West",
-     note:"A Hindustani classical vocal concert at a heritage Marathi theatre venue not yet on this board.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/pankh-kaushiki-chakraborty-mumbai/3900030477308916", added:"2026-08-19"},
-
-    {date:"2026-08-29", a:"bandra", cat:"social", name:"LinkedUp: A Dating Show for the Employed",
-     when:"Sat 29 Aug · 6:00–7:30 PM", where:"The Habitat, Khar West",
-     note:"Fills this board's thinnest category with a genuinely different live-dating-game format.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/linkedup-a-dating-show-for-the-employed-ft-sahil/3900030534130939", added:"2026-08-19"},
-
-    {date:"2026-08-29", a:"bandra", cat:"stage", name:"Abish Mathew & His Many Talents Part 2",
-     when:"Sat 29 Aug · evening", where:"The Habitat, Khar West",
-     note:"A recognisable-name comedy solo show the same weekend as several other Habitat bookings.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/abish-mathew-and-his-many-talents-part-2/3900030509185007", added:"2026-08-19"},
-
-    {date:"2026-08-23", a:"navimum", cat:"music", name:"Remembering KK — Mumbai Tour",
-     when:"Sun 23 Aug · 8:30 PM", where:"Vishnudas Bhave Natyagruha, Vashi",
-     note:"A tribute concert at the same Navi Mumbai hall already carrying Usha Uthup's date on this board.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/remembering-kk-mumbai-tour/3900030234214553", added:"2026-08-19"},
-
-    {dow:6, a:"bandra", cat:"ai", name:"MumbAI AI Saturdays — Get Funded to Co-Work",
+                        {dow:6, a:"bandra", cat:"ai", name:"MumbAI AI Saturdays — Get Funded to Co-Work",
      when:"Every Saturday through 25 Oct · 6:00–8:00 PM", where:"BHIVE Platinum Plus, BKC",
      note:"A recurring founder/builder co-working meetup — genuinely low-cost and weekly, in this board's thinnest tech category.",
      cost:"₹75", url:"https://www.meetup.com/mumbai-ai/events/315985045/", added:"2026-08-19"},
@@ -1849,38 +1420,18 @@
      note:"A genuine Monday-morning recurring fixture — this board has almost no weekday outdoors options. Exact meeting point is confirmed on registration.",
      cost:"Not specified", url:"https://www.meetup.com/national-park-mumbai-cycling-club/events/316163610/", added:"2026-08-19"},
 
-    {date:"2026-08-25", a:"southmum", cat:"speak", name:"Developing Inner Stability: Lessons from the Buddha",
-     when:"Tue 25 Aug · 7:30–9:00 PM", where:"New Acropolis, Ballard Estate, Fort",
-     note:"A genuine Tuesday-night philosophy talk — the weeknight-in-a-thin-category find this board hunts for. Area corrected from bandra to southmum on the 19 Aug refresh: New Acropolis's actual venue is Ballard Estate, Fort, confirmed via a sibling event listing.",
-     cost:"₹200", url:"https://www.meetup.com/new-acropolis-bandra-philosophers/events/316060102/", added:"2026-08-19"},
-
-    /* ================= 19 AUG REFRESH, ROUND 2 ================= */
+        /* ================= 19 AUG REFRESH, ROUND 2 ================= */
     {date:"2026-09-20", a:"multi", cat:"craft", name:"Young Innovators Lab",
      when:"Sun 20 Sep · 2:00–6:00 PM", where:"M.K. School, Borivali West",
      note:"A kids' STEM/innovation workshop for ages 7-15 — a genuinely different craft format from this board's usual pottery/resin classes.",
      cost:"₹1,500", url:"https://allevents.in/mumbai/young-innovators-lab-tickets/80002411634096", added:"2026-08-19"},
 
-    {date:"2026-08-29", a:"multi", cat:"music", name:"Laal Ishq — Geeta Rabari",
-     when:"Sat 29 Aug · 6:00 PM", where:"K. Divine Lawns & Convention, Eksar, Borivali West",
-     note:"A pre-Navratri folk-vocalist night with a red-dress-code theme.",
-     cost:"₹1,000", url:"https://allevents.in/mumbai/laal-ishq-with-geeta-rabari-by-showglitz-x-thangaat-tickets/80001869882141", added:"2026-08-19"},
-
-    {date:"2026-09-05", a:"andheri", cat:"stage", name:"Beti Testing — Aditi Mittal",
+        {date:"2026-09-05", a:"andheri", cat:"stage", name:"Beti Testing — Aditi Mittal",
      when:"Sat 5 Sep · 6:00–7:10 PM", where:"Ink A Laugh, Vile Parle West",
      note:"A named comic's solo hour at this board's anchor Vile Parle venue.",
      cost:"Ticketed", url:"https://allevents.in/mumbai/beti-testing/3900030519130751", added:"2026-08-19"},
 
-    {date:"2026-08-29", a:"andheri", cat:"music", name:"Lenny's Kids Concert Tour — Mumbai",
-     when:"Sat 29 Aug · 11:00 AM–2:00 PM", where:"Dublin Square, Phoenix Marketcity, Kurla West",
-     note:"A touring kids'/family concert, a genuinely different crowd from this board's usual evening gigs.",
-     cost:"Ticketed", url:"https://allevents.in/mumbai/lennys-kids-concert-tour-mumbai/3900030389495002", added:"2026-08-19"},
-
-    {date:"2026-08-28", a:"multi", cat:"books", name:"Nakshtranche Dene — Shanta Shelke",
-     when:"Fri 28 Aug · 7:00 PM", where:"Shanmukhananda Hall, Sion",
-     note:"A Marathi poetry-and-music tribute, the same shape as this board's existing Choggo card.",
-     cost:"₹300–₹3,500", url:"https://allevents.in/mumbai/nakshtranche-dene-shanta-shelke/3900030235594858", added:"2026-08-19"},
-
-    {date:"2026-09-05", a:"andheri", cat:"ai", name:"ProductTank Mumbai — AI in Product Management",
+            {date:"2026-09-05", a:"andheri", cat:"ai", name:"ProductTank Mumbai — AI in Product Management",
      when:"Sat 5 Sep · 11:00 AM–1:00 PM", where:"DevX, Dynasty Business Park, Andheri East",
      note:"This board's REFRESH-RULES previously logged ProductTank Mumbai as confirmed genuinely empty — it now has a real dated event, on AI in product management specifically.",
      cost:"Ticketed", url:"https://www.meetup.com/producttank-mumbai/events/316236756/", added:"2026-08-19"},
@@ -1895,15 +1446,316 @@
      note:"The same New Acropolis series as this board's Developing Inner Stability card, correctly placed in southmum.",
      cost:"₹200", url:"https://www.meetup.com/acropolis/events/315779112/", added:"2026-08-19"},
 
-    {date:"2026-08-29", a:"andheri", cat:"startup", name:"Global Startups Club — Startup Networking Mumbai",
-     when:"Sat 29 Aug · 10:30 AM–1:30 PM", where:"DevX, Dynasty Business Park, Andheri East",
-     note:"A startup-networking meetup, same venue as ProductTank's AI event.",
-     cost:"Ticketed", url:"https://www.meetup.com/mumbai-business-meetup-business-network/events/316069778/", added:"2026-08-19"},
+    /* ================= 1 SEP REFRESH — scraper-sourced sweep ================= */
+    {date:"2026-09-10", a:"powai", cat:"social", name:"Afterwork by Heineken | Powai SOCIAL",
+     when:"Thu 10 Sep", where:"Powai Social, Powai",
+     note:"A Thursday after-work social — this board's thinnest weeknight in Powai.",
+     cost:"Ticketed", url:"https://www.district.in/events/afterwork-by-heineken-powai-social-sep10-2026-buy-tickets", added:"2026-09-01"},
 
-    {date:"2026-08-27", a:"multi", cat:"games", name:"Board Games & Karaoke — House Party",
-     when:"Thu 27 Aug · 7:00–10:00 PM", where:"Dadar West",
-     note:"A Thursday board-games-and-karaoke social — this board's thinnest weeknight.",
-     cost:"₹600", url:"https://www.meetup.com/linkandchillmumbai/events/316235102/", added:"2026-08-19"}
+    {date:"2026-09-08", a:"bandra", cat:"expo", name:"Global Fintech Fest",
+     when:"Tue 8 Sep", where:"Jio World Centre, BKC",
+     note:"A major fintech industry expo at BKC's flagship venue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/global-fintech-fest/100001998748213712", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"southmum", cat:"music", name:"Allin Showcase — Arjun Vagale, Calm Chor & Ash Roy",
+     when:"Sat 5 Sep", where:"HYLO, Fort",
+     note:"An electronic-music showcase with three distinct acts on one bill.",
+     cost:"₹899", url:"https://allevents.in/mumbai/allin-showcase-featuring-arjun-vagale-calm-chor-and-ash-roy/4100030622269705", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"parel", cat:"stage", name:"Sunil Grover Live in Mumbai",
+     when:"Sat 19 Sep", where:"Dome, SVP Stadium, Worli",
+     note:"A major touring headliner at a proper stadium venue — the biggest name on this board this refresh.",
+     cost:"₹999–₹7,499", url:"https://allevents.in/mumbai/sunil-grover-live-in-mumbai/4100030580897252", added:"2026-09-01"},
+
+    {date:"2026-09-13", a:"bandra", cat:"music", name:"Durbar Evenings — Orchestral Qawwali Project",
+     when:"Sun 13 Sep", where:"Jio World Garden, BKC",
+     note:"A qawwali reimagined with a full orchestra — a genuinely different format from the board's usual qawwali nights.",
+     cost:"₹2,999–₹17,999", url:"https://allevents.in/mumbai/durbar-evenings-orchestral-qawwali-project/4100030496203148", added:"2026-09-01"},
+
+    {date:"2026-09-11", a:"bandra", cat:"stage", name:"Space Cadet — Varun Thakur: KCC",
+     when:"Fri 11 Sep", where:"Khar Comedy Club",
+     note:"A named comic's solo hour at Khar's dedicated comedy room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/space-cadet-ft-varun-thakur-kcc/3900030564744231", added:"2026-09-01"},
+
+    {date:"2026-09-11", a:"multi", cat:"music", name:"Hrishikesh Ranade — Live in Concert",
+     when:"Fri 11 Sep", where:"Prabodhankar Thackeray Auditorium, Borivali West",
+     note:"A live vocal concert in Borivali, north of this board's usual coverage.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/hrishikesh-ranade-live-in-concert/3900030403465255", added:"2026-09-01"},
+
+    {date:"2026-09-03", a:"bandra", cat:"stage", name:"Azeem Banatwalla — Generational",
+     when:"Thu 3 Sep", where:"Khar Comedy Club",
+     note:"A veteran club comic's satire hour, this board's own Mumbai date of a set already on Pune's board.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/azeem-banatwalla-generational/3900030491708307", added:"2026-09-01"},
+
+    {date:"2026-09-03", a:"bandra", cat:"expo", name:"Fire & Security India Expo (FSIE) 2026",
+     when:"Thu 3 Sep", where:"Jio World Convention Centre, BKC",
+     note:"A fire-and-security industry trade expo, previously held back for lacking an exact URL — now has one.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/fire-and-security-india-expo-fsie-2026-mumbai-exhibition/100001970088485694", added:"2026-09-01"},
+
+    {date:"2026-09-11", a:"multi", cat:"music", name:"Bollywood Hits Then & Now",
+     when:"Fri 11 Sep", where:"Shree Shivaji Mandir, Dadar West",
+     note:"A live Bollywood-hits set at a classic Dadar hall.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/bollywood-hits-then-and-now/3900030311288411", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"bandra", cat:"social", name:"Taylor Swift: The Night Of A Showgirl (Fan Event)",
+     when:"Sat 5 Sep", where:"Veranda, Khar",
+     note:"A fan singalong/experience event for the new album.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/taylor-swift-the-night-of-a-showgirl-fan-event/3900030573883946", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"bandra", cat:"stage", name:"Spoiler Alert — Anshu Mor: KCC",
+     when:"Sat 12 Sep", where:"Khar Comedy Club",
+     note:"A solo comedy hour at Khar's dedicated room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/spoiler-alert-ft-anshu-mor-kcc/3900030537257008", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"bandra", cat:"dance", name:"Sambhavami Yugey Yugey",
+     when:"Sat 12 Sep", where:"The Studio Theatre, NMACC, BKC",
+     note:"A classical dance production at NMACC's smaller studio theatre.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/sambhavami-yugey-yugey/3900030540082653", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"bandra", cat:"music", name:"Candlelight: Mehfil-e-Sufi | Mumbai",
+     when:"Sun 6 Sep", where:"Sofitel Mumbai BKC",
+     note:"A candlelit Sufi string-ensemble set at a BKC hotel.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/candlelight-mehfil-e-sufi-mumbai/200030442938843", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"thane", cat:"stage", name:"Vipul Goyal Unleashed — Live in Kalyan",
+     when:"Sun 6 Sep", where:"C M Gandhi Auditorium, Kalyan West",
+     note:"A named comic's solo hour in Kalyan, this board's outer Thane-side reach.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/vipul-goyal-unleashed-live-in-kalyan/3900030317319828", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"bandra", cat:"stage", name:"Rock Bottom — Shubham Pujari",
+     when:"Fri 5 Sep", where:"The Habitat, Khar West",
+     note:"A solo stand-up hour at this board's anchor Khar comedy room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/rock-bottom-a-standup-solo-by-shubham-pujari/3900030064034738", added:"2026-09-01"},
+
+    {date:"2026-09-04", a:"bandra", cat:"stage", name:"Not a Crowdwork Comedy Show",
+     when:"Fri 4 Sep", where:"The Habitat, Khar West",
+     note:"A structured (not crowd-work) comedy format at the Habitat.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/not-a-crowdwork-comedy-show/3900029184775653", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"multi", cat:"music", name:"Bhajan Jamming — Soul Strings ft. Nandy Sisters",
+     when:"Sat 12 Sep", where:"Phoenix Marketcity, Kurla West",
+     note:"A devotional live-music set at a mall amphitheatre.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/bhajan-jamming-soul-strings-ft-nandy-sisters/3900030502344912", added:"2026-09-01"},
+
+    {date:"2026-09-25", a:"bandra", cat:"music", name:"Aho Gurudev",
+     when:"Fri 25 Sep", where:"Jio World Convention Centre, BKC",
+     note:"A devotional music evening at BKC's flagship convention venue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/aho-gurudev/200030320140718", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"andheri", cat:"stage", name:"Stand-up Virgin — Kubbra Sait & Devanshi Shah",
+     when:"Sun 6 Sep", where:"Mukti Manch, Versova, Andheri West",
+     note:"A two-hander stand-up debut set at this board's Versova improv venue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/stand-up-virgin-ft-kubbra-sait-and-devanshi-shah/3900030613795216", added:"2026-09-01"},
+
+    {date:"2026-10-02", a:"bandra", cat:"expo", name:"GJS — India Gem and Jewellery Show 2026",
+     when:"Fri 2 Oct", where:"Jio World Convention Centre, BKC",
+     note:"A major gem-and-jewellery trade show.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/gjs-india-gem-and-jewellery-show-2026/200030535838846", added:"2026-09-01"},
+
+    {date:"2026-09-26", a:"multi", cat:"music", name:"Ishqnaama — Love Across Generations",
+     when:"Sat 26 Sep", where:"Shanmukhananda Hall, Sion",
+     note:"A themed music evening on love across generations at Sion's classic hall.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/ishqnaama-love-across-generations/3900030538954842", added:"2026-09-01"},
+
+    {date:"2026-09-03", a:"multi", cat:"music", name:"Bhaktigram",
+     when:"Thu 3 Sep", where:"Shree Shivaji Mandir, Dadar West",
+     note:"A devotional music evening, a genuine Thursday option at Dadar's classic hall.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/bhaktigram/3900030596740047", added:"2026-09-01"},
+
+    {date:"2026-09-04", a:"multi", cat:"stage", name:"Shyam Teri Bansee",
+     when:"Fri 4 Sep", where:"Aspee Auditorium, Malad West",
+     note:"A devotional theatrical production in Malad.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/shyam-teri-bansee/3900030234215112", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"southmum", cat:"stage", name:"Casual-Tea — Madhur Virli",
+     when:"Sat 5 Sep", where:"Sophia Bhabha Auditorium, Breach Candy",
+     note:"A stand-up hour at a South Mumbai college auditorium.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/casual-tea-ft-madhur-virli/3900030512332051", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"parel", cat:"stage", name:"Tab Tum Kahaan The? — Sundeep Sharma",
+     when:"Sat 5 Sep", where:"Backspace, Lower Parel",
+     note:"The Mumbai date of a touring solo show also playing Delhi this season.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/tab-tum-kahaan-the-by-sundeep-sharma/3900030512467021", added:"2026-09-01"},
+
+    {date:"2026-09-13", a:"bandra", cat:"stage", name:"ImagiNesan — Nesan David",
+     when:"Sun 13 Sep", where:"Backspace, Bandra West",
+     note:"A solo stand-up hour at Backspace's Bandra room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/imaginesan-a-live-standup-show-by-nesan-david/3900030494983536", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"bandra", cat:"music", name:"Ajivasan ACT 2026",
+     when:"Sun 6 Sep", where:"Ajivasan Music Academy, Santacruz West",
+     note:"A student showcase concert at a well-known Mumbai music academy.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/ajivasan-act-2026/3900030594828915", added:"2026-09-01"},
+
+    {date:"2026-09-17", a:"bandra", cat:"music", name:"Nightingales of India — Two Voices, One Legacy",
+     when:"Thu 17 Sep", where:"The Studio Theatre, NMACC, BKC",
+     note:"A tribute concert to two legendary playback voices, a genuine Thursday option at NMACC.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/nightingales-of-india-two-voices-one-legacy/3900030587293520", added:"2026-09-01"},
+
+    {date:"2026-09-11", a:"andheri", cat:"stage", name:"Ghutne 2.0 — Shashwat Maheshwari",
+     when:"Fri 11 Sep", where:"The J Spot, Juhu",
+     note:"A solo comedy hour at this board's Juhu room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/ghutne-20-standup-comedy-by-shashwat-maheshwari/3900030604255801", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"bandra", cat:"music", name:"The Weeknd Night — Mumbai",
+     when:"Sat 19 Sep", where:"The Habitat, Khar West",
+     note:"A tribute set covering The Weeknd's catalogue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/the-weeknd-night-mumbai/3900030619660052", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"parel", cat:"stage", name:"Fresh Violence — Punit Pania",
+     when:"Sun 6 Sep", where:"Backspace, Lower Parel",
+     note:"A solo stand-up hour at Backspace's Lower Parel room.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/fresh-violence-ft-punit-pania/3900030545833643", added:"2026-09-01"},
+
+    {date:"2026-09-03", a:"bandra", cat:"stage", name:"Midnight All Stars",
+     when:"Thu 3 Sep", where:"The Habitat, Khar West",
+     note:"A late-slot multi-comic lineup show, a genuine Thursday option.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/midnight-all-stars/3900030045554041", added:"2026-09-01"},
+
+    {date:"2026-09-18", a:"bandra", cat:"music", name:"Carvaan Live: Magic of Rafi at NMACC",
+     when:"Fri 18 Sep", where:"The Studio Theatre, NMACC, BKC",
+     note:"A live Mohammed Rafi tribute set at NMACC.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/carvaan-live-magic-of-rafi-at-nmacc/3900030614445117", added:"2026-09-01"},
+
+    {date:"2026-09-18", a:"bandra", cat:"music", name:"Carvaan Live: Sing With Kishore at NMACC",
+     when:"Fri 18 Sep", where:"The Studio Theatre, NMACC, BKC",
+     note:"A Kishore Kumar sing-along tribute, the same evening as the Rafi set at NMACC.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/carvaan-live-sing-with-kishore-at-nmacc/3900030490000216", added:"2026-09-01"},
+
+    {date:"2026-09-03", a:"multi", cat:"games", name:"Gamer Factory Presents: Gateway Games",
+     when:"Thu 3 Sep", where:"Rajhans Helix 3, Ghatkopar West",
+     note:"A board-games meetup in Ghatkopar, this board's east-side reach.",
+     cost:"₹150–₹250", url:"https://allevents.in/mumbai/gamer-factory-presents-gateway-games-tickets/80009887182347", added:"2026-09-01"},
+
+    {date:"2026-10-10", a:"parel", cat:"startup", name:"Seed Business School Festival 2026 — Mumbai",
+     when:"Sat 10 Oct", where:"The St. Regis Mumbai, Lower Parel",
+     note:"A business-school-run entrepreneurship festival.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/seed-business-school-festival-2026-mumbai/100001998872211593", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"andheri", cat:"social", name:"Rahul Anjali Meet Up",
+     when:"Sun 6 Sep", where:"Sthamba Global Brewery, Andheri Lokhandwala",
+     note:"A casual social meetup at an Andheri brewery.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/rahul-anjali-meet-up/4100030617818513", added:"2026-09-01"},
+
+    {date:"2026-10-10", a:"multi", cat:"startup", name:"Wolf Club Investors & Entrepreneurs Meetup",
+     when:"Sat 10 Oct", where:"MSSU I-Spark Foundation Incubator, Vidyavihar",
+     note:"An investors-and-founders meetup at a Vidyavihar incubator space.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/wolf-club-investors-and-entrepreneurs-meetup-tickets/80007018659468", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"parel", cat:"social", name:"Pub Clubbing Meets Mumbai",
+     when:"Sat 5 Sep", where:"Lord of the Drinks, Worli",
+     note:"A pub-based social meetup in Worli.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/pub-clubbing-meets-mumbai/100001986070213472", added:"2026-09-01"},
+
+    {date:"2026-09-18", a:"southmum", cat:"craft", name:"Finding My Centre — Mandala Talk & Workshop",
+     when:"Fri 18 Sep", where:"New Acropolis, Ballard Estate, Fort",
+     note:"A mandala-drawing workshop with a philosophy talk attached, at the same venue as this board's Stoic Wisdom talks.",
+     cost:"₹200", url:"https://allevents.in/mumbai/finding-my-centre-talk-and-workshop-drawing-inspiration-from-mandala-tickets/80002218140005", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"parel", cat:"social", name:"Coffee Table Conversations",
+     when:"Sat 5 Sep", where:"Bayroute, Palladium Mall, Lower Parel",
+     note:"A structured conversation-based social format.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/coffee-table-conversations/3900030582711338", added:"2026-09-01"},
+
+    {date:"2026-09-20", a:"bandra", cat:"speak", name:"Encountering the Inner Battle: Lessons from Arjuna",
+     when:"Sun 20 Sep", where:"New Acropolis, Bandra",
+     note:"A philosophy talk drawing on the Bhagavad Gita, at New Acropolis's Bandra branch.",
+     cost:"₹200", url:"https://allevents.in/mumbai/encountering-the-inner-battle-lessons-from-arjuna-tickets/80001905323466", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"multi", cat:"startup", name:"Mumbai Founders Breakfast Club 2026",
+     when:"Sat 19 Sep", where:"Mutuswami Cafe, Dadar East",
+     note:"A founders' breakfast networking meetup.",
+     cost:"₹1,000", url:"https://allevents.in/mumbai/mumbai-founders-breakfast-club-2026-tickets/80007488843463", added:"2026-09-01"},
+
+    {date:"2026-09-10", a:"southmum", cat:"music", name:"SoundRise Vinyl Thursdays at Conçu",
+     when:"Thu 10 Sep · 8:00 PM", where:"Conçu, Colaba",
+     note:"A vinyl-DJ evening in Colaba, a genuine Thursday option in South Mumbai.",
+     cost:"₹999", url:"https://allevents.in/mumbai/soundrise-vinyl-thursdays-at-concu-10th-sept-8pm-tickets/80007897572842", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"bandra", cat:"craft", name:"Bad Drawing Party — Mumbai",
+     when:"Sun 6 Sep", where:"Olive Cafe and Bar, BKC",
+     note:"A deliberately unpretentious drawing social — no talent required.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/bad-drawing-party-mumbai/3900030604904306", added:"2026-09-01"},
+
+    {date:"2026-09-04", a:"navimum", cat:"music", name:"The Musical Journey Of Indian Cinema",
+     when:"Fri 4 Sep", where:"Vishnudas Bhave Natyagruha, Vashi",
+     note:"A Bollywood-music-through-the-decades concert in Navi Mumbai.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/the-musical-journey-of-indian-cinema/3900030622530829", added:"2026-09-01"},
+
+    {date:"2026-09-23", a:"bandra", cat:"craft", name:"Art Meets Tea: Second Nature",
+     when:"Wed 23 Sep", where:"Level 1, Art House, NMACC, BKC",
+     note:"An art-and-tea pairing session, a genuine weeknight craft option.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/art-meets-tea-second-nature/3900030475782946", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"bandra", cat:"craft", name:"Texture Art — Mumbai",
+     when:"Fri 5 Sep", where:"Tim Hortons, Bandra West",
+     note:"A texture-painting cafe workshop.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/texture-art-mumbai/3900030423180420", added:"2026-09-01"},
+
+    {date:"2026-09-02", a:"multi", cat:"music", name:"Gandh Kokanchya Maticha",
+     when:"Wed 2 Sep", where:"Shree Shivaji Mandir, Dadar West",
+     note:"A Konkan-themed Marathi music-and-culture evening, a genuine weeknight option at Dadar's classic hall.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/gandh-kokanchya-maticha/3900030612260504", added:"2026-09-01"},
+
+    {date:"2026-09-01", a:"southmum", cat:"outdoors", name:"Mumbai Heritage Walk",
+     when:"Tue 1 Sep", where:"Meeting point: McDonald's opp. CST Station, Fort",
+     note:"A guided heritage walk through Fort's colonial-era streets, starting right outside CST.",
+     cost:"₹1,200", url:"https://allevents.in/mumbai/mumbai-heritage-walk-tickets/80002904903471", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"bandra", cat:"craft", name:"Clay Trinket Tray Workshop — BKC Dive",
+     when:"Sun 6 Sep", where:"BKC Dive, BKC",
+     note:"A clay-tray workshop at a BKC studio.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/clay-trinket-tray-workshop/3900030580445350", added:"2026-09-01"},
+
+    {date:"2026-09-01", a:"parel", cat:"craft", name:"Japanese Kintsugi Art",
+     when:"Tue 1 Sep", where:"Bayroute, Palladium Mall, Lower Parel",
+     note:"A kintsugi repair-art class, a genuine weeknight craft option at a mall venue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/japanese-kintsugi-art/3900030600819324", added:"2026-09-01"},
+
+    {date:"2026-09-06", a:"bandra", cat:"craft", name:"Clay Trinket Tray Date — Olive Café",
+     when:"Sun 6 Sep", where:"Olive Cafe and Bar, BKC",
+     note:"A second clay-tray class the same day at a different venue than BKC Dive's.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/clay-trinket-tray-date-mumbai/3900030615485606", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"multi", cat:"stage", name:"Love vs Friendship — LEA",
+     when:"Sat 19 Sep", where:"The Fine Arts Society, Chembur",
+     note:"A relationship-comedy special in Chembur, east of this board's usual coverage.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/love-vs-friendship-by-lea-i-mumbai/3900030477953444", added:"2026-09-01"},
+
+    {date:"2026-09-26", a:"thane", cat:"music", name:"Lata — The Nightingale (Ek Sangeet Yatra)",
+     when:"Sat 26 Sep", where:"Lata Mangeshkar Natyagruha, Mira Road",
+     note:"A tribute concert to Lata Mangeshkar at a Mira-Bhayandar hall named for her.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/lata-the-nightingale-ek-sangeet-yatra/3900030623895231", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"bandra", cat:"stage", name:"Shiddat",
+     when:"Fri 5 Sep", where:"The Habitat, Khar West",
+     note:"A relationship/romance-themed comedy special, a genuine Friday option at the Habitat.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/shiddat/3900030511597515", added:"2026-09-01"},
+
+    {date:"2026-09-19", a:"powai", cat:"craft", name:"Bomboloni Special (Eggless)",
+     when:"Sat 19 Sep", where:"Culinary Craft, Powai",
+     note:"An eggless Italian-doughnut baking class, a different format from Hitchki's usual pottery slate.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/bomboloni-special-eggless/3900030604951703", added:"2026-09-01"},
+
+    {date:"2026-09-05", a:"andheri", cat:"startup", name:"Eminence (D2C Founders Club)",
+     when:"Fri 5 Sep", where:"Woodside Inn, Andheri West",
+     note:"A D2C founders' networking evening.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/eminence-d2c-founders-club-tickets/80001828740757", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"multi", cat:"craft", name:"Clash of Ramens — Hands-On Workshop",
+     when:"Sat 12 Sep", where:"Urban Platter, Mahim West",
+     note:"A hands-on ramen-making class in Mahim.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/clash-of-ramens-hands-on-workshop/3900030629584630", added:"2026-09-01"},
+
+    {date:"2026-09-12", a:"multi", cat:"craft", name:"An Argentinian Affair — Comfort Foods from Argentina",
+     when:"Sat 12 Sep", where:"Urban Platter, Mahim West",
+     note:"An Argentinian cooking class, the same day as the ramen workshop at the same venue.",
+     cost:"Ticketed", url:"https://allevents.in/mumbai/an-argentinian-affair-comfort-foods-from-argentin/3900030634556648", added:"2026-09-01"},
+
+    {date:"2026-09-13", a:"multi", cat:"outdoors", name:"Aamchi Mumbai Marathon",
+     when:"Sun 13 Sep", where:"Godrej Mangroves Area",
+     note:"A community marathon through a mangrove-forest route, a genuinely different outdoors setting.",
+     cost:"₹690–₹950", url:"https://allevents.in/bhiwandi/aamchi-mumbai-marathon/4100030426741123", added:"2026-09-01"}
   ];
 
   var CLASSES = [
