@@ -8,7 +8,7 @@
 <meta name="description" content="Mumbai Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20261010-103921-5377">
+<meta name="build" content="20261010-140859-8701">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -16,16 +16,226 @@
 <meta name="apple-mobile-web-app-title" content="Mumbai Circle">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="mobile-web-app-capable" content="yes">
-<!-- Google tag (gtag.js) - one shared "Circle" GA4 property across the hub and all three
-     city boards. 'city' rides on every hit as a custom parameter so the four sites stay
-     distinguishable inside one property rather than needing four separate dashboards. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88F80YY2NQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('set', 'city', 'Mumbai');
-  gtag('config', 'G-88F80YY2NQ');
+<!-- ITC analytics 1.0.0; Google web-vitals 6.2.3, Apache-2.0 -->
+<script>window.ITC_ANALYTICS_CONFIG={"enabled":true,"board_city":"Mumbai","board_state":"Maharashtra","page_type":"city_board"};
+!function(t,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n((t="undefined"!=typeof globalThis?globalThis:t||self).webVitals={})}(this,function(t){"use strict";let n=-1;const e=()=>n,i=t=>{addEventListener("pageshow",e=>{e.persisted&&(n=e.timeStamp,t(e))},!0)},o=(t,n,e,i)=>{let o,s;return a=>{n.value>=0&&(a||i)&&(s=n.value-(o??0),(s||void 0===o)&&(o=n.value,n.delta=s,n.rating=((t,n)=>t>n[1]?"poor":t>n[0]?"needs-improvement":"good")(n.value,e),t(n)))}},s=t=>{requestAnimationFrame(()=>requestAnimationFrame(()=>t()))},a=()=>{const t=performance.getEntriesByType("navigation")[0];if(t&&t.responseStart>0&&t.responseStart<performance.now())return t},r=()=>a()?.activationStart??0;let c=-1;const f=new Set,d=()=>"hidden"!==document.visibilityState||document.prerendering?1/0:0,h=t=>{if("hidden"===document.visibilityState){if("visibilitychange"===t.type)for(const t of f)t();isFinite(c)||(c="visibilitychange"===t.type?t.timeStamp:0,removeEventListener("prerenderingchange",h,!0))}},l=(t=!1)=>{if(t&&(c=1/0),c<0){const t=r(),n=document.prerendering?void 0:globalThis.performance.getEntriesByType("visibility-state").find(n=>"hidden"===n.name&&n.startTime>=t)?.startTime;c=n??d(),addEventListener("visibilitychange",h,!0),addEventListener("prerenderingchange",h,!0),i(()=>{setTimeout(()=>{c=d()})})}return{get firstHiddenTime(){return c},onHidden(t){f.add(t)}}},u=(t,n=-1,i,o=0,s,c,f)=>{const d=a(),h=d?.navigationId||0;let l="navigate";i?l=i:e()>=0?l="back-forward-cache":d&&(document.prerendering||r()>0?l="prerender":document.wasDiscarded?l="restore":d.type&&(l=d.type.replace(/_/g,"-")));return{name:t,value:n,rating:"good",delta:0,entries:[],id:`v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,navigationType:l,navigationId:o||h,navigationInteractionId:s,navigationURL:c||d?.name,navigationStartTime:f||0}},g=new WeakMap;function v(t,n){let e=g.get(n);return e||(e=new WeakMap,g.set(n,e)),e.get(t)||e.set(t,new n),e.get(t)}class p{t;i=0;o=[];h(t){if(t.hadRecentInput)return;const n=this.o[0],e=this.o.at(-1);this.i&&n&&e&&t.startTime-e.startTime<1e3&&t.startTime-n.startTime<5e3?(this.i+=t.value,this.o.push(t)):(this.i=t.value,this.o=[t]),this.t?.(t)}}const m=(t,n,e={})=>{try{const i=t.filter(t=>PerformanceObserver.supportedEntryTypes.includes(t));if(i.length>0){const t=new PerformanceObserver(t=>{queueMicrotask(()=>{const e=t.getEntries();i.length>1&&e.sort((t,n)=>t.startTime+t.duration-(n.startTime+n.duration)),n(e)})});for(const n of i)t.observe({type:n,buffered:!0,...e});return t}}catch{}},b=t=>globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation")&&"function"==typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint&&t&&t.reportSoftNavs,y=(t,n)=>{if(t.set(n.navigationId,n),t.size>2){const n=t.keys().next().value;void 0!==n&&t.delete(n)}},T=t=>{let n=!1;return()=>{n||(t(),n=!0)}};class _{l}const E=t=>{document.prerendering?addEventListener("prerenderingchange",t,!0):t()},M=[1800,3e3],L=(t,n={})=>{const a=b(n);E(()=>{const c=v(n,_),f=l();let d,h=u("FCP");const g=m(["paint"],t=>{for(const n of t)"first-contentful-paint"===n.name&&(g.disconnect(),n.startTime<f.firstHiddenTime&&(h.value=Math.max(n.startTime-r(),0),h.entries.push(n),h.navigationId=n.navigationId||h.navigationId,d(!0)))});if(g&&(d=o(t,h,M,n.reportAllChanges),i(i=>{h=u("FCP",-1,"back-forward-cache",h.navigationId,h.navigationInteractionId,h.navigationURL,e()),d=o(t,h,M,n.reportAllChanges),s(()=>{h.value=performance.now()-i.timeStamp,d(!0)})})),a){m(["soft-navigation"],e=>{e.forEach(e=>{c.l&&e.navigationId&&y(c.l,e);const i=Math.max((e.presentationTime||e.paintTime||0)-e.startTime,0);h=u("FCP",i,"soft-navigation",e.navigationId,e.interactionId,e.name,e.startTime),d=o(t,h,M,n.reportAllChanges),d(!0)})},n)}})},P=[.1,.25];let w=0,I=1/0,k=0;const C=t=>{for(const n of t)n.interactionId&&(I=Math.min(I,n.interactionId),k=Math.max(k,n.interactionId),w=k?(k-I)/7+1:0)};let F;const N=()=>F?w:performance.interactionCount??0,B=()=>{"interactionCount"in performance||F||(F=m(["event"],C,{durationThreshold:0}))};class S{u=0;v=[];p=new Map;m;T;_(){return N()-this.u}M(){this.u=N(),this.v.length=0,this.p.clear()}L(t){const n=this._(),e=Math.min(this.v.length-1,Math.floor(n/50));return!n||-1!==e||"soft-navigation"!==t&&"back-forward-cache"!==t?this.v[e]:{P:8,id:-1,entries:[]}}h(t){if(this.m?.(t),!t.interactionId)return;const n=this.v.at(-1);let e=this.p.get(t.interactionId);if(e||this.v.length<10||t.duration>n.P){if(e?t.duration>e.P?(e.entries=[t],e.P=t.duration):t.duration===e.P&&t.startTime===e.entries[0].startTime&&e.entries.push(t):(e={id:t.interactionId,entries:[t],P:t.duration},this.p.set(e.id,e),this.v.push(e)),this.v.sort((t,n)=>n.P-t.P),this.v.length>10){const t=this.v.splice(10);for(const n of t)this.p.delete(n.id)}this.T?.(e)}}}const q=t=>{const n="requestIdleCallback"in globalThis?1e3:0,e=globalThis.requestIdleCallback||setTimeout,i=globalThis.cancelIdleCallback||clearTimeout;if("hidden"===document.visibilityState)t();else{const o=T(t);let s=-1;const a=()=>{i(s),o()};addEventListener("visibilitychange",a,{once:!0,capture:!0}),s=e(()=>{removeEventListener("visibilitychange",a,{capture:!0}),o()},{timeout:n})}},x=[200,500];class A{m;l;h(t){this.m?.(t)}}const H=[2500,4e3],O=[800,1800],U=t=>{document.prerendering?E(()=>U(t)):"complete"!==document.readyState?addEventListener("load",()=>U(t),!0):setTimeout(t)};t.CLSThresholds=P,t.FCPThresholds=M,t.INPThresholds=x,t.LCPThresholds=H,t.TTFBThresholds=O,t.onCLS=(t,n={})=>{const a=l();L(T(()=>{let r,c=u("CLS",0);const f=v(n,p),d=(e,i,s,a,d)=>{c=u("CLS",0,e,i,s,a,d),f.i=0,r=o(t,c,P,n.reportAllChanges)},h=(t=!1)=>{f.i>c.value&&(c.value=f.i,c.entries=f.o),r(t)},l=t=>{h(!0),d("soft-navigation",t.navigationId,t.interactionId,t.name,t.startTime)},g=t=>{for(const n of t)"soft-navigation"!==n.entryType?f.h(n):l(n);h()},y=["layout-shift"];b(n)&&y.push("soft-navigation");const T=m(y,g);T&&(r=o(t,c,P,n.reportAllChanges),a.onHidden(()=>{g(T.takeRecords()),r(!0)}),i(()=>{d("back-forward-cache",c.navigationId,c.navigationInteractionId,c.navigationURL,e()),s(r)}),setTimeout(r))}))},t.onFCP=L,t.onINP=(t,n={})=>{if(!globalThis.PerformanceEventTiming||!("interactionId"in PerformanceEventTiming.prototype))return;const s=l();E(()=>{B();let a,r=u("INP");const c=v(n,S),f=(e,i,s,f,d)=>{c.M(),r=u("INP",-1,e,i,s,f,d),a=o(t,r,x,n.reportAllChanges)},d=()=>{const t=c.L(r.navigationType);t&&t.P!==r.value&&(r.value=t.P,r.entries=t.entries,a())},h=t=>{d(),a(!0),f("soft-navigation",t.navigationId,t.interactionId,t.name,t.startTime)},l=(t,n=!1)=>{q(()=>{for(const n of t)"soft-navigation"!==n.entryType?c.h(n):h(n);d(),n&&a(!0)})},g=["event","first-input"];b(n)&&g.push("soft-navigation");const p=m(g,l,{...n,durationThreshold:n.durationThreshold??40});a=o(t,r,x,n.reportAllChanges),p&&(s.onHidden(()=>{l(p.takeRecords(),!0)}),i(()=>{f("back-forward-cache",r.navigationId,r.navigationInteractionId,r.navigationURL,e())}))})},t.onLCP=(t,n={})=>{let a=!1;const c=b(n);E(()=>{let f,d=l(),h=u("LCP");const g=v(n,A),p=(e,i,s,r,c)=>{h=u("LCP",-1,e,i,s,r,c),f=o(t,h,H,n.reportAllChanges),a=!1,"soft-navigation"===e&&(d=l(!0))},b=t=>{g.l&&t.navigationId&&y(g.l,t),a||f(!0),p("soft-navigation",t.navigationId,t.interactionId,t.name,t.startTime);const n=t.getLargestInteractionContentfulPaint?.();n&&T([n])},T=t=>{n.reportAllChanges||c||(t=t.slice(-1));for(const n of t){if(!n)continue;if("soft-navigation"===n.entryType){b(n);continue}let t=0,e=[],i=n.startTime;if("largest-contentful-paint"===n.entryType)t=Math.max(n.startTime-r(),0),g.h(n),e=[n];else if("interaction-contentful-paint"===n.entryType){const o=n;if(!h.navigationId)continue;if("interactionId"in o&&o.interactionId!=h.navigationInteractionId)continue;i=o.largestContentfulPaint?.renderTime||0,t=Math.max(i-n.startTime,0),o.largestContentfulPaint&&(g.h(o.largestContentfulPaint),e=[o.largestContentfulPaint])}i<d.firstHiddenTime&&(h.value=t,h.entries=e,f())}},_=["largest-contentful-paint"];c&&_.push("interaction-contentful-paint","soft-navigation");const E=m(_,T);if(E){f=o(t,h,H,n.reportAllChanges);const r=["keydown","click","visibilitychange"],d=t=>{if(t.isTrusted&&!a){const t=h.id;q(()=>{if(!a){if(!c){E.disconnect();for(const t of r)removeEventListener(t,d,{capture:!0})}t===h.id&&(a=!0,f(!0))}})}};for(const t of r)addEventListener(t,d,{capture:!0});i(i=>{p("back-forward-cache",h.navigationId,h.navigationInteractionId,h.navigationURL,e()),f=o(t,h,H,n.reportAllChanges),s(()=>{h.value=performance.now()-i.timeStamp,a=!0,f(!0)})})}})},t.onTTFB=(t,n={})=>{const s=b(n);let c=u("TTFB"),f=o(t,c,O,n.reportAllChanges);U(()=>{const d=a();if(d){const a=d.responseStart;if(c.value=Math.max(a-r(),0),c.entries=[d],f(!0),i(()=>{c=u("TTFB",0,"back-forward-cache",c.navigationId,c.navigationInteractionId,c.navigationURL,e()),f=o(t,c,O,n.reportAllChanges),f(!0)}),s){m(["soft-navigation"],e=>{e.forEach(e=>{e.navigationId&&(c=u("TTFB",0,"soft-navigation",e.navigationId,e.interactionId,e.name,e.startTime),c.entries=[e],f=o(t,c,O,n.reportAllChanges),f(!0))})},n)}}})}});
+//# sourceMappingURL=web-vitals.umd.cjs.map
+
+/* In The Circle measurement v1.0.0. No form text, contacts or precise location. */
+(function (w, d) {
+  'use strict';
+  if (w.ITCAnalytics) return;
+  var cfg = w.ITC_ANALYTICS_CONFIG || {}, tag = 'G-88F80YY2NQ';
+  var enabled = cfg.enabled !== false, started = false, allowed = false;
+  var cookieDomain = /(^|\.)inthecircle\.in$/.test(location.hostname) ? '; Domain=inthecircle.in' : '';
+  var params = new URLSearchParams(location.search);
+  var debug = params.get('itc_debug') === '1' || !/(^|\.)inthecircle\.in$/.test(location.hostname);
+  var internal = params.get('itc_internal');
+  var pageCity = cfg.board_city || 'Hub', pageState = cfg.board_state || 'All India';
+  function readCookie(key) {
+    var found = d.cookie.split(';').map(function (x) { return x.trim(); }).filter(function (x) { return x.indexOf(key + '=') === 0; })[0];
+    return found ? found.slice(key.length + 1) : '';
+  }
+  function cookie(key, value) { d.cookie = key + '=' + value + '; Max-Age=15552000; Path=/; SameSite=Lax' + cookieDomain + (location.protocol === 'https:' ? '; Secure' : ''); }
+  if (internal === '1' || internal === '0') cookie('itc_internal', internal);
+  internal = readCookie('itc_internal') === '1';
+  var privacySignal = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
+  var choice = readCookie('itc_analytics');
+  allowed = enabled && !privacySignal && choice === 'allow';
+  w.dataLayer = w.dataLayer || [];
+  w.gtag = function () { if (enabled) w.dataLayer.push(arguments); };
+  w.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+  function token(x) { return typeof x === 'string' && /^[a-zA-Z0-9_-]{1,60}$/.test(x) ? x : 'other'; }
+  function id(url) {
+    var raw = '';
+    try { var u = new URL(url, location.href); raw = u.hostname + u.pathname; } catch (_) { return 'unknown'; }
+    var h = 2166136261;
+    for (var i = 0; i < raw.length; i++) { h ^= raw.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return 'l_' + (h >>> 0).toString(16);
+  }
+  function safeLocation() {
+    var u = new URL(location.origin + location.pathname);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_id'].forEach(function (k) {
+      var v = params.get(k);
+      if (v && /^[a-zA-Z][a-zA-Z0-9_-]{0,79}$/.test(v) && !/\d{7,}/.test(v)) u.searchParams.set(k, v);
+    });
+    return u.href;
+  }
+  function safeReferrer() { try { var u = new URL(d.referrer); return u.origin + '/'; } catch (_) { return ''; } }
+  var fields = {
+    event_category: token, event_area: token, listing_id: token, filter_type: token,
+    filter_value: token, section_name: token, destination_city: token,
+    link_domain: function (v) { return /^[a-z0-9.-]{1,100}$/.test(v) ? v : 'other'; },
+    result_count: function (v) { return Math.max(0, Math.min(10000, Math.round(Number(v) || 0))); },
+    search_active: function (v) { return v ? 'yes' : 'no'; },
+    percent_scrolled: function (v) { return [25, 50, 75, 90].indexOf(v) >= 0 ? v : 0; },
+    metric_name: function (v) { return ['CLS', 'INP', 'LCP', 'FCP', 'TTFB'].indexOf(v) >= 0 ? v : 'other'; },
+    metric_rating: function (v) { return ['good', 'needs-improvement', 'poor'].indexOf(v) >= 0 ? v : 'other'; },
+    value: function (v) { return Math.max(0, Math.min(600000, Math.round(Number(v) || 0))); },
+    error_type: function (v) { return ['script', 'resource', 'promise'].indexOf(v) >= 0 ? v : 'other'; }
+  };
+  var events = ['board_ready', 'listing_view', 'state_click', 'ticket_click', 'directions_click', 'save_event', 'unsave_event', 'filter_change', 'search_used', 'no_results', 'section_view', 'whatsapp_click', 'contact_click', 'directory_click', 'scroll_depth', 'app_install', 'site_error', 'web_vital'];
+  function track(name, data) {
+    if (!allowed || !started || !enabled || events.indexOf(name) < 0) return;
+    try {
+      var clean = { board_city: pageCity, board_state: pageState, page_type: cfg.page_type || 'city_board', tracking_version: '1.0.0', display_mode: w.matchMedia && w.matchMedia('(display-mode: standalone)').matches ? 'app' : 'browser' };
+      Object.keys(data || {}).forEach(function (k) { if (fields[k]) clean[k] = fields[k](data[k]); });
+      if (debug) clean.debug_mode = true;
+      if (internal && !debug) clean.traffic_type = 'internal';
+      w.gtag('event', name, clean);
+    } catch (_) { /* A tracking failure must not affect the board. */ }
+  }
+  function resultCount() {
+    var el = d.getElementById('resultCount') || d.getElementById('tCount');
+    return el ? parseInt(el.textContent, 10) || 0 : 0;
+  }
+  function searchActive() { var q = d.getElementById('q'); return !!(q && q.value.trim()); }
+  var zero = false;
+  function results() {
+    var n = resultCount();
+    if (!n && !zero && cfg.page_type !== 'hub') track('no_results', { result_count: 0, search_active: searchActive() });
+    zero = !n;
+  }
+  function vitals() {
+    if (!w.webVitals) return;
+    ['CLS', 'INP', 'LCP', 'FCP', 'TTFB'].forEach(function (name) {
+      try { w.webVitals['on' + name](function (m) { track('web_vital', { metric_name: m.name, metric_rating: m.rating, value: Math.round(m.name === 'CLS' ? m.value * 1000 : m.value) }); }); } catch (_) {}
+    });
+  }
+  function start() {
+    if (started || !allowed || !enabled) return;
+    started = true;
+    w['ga-disable-' + tag] = false;
+    w.gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    w.gtag('js', new Date());
+    var c = { send_page_view: true, cookie_domain: 'auto', page_location: safeLocation(), page_referrer: safeReferrer(), allow_google_signals: false, allow_ad_personalization_signals: false, board_city: pageCity, board_state: pageState, page_type: cfg.page_type || 'city_board', tracking_version: '1.0.0', display_mode: w.matchMedia && w.matchMedia('(display-mode: standalone)').matches ? 'app' : 'browser' };
+    if (debug) c.debug_mode = true;
+    if (internal && !debug) c.traffic_type = 'internal';
+    w.gtag('config', tag, c);
+    var script = d.createElement('script'); script.async = true; script.src = 'https://www.googletagmanager.com/gtag/js?id=' + tag + '&l=dataLayer'; d.head.appendChild(script);
+    track('board_ready', { result_count: resultCount() }); results(); vitals(); observeListings();
+  }
+  function clearAnalyticsCookies() {
+    d.cookie.split(';').forEach(function (part) {
+      var key = part.trim().split('=')[0];
+      if (!/^_ga(?:_|$)|^_gid$|^_gat/.test(key)) return;
+      ['', '; Domain=' + location.hostname, cookieDomain].forEach(function (domain) { d.cookie = key + '=; Max-Age=0; Path=/' + domain + '; SameSite=Lax'; });
+    });
+  }
+  function setChoice(value) {
+    cookie('itc_analytics', value);
+    allowed = enabled && !privacySignal && value === 'allow';
+    if (allowed) { w['ga-disable-' + tag] = false; w.gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }); start(); }
+    else { w['ga-disable-' + tag] = true; w.gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }); clearAnalyticsCookies(); }
+    var panel = d.getElementById('itc-analytics-panel'); if (panel) panel.hidden = true;
+  }
+  function consentUI() {
+    var style = d.createElement('style');
+    style.textContent = '#itc-analytics-panel{position:fixed;bottom:16px;left:16px;right:16px;max-width:540px;z-index:10000;padding:16px;background:#fffaf0;color:#17130f;border:2px solid #17130f;box-shadow:4px 4px 0 #17130f30;font:14px/1.5 Arial,sans-serif}#itc-analytics-panel[hidden]{display:none}#itc-analytics-panel p{margin:0 0 10px}#itc-analytics-panel button{margin:0 8px 0 0;padding:9px 12px;border:1px solid #17130f;background:#fffaf0;color:#17130f;font:bold 13px Arial;cursor:pointer}#itc-analytics-panel a{color:#17130f}#itc-analytics-settings{display:block;margin:18px auto;padding:8px 12px;border:1px solid #777;background:#fffaf0;color:#17130f;font:12px Arial;cursor:pointer}';
+    d.head.appendChild(style);
+    var panel = d.createElement('section'); panel.id = 'itc-analytics-panel'; panel.setAttribute('aria-label', 'Analytics privacy choices');
+    panel.innerHTML = '<p><strong>Help us understand what works</strong></p><p>With your permission, we use Google Analytics to measure visits, event clicks and site performance. We do not send your search text, contact details or precise location. Analytics cookies last up to two years. Your choice is remembered for six months across our city boards. You can change it below at any time.</p><p><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses this data</a></p><button type="button" id="itc-analytics-allow">Allow analytics</button><button type="button" id="itc-analytics-deny">Decline analytics</button>';
+    panel.hidden = !!choice || privacySignal || !enabled;
+    d.body.appendChild(panel);
+    if (privacySignal) panel.querySelector('p:nth-child(2)').textContent = 'Your browser requests privacy, so analytics is disabled. We respect this choice across our city boards.';
+    var settings = d.createElement('button'); settings.type = 'button'; settings.id = 'itc-analytics-settings'; settings.textContent = 'Analytics privacy settings'; d.body.appendChild(settings);
+    settings.onclick = function () { panel.hidden = false; };
+    panel.querySelector('#itc-analytics-allow').disabled = privacySignal || !enabled;
+    panel.querySelector('#itc-analytics-allow').onclick = function () { setChoice('allow'); };
+    panel.querySelector('#itc-analytics-deny').onclick = function () { setChoice('deny'); };
+  }
+  function listing(el) {
+    var card = el.closest('.card'), go = card && card.querySelector('.go, .actions a.btn:not(.secondary)');
+    return { listing_id: id(go ? go.href : ''), event_category: card && card.getAttribute('data-itc-category') || go && go.getAttribute('data-cat') || 'other', event_area: card && card.getAttribute('data-itc-area') || go && go.getAttribute('data-area') || 'other' };
+  }
+  function targetCity(url) {
+    try {
+      var u = new URL(url, location.href), cities = ['bangalore', 'hyderabad', 'delhi', 'mumbai', 'pune', 'chennai', 'kolkata', 'ahmedabad', 'jaipur', 'kochi'];
+      var slug = u.hostname === 'inthecircle.in' ? u.pathname.split('/')[1] : u.hostname.split('.')[0];
+      return /(^|\.)inthecircle\.in$/.test(u.hostname) && cities.indexOf(slug) >= 0 ? slug : '';
+    } catch (_) { return ''; }
+  }
+  function filter(type, value) {
+    track('filter_change', { filter_type: type, filter_value: value || 'all', result_count: resultCount(), search_active: searchActive() }); results();
+  }
+  var listingObserver, renderObserver, viewed = {}, viewTimers = new Map();
+  function observeListings() {
+    if (!w.IntersectionObserver || cfg.page_type === 'hub') return;
+    try {
+      if (!listingObserver) listingObserver = new w.IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var card = entry.target, item = listing(card), key = item.listing_id;
+          if (viewTimers.has(card)) { w.clearTimeout(viewTimers.get(card)); viewTimers.delete(card); }
+          if (!allowed || viewed[key] || entry.intersectionRatio < 0.5) return;
+          viewTimers.set(card, w.setTimeout(function () {
+            viewTimers.delete(card);
+            if (!allowed || !card.isConnected || d.visibilityState === 'hidden') return;
+            viewed[key] = true; track('listing_view', item);
+          }, 1000));
+        });
+      }, { threshold: [0, 0.5] });
+      function scan() { listingObserver.disconnect(); viewTimers.forEach(function (timer) { w.clearTimeout(timer); }); viewTimers.clear(); d.querySelectorAll('.card').forEach(function (card) { if (!card.querySelector('.go, .actions a.btn:not(.secondary)')) return; listingObserver.observe(card); }); }
+      scan();
+      if (!renderObserver && w.MutationObserver) {
+        var scanTimer;
+        renderObserver = new w.MutationObserver(function () { w.clearTimeout(scanTimer); scanTimer = w.setTimeout(scan, 150); });
+        ['days','savedGrid','list'].forEach(function (key) { var el = d.getElementById(key); if (el) renderObserver.observe(el, { childList: true, subtree: true }); });
+      }
+    } catch (_) {}
+  }
+  function bind() {
+    consentUI(); start();
+    // Capture obtains the original node before Save/render replaces it. Reporting is
+    // deferred until the board's existing handler has completed, without blocking it.
+    d.addEventListener('click', function (ev) {
+      try {
+        var el = ev.target.closest && ev.target.closest('a,button'); if (!el || el.id.indexOf('itc-analytics-') === 0) return;
+        var a = el.tagName === 'A', href = a ? el.href : '', item = listing(el), name = '', data = item;
+        if (a && (el.matches('.go') || el.matches('.actions .btn:not(.secondary)'))) name = 'ticket_click';
+        else if (a && (el.matches('.map') || el.matches('.actions .secondary'))) name = 'directions_click';
+        else if (el.matches('button.save')) name = el.getAttribute('aria-pressed') === 'true' ? 'unsave_event' : 'save_event';
+        else if (a && /https:\/\/(chat\.whatsapp\.com|wa\.me|api\.whatsapp\.com)\//.test(href)) { name = 'whatsapp_click'; data = {}; }
+        else if (a && /^(tel:|mailto:)/.test(href)) { name = 'contact_click'; data = {}; }
+        else if (a && targetCity(href)) { name = 'state_click'; data = { destination_city: targetCity(href) }; }
+        else if (el.matches('[data-view]')) { name = 'section_view'; data = { section_name: el.getAttribute('data-view') }; }
+        else if (a && /https?:/.test(href) && new URL(href).origin !== location.origin) { name = 'directory_click'; data = { link_domain: new URL(href).hostname }; }
+        if (name) { track(name, data); return; }
+        var type = '', value = '';
+        if (el.matches('button[data-cat]')) { type = 'category'; value = el.getAttribute('data-cat'); }
+        else if (el.matches('button[data-area]')) { type = 'area'; value = el.getAttribute('data-area'); }
+        else if (el.matches('button[data-price]')) { type = 'price'; value = el.getAttribute('data-price'); }
+        else if (el.matches('button[data-km]')) { type = 'distance'; value = el.getAttribute('data-km'); }
+        else if (['wkBtn','monthBtn','thisMonBtn','nextMonBtn','aheadBtn'].indexOf(el.id) >= 0) { type = 'date_range'; value = el.id; }
+        else if (['newBtn','freeBtn','wkndBtn','savedBtn','clearBtn','locBtn','locClearBtn'].indexOf(el.id) >= 0) { type = 'options'; value = el.id; }
+        if (type) w.setTimeout(function () { var current = value; if (type === 'category' && el.getAttribute('aria-pressed') === 'false') current = 'all'; if (['newBtn','freeBtn','wkndBtn','savedBtn'].indexOf(el.id) >= 0) current += el.getAttribute('aria-pressed') === 'true' ? '_on' : '_off'; filter(type, current); }, 0);
+      } catch (_) {}
+    }, true);
+    d.addEventListener('change', function (ev) {
+      var el = ev.target, type = el.id === 'area' ? 'area' : ['range','from','to'].indexOf(el.id) >= 0 ? 'date_range' : '';
+      if (type) w.setTimeout(function () { filter(type, ['from','to'].indexOf(el.id) >= 0 ? 'custom' : el.value); }, 0);
+    });
+    var timer;
+    d.addEventListener('input', function (ev) {
+      if (ev.target.id !== 'q') return;
+      w.clearTimeout(timer); timer = w.setTimeout(function () { track('search_used', { search_active: searchActive(), result_count: resultCount() }); results(); }, 750);
+    });
+    var seen = {};
+    w.addEventListener('scroll', function () {
+      if (!allowed) return;
+      var height = d.documentElement.scrollHeight - w.innerHeight; if (height <= 0) return;
+      var percent = Math.round(w.scrollY / height * 100);
+      [25,50,75,90].forEach(function (n) { if (percent >= n && !seen[n]) { seen[n] = true; track('scroll_depth', { percent_scrolled: n }); } });
+    }, { passive: true });
+    w.addEventListener('appinstalled', function () { track('app_install', {}); });
+    var errors = 0;
+    w.addEventListener('error', function (ev) { if (++errors <= 5) track('site_error', { error_type: ev.target && ev.target !== w ? 'resource' : 'script' }); }, true);
+    w.addEventListener('unhandledrejection', function () { if (++errors <= 5) track('site_error', { error_type: 'promise' }); });
+  }
+  w.ITCAnalytics = { track: track, id: id, version: '1.0.0' };
+  if (!allowed) w['ga-disable-' + tag] = true;
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', bind); else bind();
+})(window, document);
+
 </script>
 </head>
 <body><style>
@@ -2076,21 +2286,7 @@
     document.getElementById("tabSavedN").textContent = items.length ? items.length : "";
   }
 
-  /* What people actually click through to, for the GA4 dashboard. Never blocks the
-     navigation - gtag queues the beacon and the browser follows the href immediately
-     after, same tab-opening behaviour as before this existed. Silently does nothing if
-     gtag failed to load (ad blockers, offline), so a missing analytics script can never
-     break the one thing this button is actually for. */
-  document.addEventListener("click", function(ev){
-    var go = ev.target.closest && ev.target.closest(".go");
-    if (go && typeof gtag === "function") {
-      gtag("event", "ticket_click", {
-        event_name: go.getAttribute("data-name"),
-        category:   go.getAttribute("data-cat"),
-        area:       go.getAttribute("data-area")
-      });
-    }
-  });
+  /* Shared ITC analytics measures clicks; navigation stays independent. */
 
   /* Delegated on document, not on #days - the same buttons appear in the Saved tab, and
      cards are rebuilt as HTML on every render so per-button listeners would not survive. */
