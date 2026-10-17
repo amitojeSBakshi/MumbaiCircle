@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="https://inthecircle.in/icon-512.png">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20261017-082535-9209">
+<meta name="build" content="20261017-084937-2114">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -778,6 +778,9 @@
 
 /* Shared Circle subscription and verified host details */
 .subscribe-link{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border:1px solid currentColor;border-radius:100px;color:var(--ink,#231d17);font:600 12px/1.2 Arial,sans-serif;text-decoration:none;white-space:nowrap}.masthead-links{flex-wrap:wrap;gap:10px}.hostline{font-size:12px;line-height:1.5;color:var(--ink-3,#6c6258);margin:10px 0 0}.hostline a{color:inherit;text-underline-offset:3px}.tel{overflow-wrap:anywhere}.verified-label{font-size:11px;color:var(--ink-4,#8a8075);margin:5px 0 0}.circle-subscribe{width:min(760px,calc(100% - 24px));max-height:92vh;border:1px solid #c6b9a8;border-radius:14px;padding:14px;background:#fdf9f3;color:#231d17;box-shadow:0 20px 90px #0005}.circle-subscribe::backdrop{background:#19130eb3}.circle-subscribe .subscribe-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.circle-subscribe h2{font:700 22px Georgia,serif;margin:6px 0}.circle-subscribe button{border:1px solid #b7a794;background:transparent;border-radius:30px;padding:8px 12px;cursor:pointer}.circle-subscribe iframe{width:100%;height:65vh;border:0;background:#fff}.circle-subscribe p{font:13px/1.5 Arial,sans-serif}.circle-subscribe .subscribe-fallback{font-size:12px}.dd-menu{max-height:min(70vh,580px);overflow:auto}.tag{max-width:100%;white-space:normal}.card{min-width:0}.where,.note,.hostline{overflow-wrap:anywhere}
+
+/* Card summaries stay compact at every viewport. */
+.card .note{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;max-height:3em}
 </style>
 
 <canvas id="bgCanvas" aria-hidden="true"></canvas>
@@ -1164,14 +1167,14 @@
      sweep (15 Aug 2026) — held back rather than shipped as empty filter options, same
      rule Delhi applied to its own areas. Re-add once a hunt actually finds them. */
   var AREAS = [
-    {"k":"southmum","label":"South Mumbai (Colaba, Fort, Churchgate)"},
-    {"k":"bandra","label":"Bandra & Khar"},
-    {"k":"andheri","label":"Andheri & Juhu"},
-    {"k":"parel","label":"Lower Parel & Worli"},
-    {"k":"powai","label":"Powai & Vikhroli"},
+    {"k":"southmum","label":"South Mumbai"},
+    {"k":"bandra","label":"Bandra"},
+    {"k":"andheri","label":"Western Suburbs"},
+    {"k":"parel","label":"Central Mumbai"},
+    {"k":"powai","label":"Eastern Suburbs"},
     {"k":"navimum","label":"Navi Mumbai"},
     {"k":"thane","label":"Thane"},
-    {"k":"multi","label":"Other verified venues"},
+    {"k":"multi","label":"Other areas"},
     {"k":"juhu","label":"Juhu & Vile Parle","parent":"andheri"},
     {"k":"versova","label":"Versova & Andheri West","parent":"andheri"},
     {"k":"marol","label":"Andheri East, Marol & Airport","parent":"andheri"},
@@ -1188,6 +1191,13 @@
     {"k":"kharghar","label":"Navi Mumbai · Kharghar & Panvel","parent":"navimum"}
   ];
   var AREAMAP = {}; AREAS.forEach(function(a){ AREAMAP[a.k] = a; });
+  function mainArea(key){
+    var seen = {};
+    while (AREAMAP[key] && AREAMAP[key].parent && !seen[key]) {
+      seen[key] = true; key = AREAMAP[key].parent;
+    }
+    return key;
+  }
 
   /* nearest railway line + station for the area — Mumbai's defining transit is the
      Suburban Railway ("the local"), not the Metro, so this names Western/Central/Harbour
@@ -2169,7 +2179,7 @@
     return false;
   }
   function matches(e){
-    if (state.areas.length && state.areas.indexOf(e.a) === -1 && state.areas.indexOf((AREAMAP[e.a] || {}).parent) === -1) return false;
+    if (state.areas.length && state.areas.indexOf(mainArea(e.a)) === -1) return false;
     if (state.cats.length && state.cats.indexOf(e.cat) === -1) return false;
     if (state.free && !e.free) return false;
     if (state.onlyNew && !isNew(e)) return false;
@@ -2288,8 +2298,8 @@
     var costCls = 'cost';
     if (e.free) costCls += ' is-free';
     else { var pr = priceOf(e); if (pr !== null) costCls += (pr < 500 ? ' is-budget' : ' is-premium'); }
-    var area = AREAMAP[e.a]
-      ? '<span class="tag">' + AREAMAP[e.a].label + '</span>' : '';
+    var area = AREAMAP[mainArea(e.a)]
+      ? '<span class="tag">' + AREAMAP[mainArea(e.a)].label + '</span>' : '';
     var far = distanceLabel(e);
     var metro = ''
       + '<div class="metro">'
@@ -2442,14 +2452,12 @@
   anyArea.innerHTML = 'Anywhere in Mumbai<span class="tick">✓</span>';
   areaRow.appendChild(anyArea);
   areaRow.appendChild(Object.assign(document.createElement("div"), {className:"dd-sep"}));
-  AREAS.forEach(function(a){
+  AREAS.filter(function(a){ return !a.parent; }).sort(function(a,b){ return Number(a.k === "multi") - Number(b.k === "multi"); }).forEach(function(a){
     var b = document.createElement("button");
     b.className = "dd-item"; b.type = "button";
     b.setAttribute("data-area", a.k);
     b.setAttribute("aria-pressed","false");
-    b.innerHTML = a.label
-      + '<span class="ddmeta">' + (TRANSIT[a.k] || "—") + '</span>'
-      + '<span class="tick">✓</span>';
+    b.innerHTML = a.label      + '<span class="tick">✓</span>';
     areaRow.appendChild(b);
   });
 
@@ -2799,7 +2807,7 @@
       /* validate against the real maps - a stale or mistyped link should fall back to
          the normal board, never render an empty one with no explanation */
       if (k === "area") {
-        state.areas = v.split(",").filter(function(a){ return AREAMAP[a]; });
+        state.areas = v.split(",").filter(function(a){ return AREAMAP[a]; }).map(mainArea).filter(function(a,i,all){ return all.indexOf(a) === i; });
         got = true;
       }
       else if (k === "cat") {
