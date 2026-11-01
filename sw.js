@@ -1,5 +1,5 @@
-﻿/* Mumbai Circle - build 20261028-223731-5352 */
-var CACHE = "mumbai-circle-20261028-223731-5352";
+﻿/* Mumbai Circle - build 20261101-204915-437 */
+var CACHE = "mumbai-circle-20261101-204915-437";
 var ASSETS = ["./", "./index.html", "./manifest.json",
               "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
